@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Navbar from './components/navbar';
 import { ModernHero } from './components/modern-hero';
 import { FeaturesSection } from './components/feature-section';

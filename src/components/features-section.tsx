@@ -10,11 +10,11 @@ import {
   Shield,
   Users,
 } from "lucide-react";
-import Image from "next/image";
 
-const TaskManagementImage = () => (
+
+const TaskManagementimg = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
-    <Image
+    <img
       src="/modern-task-management-dashboard-with-kanban-board.jpg"
       alt="Task Management Dashboard"
       width={300}
@@ -24,9 +24,9 @@ const TaskManagementImage = () => (
   </div>
 );
 
-const ChatImage = () => (
+const Chatimg = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
-    <Image
+    <img
       src="/ai-chatbot-conversation-interface-with-natural-lan.jpg"
       alt=" Chat Interface"
       width={300}
@@ -36,9 +36,9 @@ const ChatImage = () => (
   </div>
 );
 
-const CalendarImage = () => (
+const Calendarimg = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
-    <Image
+    <img
       src="/intelligent-calendar-scheduling-with-ai-powered-me.jpg"
       alt="Smart Calendar"
       width={300}
@@ -48,9 +48,9 @@ const CalendarImage = () => (
   </div>
 );
 
-const DocumentImage = () => (
+const Documentimg = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
-    <Image
+    <img
       src="/document-analysis-and-workflow-automation-with-ai-.jpg"
       alt="Document Analysis"
       width={300}
@@ -60,9 +60,9 @@ const DocumentImage = () => (
   </div>
 );
 
-const AnalyticsImage = () => (
+const Analyticsimg = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
-    <Image
+    <img
       src="/productivity-analytics-dashboard-with-performance-.jpg"
       alt="Analytics Dashboard"
       width={300}
@@ -72,9 +72,9 @@ const AnalyticsImage = () => (
   </div>
 );
 
-const SecurityImage = () => (
+const Securityimg = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
-    <Image
+    <img
       src="/enterprise-security-shield-with-encryption-and-dat.jpg"
       alt="Security Features"
       width={300}
@@ -84,9 +84,9 @@ const SecurityImage = () => (
   </div>
 );
 
-const CollaborationImage = () => (
+const Collaborationimg = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
-    <Image
+    <img
       src="/team-collaboration-workspace-with-shared-tasks-and.jpg"
       alt="Team Collaboration"
       width={300}
@@ -101,49 +101,49 @@ const features = [
     title: "Smart Task Management",
     description:
       " task prioritization and intelligent scheduling that adapts to your workflow patterns.",
-    header: <TaskManagementImage />,
+    header: <TaskManagementimg />,
     icon: <Brain className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "Natural Language Processing",
     description:
       "Communicate with your assistant using natural language for seamless interaction.",
-    header: <ChatImage />,
+    header: <Chatimg />,
     icon: <MessageSquare className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "Intelligent Scheduling",
     description:
       "Automatically schedule meetings, set reminders, and manage your calendar with context awareness.",
-    header: <CalendarImage />,
+    header: <Calendarimg />,
     icon: <Calendar className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "Document Analysis & Workflow Automation",
     description:
       "Extract insights, summarize content, and create custom automation workflows that trigger based on events.",
-    header: <DocumentImage />,
+    header: <Documentimg />,
     icon: <FileText className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "Performance Analytics",
     description:
       "Track productivity metrics and get actionable insights to optimize your workflow efficiency.",
-    header: <AnalyticsImage />,
+    header: <Analyticsimg />,
     icon: <BarChart3 className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "Enterprise Security",
     description:
       "Bank-level encryption and compliance with industry standards to keep your data secure.",
-    header: <SecurityImage />,
+    header: <Securityimg />,
     icon: <Shield className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "Team Collaboration",
     description:
       "Share insights, delegate tasks, and collaborate seamlessly with your team members.",
-    header: <CollaborationImage />,
+    header: <Collaborationimg />,
     icon: <Users className="h-4 w-4 text-neutral-500" />,
   },
 ];

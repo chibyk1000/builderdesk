@@ -3,12 +3,7 @@
 import { Button } from "@/components/ui/button";
 import {
   ChevronRight,
-  Slack,
-  Framer,
 
-  Linkedin,
-  Instagram,
-  Facebook,
 } from "lucide-react";
 
 export function TrustedSection() {

@@ -1,8 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
-import { Link } from "react-router-dom";
+
 
 
 const Navbar = () => {
