@@ -62,7 +62,7 @@ export function ComparisonSection() {
         <div className="">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Why choose <span className="text-primary">Assist</span>?
+              Why choose <span className="text-primary">Builders Desk</span>?
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               See how we compare to other virtual assistant solutions in the market.

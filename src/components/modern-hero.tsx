@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 
 export function ModernHero() {
   return (
-    <section className="relative flex flex-col items-center max-md:px-2 bg-black text-white text-sm pb-28 pt-8 bg-[url('https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-gradient-bg.svg')] bg-top bg-no-repeat font-[family-name:var(--font-poppins)]">
+    <section className="relative flex flex-col items-center max-md:px-2 bg-white text-primary text-sm pb-28 pt-8 bg-[url('https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-gradient-bg.svg')] bg-top bg-no-repeat font-[family-name:var(--font-poppins)]">
       {/* Community Badge */}
-      <div className="flex flex-wrap items-center justify-center p-1.5 mt-24 rounded-full border border-green-900 bg-green-700/15 text-xs">
+      <div className="flex flex-wrap items-center justify-center p-1.5 mt-24 rounded-full border border-primary bg-primary/15 text-xs">
         <div className="flex items-center">
           <img
             className="size-7 rounded-full border-3 border-white"
@@ -30,12 +30,12 @@ export function ModernHero() {
       </div>
 
       {/* Hero Title */}
-      <h1 className="text-4xl md:text-6xl text-center font-semibold max-w-4xl mt-5 bg-gradient-to-r from-white to-[#748298] text-transparent bg-clip-text">
+      <h1 className="text-4xl md:text-6xl text-center font-semibold max-w-4xl mt-5 text-gray-900  bg-clip-text">
         Meet Your Personal Virtual Assistant
       </h1>
 
       {/* Hero Description */}
-      <p className="text-slate-300 md:text-base max-md:px-2 text-center max-w-2xl mt-3">
+      <p className="text-primary md:text-base max-md:px-2 text-center max-w-2xl mt-3">
         From scheduling and reminders to research and writing—your  assistant
         is here to save time, reduce stress, and help you focus on what matters.
         Available anytime, anywhere.
@@ -43,12 +43,12 @@ export function ModernHero() {
 
       {/* CTA Buttons */}
       <div className="flex items-center gap-2 mt-8 text-sm">
-        <Button className="px-6 py-2.5 bg-green-600 hover:bg-green-700 transition rounded-full">
+        <Button className="px-6 py-2.5  transition rounded-full">
           Get Started Free
         </Button>
         <Button
           variant="outline"
-          className="flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-6 py-2.5 text-white hover:bg-white/20"
+          className="flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-6 py-2.5 text-primary hover:bg-white/20"
         >
           <span>Watch Demo</span>
           <svg

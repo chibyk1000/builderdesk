@@ -7,17 +7,21 @@ import { TrustedSection } from './components/trusted-section';
 import { ComparisonSection } from './components/comparison-section';
 import { TestimonialsSection } from './components/testimonial-section';
 import { Footer } from './components/footer';
+import { Hero2 } from './components/Hero2';
+import { TimeSavingSection } from './components/time-saving-section';
 
 const App = () => {
   return (
-    <div>
+    <div className='bg-white'>
       <Navbar />
       <ModernHero />
 
       <FeaturesSection />
 
       <TrustedSection />
+      <TimeSavingSection/>
       <RecentTasksSection />
+      <Hero2/>
       <ComparisonSection />
       <TestimonialsSection />
       <Footer />

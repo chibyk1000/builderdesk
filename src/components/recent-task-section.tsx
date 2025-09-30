@@ -10,7 +10,6 @@ import {
   Mail,
   BarChart,
 } from "lucide-react";
-import { StripedPattern } from "./ui/striped-pattern";
 
 const recentTasks = [
   {
@@ -57,19 +56,15 @@ const recentTasks = [
 
 export function RecentTasksSection() {
   return (
-    <section
-      id="tasks"
-      className="py-20 px-4 bg-gradient-to-tr from-accent/20 to-"
-    >
-      <div className="max-w-6xl mx-auto relative">
-        <StripedPattern className="[mask-image:radial-gradient(300px_circle_at_center,green,transparent)] -z-10 opacity-15" />
-        <div className="">
+    <section id="tasks" className="py-20 px-4 bg-accent/20">
+      <div className="max-w-6xl mx-auto">
+        <div className="animate-fade-in-up opacity-0 animation-delay-600">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               See your assistant <span className="text-primary">in action</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Real examples of tasks completed by our assistant, showing the
+              Real examples of tasks completed by our Virtual  assistants, showing the
               intelligence and efficiency you can expect.
             </p>
           </div>

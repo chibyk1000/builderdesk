@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="py-20 px-4 border-t border-border">
+    <footer className="py-10 px-4 border-t border-border">
       <div className="max-w-6xl mx-auto">
         {/* CTA Section */}
         <div className="text-center mb-16 ">
@@ -14,7 +14,7 @@ export function Footer() {
             <span className="text-primary">your workflow</span>?
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Join thousands of teams already using Assist to boost productivity
+            Join thousands of teams already using BuildersDesk to boost productivity
             and streamline their operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -137,10 +137,10 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border">
-          <div className="font-bold text-lg mb-4 md:mb-0">Assist</div>
+        <div className="flex flex-col md:flex-row justify-between items-center pt-2 border-t border-border">
+          <div className="font-bold text-lg mb- md:mb-0"><img src="/logo.png" alt="" className="w-40 object-contain" /></div>
           <p className="text-sm text-muted-foreground">
-            © 2025 Assist. All rights reserved.
+            © 2025 Builders Desk. All rights reserved.
           </p>
         </div>
       </div>
