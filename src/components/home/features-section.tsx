@@ -11,7 +11,6 @@ import {
   Users,
 } from "lucide-react";
 
-
 const TaskManagementimg = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
     <img
@@ -151,7 +150,7 @@ const features = [
 export function FeaturesSection() {
   return (
     <section id="features" className="py-20 px-4 b ">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-8xl w-full mx-auto">
         <div className="animate-fade-in-up opacity -0 animation-delay-400">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -163,7 +162,7 @@ export function FeaturesSection() {
               intelligent automation and seamless integration.
             </p>
           </div>
-          <BentoGrid className="max-w-4xl mx-auto">
+          <BentoGrid className=" mx-auto">
             {features.map((item, i) => (
               <BentoGridItem
                 key={i}
@@ -171,7 +170,11 @@ export function FeaturesSection() {
                 description={item.description}
                 header={item.header}
                 icon={item.icon}
-                className={i === 3 || i === 6 ? "md:col-span-2 bg-transparent text-a" : " bg-transparent"}
+                // className={
+                //   i === 3 || i === 6
+                //     ? "md:col-span-2 bg-transparent text-a"
+                //     : " bg-transparent"
+                // }
               />
             ))}
           </BentoGrid>

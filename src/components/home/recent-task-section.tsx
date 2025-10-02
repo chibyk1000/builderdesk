@@ -64,8 +64,8 @@ export function RecentTasksSection() {
               See your assistant <span className="text-primary">in action</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Real examples of tasks completed by our Virtual  assistants, showing the
-              intelligence and efficiency you can expect.
+              Real examples of tasks completed by our Virtual assistants,
+              showing the intelligence and efficiency you can expect.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

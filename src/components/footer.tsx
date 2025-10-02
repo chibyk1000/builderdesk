@@ -2,30 +2,34 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
-    <footer className="py-10 px-4 border-t border-border">
+    <footer className="py-10 pt-30 px-4 bg-slate-950 border-t border-slate-800 text-slate-200">
       <div className="max-w-6xl mx-auto">
         {/* CTA Section */}
-        <div className="text-center mb-16 ">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Ready to transform{" "}
-            <span className="text-primary">your workflow</span>?
+            <span className="text-teal-500">your workflow</span>?
           </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Join thousands of teams already using BuildersDesk to boost productivity
-            and streamline their operations.
+          <p className="text-xl text-slate-400 mb-8 max-w-3xl mx-auto">
+            Join thousands of teams already using BuildersDesk to boost
+            productivity and streamline their operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="rounded-full text-lg px-8">
+            <Button
+              size="lg"
+              className="rounded-full text-lg px-8 bg-teal-600 text-white hover:bg-teal-500"
+            >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="rounded-full text-lg px-8 bg-transparent"
+              className="rounded-full text-lg px-8 border-slate-600 text-slate-200 hover:border-slate-400 hover:text-slate-900 bg-transparent"
             >
               Contact Sales
             </Button>
@@ -34,113 +38,45 @@ export function Footer() {
 
         {/* Footer Links */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-          <div>
-            <h3 className="font-semibold mb-4">Product</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  API
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Integrations
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Press
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Help Center
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Community
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Status
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-4">Legal</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Privacy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Terms
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Security
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Cookies
-                </a>
-              </li>
-            </ul>
-          </div>
+          {[
+            {
+              title: "Product",
+              links: ["Features", "Pricing", "API", "Integrations"],
+            },
+            { title: "Company", links: ["About", "Blog", "Careers", "Press"] },
+            {
+              title: "Resources",
+              links: ["Documentation", "Help Center", "Community", "Status"],
+            },
+            {
+              title: "Legal",
+              links: ["Privacy", "Terms", "Security", "Cookies"],
+            },
+          ].map((section) => (
+            <div key={section.title}>
+              <h3 className="font-semibold mb-4 text-white">{section.title}</h3>
+              <ul className="space-y-2 text-sm text-slate-400">
+                {section.links.map((link) => (
+                  <li key={link}>
+                    <a href="#" className="hover:text-white transition-colors">
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-2 border-t border-border">
-          <div className="font-bold text-lg mb- md:mb-0"><img src="/logo.png" alt="" className="w-40 object-contain" /></div>
-          <p className="text-sm text-muted-foreground">
-            © 2025 Builders Desk. All rights reserved.
+        <div className="flex flex-col md:flex-row justify-between items-center pt-2 border-t border-slate-800">
+          <div className="font-bold text-lg mb-4 md:mb-0  rounded ">
+            <Link to="/" className="font-bold text-xl bg-white inline-block rounded p-2">
+              <img src="/logo.png" alt="" className="w-20 h-fit" />
+            </Link>
+          </div>
+          <p className="text-sm text-slate-400">
+            © 2025 BuildersDesk. All rights reserved.
           </p>
         </div>
       </div>

@@ -67,7 +67,6 @@ const testimonials = [
   },
 ];
 
-
 export function TestimonialsSection() {
   return (
     <section id="testimonials" className="py-20 px-4 bg-accent/20">

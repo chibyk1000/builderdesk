@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Check, X } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Check, X } from "lucide-react";
 
 const comparisonData = [
   {
@@ -53,7 +53,7 @@ const comparisonData = [
     competitor1: false,
     competitor2: true,
   },
-]
+];
 
 export function ComparisonSection() {
   return (
@@ -65,7 +65,8 @@ export function ComparisonSection() {
               Why choose <span className="text-primary">Builders Desk</span>?
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              See how we compare to other virtual assistant solutions in the market.
+              See how we compare to other virtual assistant solutions in the
+              market.
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
@@ -88,7 +89,9 @@ export function ComparisonSection() {
               <CardHeader>
                 <CardTitle className="text-center text-primary">
                   Assist
-                  <Badge className="ml-2 bg-primary text-primary-foreground">Recommended</Badge>
+                  <Badge className="ml-2 bg-primary text-primary-foreground">
+                    Recommended
+                  </Badge>
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -107,7 +110,9 @@ export function ComparisonSection() {
             {/* Competitor 1 Column */}
             <Card className="bg-card/50 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-center text-muted-foreground">Competitor A</CardTitle>
+                <CardTitle className="text-center text-muted-foreground">
+                  Competitor A
+                </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 {comparisonData.map((item, index) => (
@@ -125,7 +130,9 @@ export function ComparisonSection() {
             {/* Competitor 2 Column */}
             <Card className="bg-card/50 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-center text-muted-foreground">Competitor B</CardTitle>
+                <CardTitle className="text-center text-muted-foreground">
+                  Competitor B
+                </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 {comparisonData.map((item, index) => (
@@ -143,5 +150,5 @@ export function ComparisonSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

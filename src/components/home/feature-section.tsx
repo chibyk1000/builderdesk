@@ -178,8 +178,8 @@ export function FeaturesSection() {
               <span className="text-primary">every workflow</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Discover how our virtual assistant  assistants   transforms the way you work with
-              intelligent automation and seamless integration.
+              Discover how our virtual assistant assistants transforms the way
+              you work with intelligent automation and seamless integration.
             </p>
           </div>
           <BentoGrid className="max-w-4xl mx-auto">
