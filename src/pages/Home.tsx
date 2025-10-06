@@ -18,9 +18,9 @@ const Home = () => {
 
           <TrustedSection />
           <TimeSavingSection/>
-          <RecentTasksSection />
-          <Hero2/>
       <ComparisonSection />
+          <Hero2/>
+          <RecentTasksSection />
       <TestimonialsSection />
     </div>
   );

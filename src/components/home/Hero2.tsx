@@ -2,14 +2,18 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { PhoneChat } from "./PhoneChat";
+// import { PhoneChat } from "./PhoneChat";
 
 export function Hero2() {
   return (
-    <section className="min-h-[90vh] bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 flex items-center justify-center px-4 pt-16 relative overflow-hidden text-white">
+    <section className="md:min-h-[90vh] min-h-[70dvh] bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 flex items-center justify-center px-4 pt-16 relative overflow-hidden text-white">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         {/* Left side - Phone mockup */}
-         <PhoneChat/>
+        <div className="max-md:hidden">
+
+          {/* <PhoneChat/> */}
+          <img src="/chat_img.png" loading="lazy" alt="" className="rounded-3xl" />
+        </div>
     
 
         {/* Right side - Content */}
@@ -29,7 +33,7 @@ export function Hero2() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-            <Button className="rounded-full text-sm px-6 bg-teal-500 text-white hover:bg-teal-600">
+            <Button className=" text-sm px-6 bg-teal-500 text-white hover:bg-teal-600">
               Watch Demo
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>

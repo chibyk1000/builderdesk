@@ -21,7 +21,7 @@ export function Footer() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="rounded-full text-lg px-8 bg-teal-600 text-white hover:bg-teal-500"
+              className=" text-lg px-8 bg-teal-600 text-white hover:bg-teal-500"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -29,7 +29,7 @@ export function Footer() {
             <Button
               variant="outline"
               size="lg"
-              className="rounded-full text-lg px-8 border-slate-600 text-slate-200 hover:border-slate-400 hover:text-slate-900 bg-transparent"
+              className=" text-lg px-8 border-slate-600 text-slate-200 hover:border-slate-400 hover:text-slate-900 bg-transparent"
             >
               Contact Sales
             </Button>
@@ -38,40 +38,142 @@ export function Footer() {
 
         {/* Footer Links */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-          {[
-            {
-              title: "Product",
-              links: ["Features", "Pricing", "API", "Integrations"],
-            },
-            { title: "Company", links: ["About", "Blog", "Careers", "Press"] },
-            {
-              title: "Resources",
-              links: ["Documentation", "Help Center", "Community", "Status"],
-            },
-            {
-              title: "Legal",
-              links: ["Privacy", "Terms", "Security", "Cookies"],
-            },
-          ].map((section) => (
-            <div key={section.title}>
-              <h3 className="font-semibold mb-4 text-white">{section.title}</h3>
-              <ul className="space-y-2 text-sm text-slate-400">
-                {section.links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="hover:text-white transition-colors">
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div>
+            <h3 className="font-semibold mb-4">Product</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>
+                <Link
+                  to="/#features"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Features
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/pricing"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className="hover:text-foreground transition-colors">
+                  Integrations
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold mb-4">Company</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>
+                <Link
+                  to="/about"
+                  className="hover:text-foreground transition-colors"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/blog"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/faq"
+                  className="hover:text-foreground transition-colors"
+                >
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>
+                <Link to="#" className="hover:text-foreground transition-colors">
+                  Documentation
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className="hover:text-foreground transition-colors">
+                  Help Center
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className="hover:text-foreground transition-colors">
+                  Community
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className="hover:text-foreground transition-colors">
+                  Status
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold mb-4">Legal</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>
+                <Link
+                  to="/privacy"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Privacy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/terms"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Terms
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className="hover:text-foreground transition-colors">
+                  Security
+                </Link>
+              </li>
+              <li>
+                <Link to="#" className="hover:text-foreground transition-colors">
+                  Cookies
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-2 border-t border-slate-800">
           <div className="font-bold text-lg mb-4 md:mb-0  rounded ">
-            <Link to="/" className="font-bold text-xl bg-white inline-block rounded p-2">
+            <Link
+              to="/"
+              className="font-bold text-xl bg-white inline-block rounded p-2"
+            >
               <img src="/logo.png" alt="" className="w-20 h-fit" />
             </Link>
           </div>

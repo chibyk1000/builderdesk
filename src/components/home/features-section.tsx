@@ -48,7 +48,7 @@ const Calendarimg = () => (
 );
 
 const Documentimg = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
+  <div className="flex flex-1 w-full h-full max-h-[4rem] rounded-xl overflow-hidden">
     <img
       src="/document-analysis-and-workflow-automation-with-ai-.jpg"
       alt="Document Analysis"
@@ -151,7 +151,7 @@ export function FeaturesSection() {
   return (
     <section id="features" className="py-20 px-4 b ">
       <div className="max-w-8xl w-full mx-auto">
-        <div className="animate-fade-in-up opacity -0 animation-delay-400">
+        <div className="animate-fade-in-up  animation-delay-400">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Powerful features for{" "}
@@ -170,11 +170,7 @@ export function FeaturesSection() {
                 description={item.description}
                 header={item.header}
                 icon={item.icon}
-                // className={
-                //   i === 3 || i === 6
-                //     ? "md:col-span-2 bg-transparent text-a"
-                //     : " bg-transparent"
-                // }
+             
               />
             ))}
           </BentoGrid>
