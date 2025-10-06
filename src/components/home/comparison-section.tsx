@@ -89,7 +89,7 @@ export function ComparisonSection() {
               <CardHeader>
                 <CardTitle className="text-center text-primary">
                   Assist
-                  <Badge className="ml-2 bg-primary text-primary-foreground">
+                  <Badge className="ml-2 px-5 bg-primary text-primary-foreground">
                     Recommended
                   </Badge>
                 </CardTitle>

@@ -130,15 +130,15 @@ export function TimeSavingSection() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-gray-200">
               <div>
-                <p className="text-3xl font-bold text-[#039A9A]">5 min</p>
+                <p className="text-3xl max-md:text-xl font-bold text-[#039A9A]">5 min</p>
                 <p className="text-sm text-gray-600">Setup Time</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-[#039A9A]">90%</p>
+                <p className="text-3xl max-md:text-xl font-bold text-[#039A9A]">90%</p>
                 <p className="text-sm text-gray-600">Time Saved</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-[#039A9A]">24/7</p>
+                <p className="text-3xl max-md:text-xl font-bold text-[#039A9A]">24/7</p>
                 <p className="text-sm text-gray-600">Available</p>
               </div>
             </div>

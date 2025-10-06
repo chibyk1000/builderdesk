@@ -3,6 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Star } from "lucide-react";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -12,7 +13,7 @@ const testimonials = [
     company: "UrbanAxis Builders",
     avatar: "/professional-woman-headshot.png",
     content:
-      "The Builders Desk assistant helps me stay on top of daily priorities without digging through spreadsheets or emails. It’s streamlined our entire workflow.",
+      "The Builders Desk assistant helps me stay on top of daily priorities without digging through spreadsheets or emails.",
     rating: 5,
   },
   {
@@ -22,7 +23,7 @@ const testimonials = [
     company: "InnovateLab Construction",
     avatar: "/professional-man-headshot.png",
     content:
-      "Builders Desk has become an essential part of our operations. The assistant keeps our team aligned and saves me hours every week.",
+      "Builders Desk has become an essential part of our operations — saving me hours every week.",
     rating: 5,
   },
   {
@@ -32,7 +33,7 @@ const testimonials = [
     company: "DataSync Build Co.",
     avatar: "/professional-woman-headshot.png",
     content:
-      "No more chasing updates or digging for files. The virtual assistant keeps everything organized and accessible. It's like having an extra coordinator on the team.",
+      "No more chasing updates or digging for files. It keeps everything organized and accessible.",
     rating: 5,
   },
   {
@@ -42,7 +43,7 @@ const testimonials = [
     company: "NextGen Dev Group",
     avatar: "/professional-man-headshot.png",
     content:
-      "As a startup, we rely on tools that keep us lean and efficient. Builders Desk does just that — it's like adding a full-time assistant without the overhead.",
+      "As a startup, we rely on tools that keep us lean. Builders Desk feels like an extra assistant.",
     rating: 5,
   },
   {
@@ -52,7 +53,7 @@ const testimonials = [
     company: "GrowthCorp Projects",
     avatar: "/professional-woman-headshot.png",
     content:
-      "The assistant helps me pull together client-facing updates and reports in no time. It’s seriously boosted our turnaround speed.",
+      "The assistant helps me pull client updates fast — our turnaround speed is up significantly.",
     rating: 5,
   },
   {
@@ -62,46 +63,63 @@ const testimonials = [
     company: "CloudTech Build Systems",
     avatar: "/professional-man-headshot.png",
     content:
-      "Builders Desk hits that perfect balance between simplicity and function. It fits right into our existing tools and makes everything smoother.",
+      "Builders Desk hits that perfect balance between simplicity and function.",
     rating: 5,
   },
 ];
 
 export function TestimonialsSection() {
   return (
-    <section id="testimonials" className="py-20 px-4 bg-accent/20">
+    <section
+      id="testimonials"
+      className="py-16 px-4 bg-gradient-to-b from-background to-accent/30"
+    >
       <div className="max-w-6xl mx-auto">
-        <div className="animate-fade-in-up opacity-0 animation-delay-1000">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Loved by <span className="text-primary">thousands</span> of teams
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              See what our customers are saying about their experience with
-              Builders Desk.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <Card
-                key={testimonial.id}
-                className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-card/80 backdrop-blur-sm animate-fade-in-up opacity-0"
-                style={{ animationDelay: `${1 + index * 0.1}s` }}
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-1 mb-4">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3">
+            Loved by <span className="text-primary">thousands</span> of teams
+          </h2>
+          <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto">
+            Real stories from leaders who trust Builders Desk to streamline
+            their construction operations.
+          </p>
+        </div>
+
+        {/* Testimonials Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={testimonial.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: index * 0.1,
+                duration: 0.5,
+                ease: "easeOut",
+              }}
+              viewport={{ once: true }}
+            >
+              <Card className="group relative bg-white border border-border/60 rounded-xl shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-300">
+                <CardContent className="p-5">
+                  {/* Stars */}
+                  <div className="flex gap-1 mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star
                         key={i}
-                        className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                        className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400"
                       />
                     ))}
                   </div>
-                  <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
-                    "{testimonial.content}"
+
+                  {/* Quote */}
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 italic">
+                    &quot;{testimonial.content}&quot;
                   </p>
+
+                  {/* Person Info */}
                   <div className="flex items-center gap-3">
-                    <Avatar className="w-10 h-10">
+                    <Avatar className="w-9 h-9 border border-border">
                       <AvatarImage
                         src={testimonial.avatar || "/placeholder.svg"}
                         alt={testimonial.name}
@@ -115,18 +133,21 @@ export function TestimonialsSection() {
                       </AvatarFallback>
                     </Avatar>
                     <div>
-                      <div className="font-semibold text-sm">
+                      <p className="font-semibold text-sm">
                         {testimonial.name}
-                      </div>
-                      <div className="text-xs text-muted-foreground">
-                        {testimonial.role} at {testimonial.company}
-                      </div>
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        {testimonial.role}{" "}
+                        <span className="text-primary font-medium">
+                          @ {testimonial.company}
+                        </span>
+                      </p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
