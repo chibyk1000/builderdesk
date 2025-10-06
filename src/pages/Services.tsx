@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
