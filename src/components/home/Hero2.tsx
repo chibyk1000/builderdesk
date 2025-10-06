@@ -28,7 +28,7 @@ export function Hero2() {
           </h1>
 
           <p className="text-base text-slate-300 mb-6 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-            Builders Desk is the world's best personal assistant for handling
+            Builders Desk is the world's leading personal assistant for handling
             urgent tasks or when you need extra help.
           </p>
 
