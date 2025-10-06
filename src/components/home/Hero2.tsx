@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 export function Hero2() {
   return (
     <section className="md:min-h-[90vh] min-h-[70dvh] bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 flex items-center justify-center px-4 pt-16 relative overflow-hidden text-white">
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-6xl mx-auto grid   lg:grid-cols-2 gap-12 items-center">
         {/* Left side - Phone mockup */}
         <div className="max-md:hidden">
 
