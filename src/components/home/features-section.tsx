@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 const TaskManagementimg = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
+  <div className="flex flex-1 w-full h-full min-h-[6rem] max-h-[8rem] rounded-xl overflow-hidden">
     <img
       src="/modern-task-management-dashboard-with-kanban-board.jpg"
       alt="Task Management Dashboard"
@@ -24,7 +24,7 @@ const TaskManagementimg = () => (
 );
 
 const Chatimg = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
+  <div className="flex flex-1 w-full h-full min-h-[6rem] max-h-[8rem] rounded-xl overflow-hidden">
     <img
       src="/ai-chatbot-conversation-interface-with-natural-lan.jpg"
       alt=" Chat Interface"
@@ -36,7 +36,7 @@ const Chatimg = () => (
 );
 
 const Calendarimg = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
+  <div className="flex flex-1 w-full h-full min-h-[6rem] max-h-[8rem] rounded-xl overflow-hidden">
     <img
       src="/intelligent-calendar-scheduling-with-ai-powered-me.jpg"
       alt="Smart Calendar"
@@ -48,7 +48,7 @@ const Calendarimg = () => (
 );
 
 const Documentimg = () => (
-  <div className="flex flex-1 w-full h-full max-h-[4rem] rounded-xl overflow-hidden">
+  <div className="flex flex-1 w-full h-full min-h-[4rem] max-h-[8rem] rounded-xl overflow-hidden">
     <img
       src="/document-analysis-and-workflow-automation-with-ai-.jpg"
       alt="Document Analysis"
@@ -60,7 +60,7 @@ const Documentimg = () => (
 );
 
 const Analyticsimg = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
+  <div className="flex flex-1 w-full h-full min-h-[6rem] max-h-[8rem] rounded-xl overflow-hidden">
     <img
       src="/productivity-analytics-dashboard-with-performance-.jpg"
       alt="Analytics Dashboard"
@@ -72,7 +72,7 @@ const Analyticsimg = () => (
 );
 
 const Securityimg = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
+  <div className="flex flex-1 w-full h-full min-h-[6rem] max-h-[8rem] rounded-xl overflow-hidden">
     <img
       src="/enterprise-security-shield-with-encryption-and-dat.jpg"
       alt="Security Features"
@@ -84,7 +84,7 @@ const Securityimg = () => (
 );
 
 const Collaborationimg = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden">
+  <div className="flex flex-1 w-full h-full min-h-[6rem] max-h-[8rem] rounded-xl overflow-hidden">
     <img
       src="/team-collaboration-workspace-with-shared-tasks-and.jpg"
       alt="Team Collaboration"
