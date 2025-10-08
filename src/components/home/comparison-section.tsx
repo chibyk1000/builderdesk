@@ -98,7 +98,7 @@ export function ComparisonSection() {
                 {comparisonData.map((item, index) => (
                   <div key={index} className="py-3 flex justify-center">
                     {item.assistAI ? (
-                      <Check className="w-5 h-5 text-green-500" />
+                      <Check className="w-5 h-5 text-blue-500" />
                     ) : (
                       <X className="w-5 h-5 text-red-500" />
                     )}
@@ -118,7 +118,7 @@ export function ComparisonSection() {
                 {comparisonData.map((item, index) => (
                   <div key={index} className="py-3 flex justify-center">
                     {item.competitor1 ? (
-                      <Check className="w-5 h-5 text-green-500" />
+                      <Check className="w-5 h-5 text-blue-500" />
                     ) : (
                       <X className="w-5 h-5 text-red-500" />
                     )}
@@ -138,7 +138,7 @@ export function ComparisonSection() {
                 {comparisonData.map((item, index) => (
                   <div key={index} className="py-3 flex justify-center">
                     {item.competitor2 ? (
-                      <Check className="w-5 h-5 text-green-500" />
+                      <Check className="w-5 h-5 text-blue-500" />
                     ) : (
                       <X className="w-5 h-5 text-red-500" />
                     )}

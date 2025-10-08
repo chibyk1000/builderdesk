@@ -23,7 +23,7 @@ export default function ServicesPage() {
       title: "Project Management Support",
       description:
         "We assist with scheduling, document control, RFI/submittal tracking, and client communications—keeping your jobs organized and on track. Our team ensures nothing falls through the cracks, from daily logs to change orders. We integrate with your existing systems and workflows to provide seamless support that keeps projects moving forward.",
-      image: "/construction-project-management-scheduling.jpg",
+      image: "/img/construction-project-management-scheduling.jpg",
       features: [
         "Scheduling & Coordination",
         "Document Control",
@@ -35,7 +35,7 @@ export default function ServicesPage() {
       title: "Administrative Assistance",
       description:
         "From data entry to permit filing, our virtual construction assistants take the busywork off your plate. We handle the administrative tasks that consume your time, allowing you to focus on the field. Our team is trained in construction-specific processes and can adapt to your company's unique needs.",
-      image: "/office-administrative-work-construction.jpg",
+      image: "/img/office-administrative-work-construction.jpg",
       features: [
         "Data Entry",
         "Permit Filing",
@@ -47,7 +47,7 @@ export default function ServicesPage() {
       title: "Estimating Support",
       description:
         "Our team helps prepare accurate estimates, bids, takeoffs, and proposal documents using industry-standard software. We work with tools like PlanSwift, Bluebeam, and Excel to deliver precise estimates that help you win more projects. Our estimators understand construction costs and can provide detailed breakdowns.",
-      image: "/construction-estimating-blueprints-calculator.jpg",
+      image: "/img/construction-estimating-blueprints-calculator.jpg",
       features: [
         "Bid Preparation",
         "Takeoff Services",
@@ -59,7 +59,7 @@ export default function ServicesPage() {
       title: "Bookkeeping & Financial Admin",
       description:
         "We handle invoicing, expense tracking, payroll coordination, and QuickBooks management—ensuring your books stay audit-ready. Our financial administrators understand construction accounting, including job costing, retention, and progress billing. Keep your finances organized and compliant with minimal effort.",
-      image: "/financial-bookkeeping-accounting-dashboard.jpg",
+      image: "/img/financial-bookkeeping-accounting-dashboard.jpg",
       features: [
         "Invoicing",
         "Expense Tracking",
@@ -71,7 +71,7 @@ export default function ServicesPage() {
       title: "Business Development & CRM",
       description:
         "Let us help you track leads, nurture client relationships, and build your pipeline with custom CRM support and BD strategies. We manage your customer relationships, follow up on opportunities, and help you maintain the connections that drive growth. Our team can work with any CRM platform or help you implement one.",
-      image: "/business-development-crm-sales-pipeline.jpg",
+      image: "/img/business-development-crm-sales-pipeline.jpg",
       features: [
         "Lead Tracking",
         "Client Relationship Management",
@@ -83,7 +83,7 @@ export default function ServicesPage() {
       title: "Custom Outsourcing Solutions",
       description:
         "Need help with something else? We create custom solutions to meet your business needs. Whether it's specialized reporting, compliance tracking, or unique operational challenges, our team can develop tailored support services. We're flexible and adaptable to whatever your construction business requires.",
-      image: "/custom-business-solutions-consulting.jpg",
+      image: "/img/custom-business-solutions-consulting.jpg",
       features: [
         "Tailored Services",
         "Specialized Reporting",
@@ -97,12 +97,10 @@ export default function ServicesPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      
-
       {/* Top Section */}
       <section className="pt-32 pb-12 px-4 md:px-16 lg:px-24 xl:px-32">
         <div className="max-w-3xl mx-auto text-center">
-          <span className="px-4 py-1 rounded-full  bg-[#039A9A]/10 text-[#039A9A] text-sm font-medium">
+          <span className="px-4 py-1 rounded-full  bg-primary/10 text-primary text-sm font-medium">
             Our Services
           </span>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
@@ -112,10 +110,7 @@ export default function ServicesPage() {
             for your needs.
           </p>
           <Link to="/contact">
-            <Button
-              size="lg"
-              className="mt-6 bg-[#039A9A] hover:bg-[#028080] "
-            >
+            <Button size="lg" className="mt-6 bg-[#135c98] hover:bg-[#0d4a73] ">
               Contact Us for a Tailored Package →
             </Button>
           </Link>
@@ -129,13 +124,13 @@ export default function ServicesPage() {
               onClick={() => setActiveTab(tab.key)}
               className={`pb-3 px-3 text-xs md:text-sm font-medium relative whitespace-nowrap ${
                 activeTab === tab.key
-                  ? "text-[#039A9A]"
+                  ? "text-[#135c98]"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
               {tab.label}
               {activeTab === tab.key && (
-                <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#039A9A]"></span>
+                <span className="absolute left-0 bottom-0 w-full h-[2px] bg-[#135c98]"></span>
               )}
             </button>
           ))}
@@ -170,10 +165,7 @@ export default function ServicesPage() {
               ))}
             </div>
             <Link to="/contact">
-              <Button
-                size="lg"
-                className="bg-[#039A9A] hover:bg-[#028080] "
-              >
+              <Button size="lg" className=" ">
                 Get Started →
               </Button>
             </Link>
@@ -182,8 +174,8 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-20 px-4 md:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-transparent to-[#039A9A]/5">
-        <div className="max-w-4xl mx-auto bg-gradient-to-r from-[#039A9A]/10 to-[#02c5c5]/10 rounded-3xl p-8 md:p-12 text-center border border-[#039A9A]/20">
+      <section className="py-12 md:py-20 px-4 md:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-white to-[#135c98]/5">
+        <div className="max-w-4xl mx-auto  rounded-3xl p-8 border md:p-12 text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
             Need Help Now?
           </h2>
@@ -195,7 +187,7 @@ export default function ServicesPage() {
             <Link to="/contact">
               <Button
                 size="lg"
-                className=" bg-[#039A9A] hover:bg-[#028080]"
+                className=" bg-[#135c98] hover:bg-[#0d4a73]"
               >
                 Schedule a Free Discovery Call
               </Button>
@@ -204,7 +196,7 @@ export default function ServicesPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className=" bg-transparent"
+                className=" bg-white"
               >
                 View Pricing
               </Button>
@@ -212,8 +204,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
-     
     </div>
   );
 }

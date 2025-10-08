@@ -14,7 +14,7 @@ import {
 const TaskManagementimg = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] max-h-[8rem] rounded-xl overflow-hidden">
     <img
-      src="/modern-task-management-dashboard-with-kanban-board.jpg"
+      src="/img/modern-task-management-dashboard-with-kanban-board.jpg"
       alt="Task Management Dashboard"
       width={300}
       height={200}
@@ -26,7 +26,7 @@ const TaskManagementimg = () => (
 const Chatimg = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] max-h-[8rem] rounded-xl overflow-hidden">
     <img
-      src="/ai-chatbot-conversation-interface-with-natural-lan.jpg"
+      src="/img/ai-chatbot-conversation-interface-with-natural-lan.jpg"
       alt=" Chat Interface"
       width={300}
       height={200}
@@ -38,7 +38,7 @@ const Chatimg = () => (
 const Calendarimg = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] max-h-[8rem] rounded-xl overflow-hidden">
     <img
-      src="/intelligent-calendar-scheduling-with-ai-powered-me.jpg"
+      src="/img/intelligent-calendar-scheduling-with-ai-powered-me.jpg"
       alt="Smart Calendar"
       width={300}
       height={200}
@@ -50,7 +50,7 @@ const Calendarimg = () => (
 const Documentimg = () => (
   <div className="flex flex-1 w-full h-full min-h-[4rem] max-h-[8rem] rounded-xl overflow-hidden">
     <img
-      src="/document-analysis-and-workflow-automation-with-ai-.jpg"
+      src="/img/document-analysis-and-workflow-automation-with-ai-.jpg"
       alt="Document Analysis"
       width={300}
       height={200}
@@ -62,7 +62,7 @@ const Documentimg = () => (
 const Analyticsimg = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] max-h-[8rem] rounded-xl overflow-hidden">
     <img
-      src="/productivity-analytics-dashboard-with-performance-.jpg"
+      src="/img/productivity-analytics-dashboard-with-performance-.jpg"
       alt="Analytics Dashboard"
       width={300}
       height={200}
@@ -74,7 +74,7 @@ const Analyticsimg = () => (
 const Securityimg = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] max-h-[8rem] rounded-xl overflow-hidden">
     <img
-      src="/enterprise-security-shield-with-encryption-and-dat.jpg"
+      src="/img/enterprise-security-shield-with-encryption-and-dat.jpg"
       alt="Security Features"
       width={300}
       height={200}
@@ -86,7 +86,7 @@ const Securityimg = () => (
 const Collaborationimg = () => (
   <div className="flex flex-1 w-full h-full min-h-[6rem] max-h-[8rem] rounded-xl overflow-hidden">
     <img
-      src="/team-collaboration-workspace-with-shared-tasks-and.jpg"
+      src="/img/team-collaboration-workspace-with-shared-tasks-and.jpg"
       alt="Team Collaboration"
       width={300}
       height={200}

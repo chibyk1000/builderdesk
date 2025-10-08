@@ -10,7 +10,8 @@
   --card-foreground: oklch(0.15 0 0);
   --popover: oklch(0.98 0 0);
   --popover-foreground: oklch(0.15 0 0);
-  --primary: oklch(0.52 0.12 192);
+  /* Updated primary color from teal to blue #135c98 */
+  --primary: oklch(0.42 0.1 240);
   --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.95 0 0);
   --secondary-foreground: oklch(0.15 0 0);
@@ -22,8 +23,10 @@
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.9 0 0);
   --input: oklch(0.9 0 0);
-  --ring: oklch(0.52 0.12 192);
-  --chart-1: oklch(0.52 0.12 192);
+  /* Updated ring color to match new blue primary */
+  --ring: oklch(0.42 0.1 240);
+  /* Updated chart-1 color to match new blue primary */
+  --chart-1: oklch(0.42 0.1 240);
   --chart-2: oklch(0.646 0.222 41.116);
   --chart-3: oklch(0.6 0.118 184.704);
   --chart-4: oklch(0.828 0.189 84.429);
@@ -31,12 +34,14 @@
   --radius: 0.625rem;
   --sidebar: oklch(0.98 0 0);
   --sidebar-foreground: oklch(0.15 0 0);
-  --sidebar-primary: oklch(0.52 0.12 192);
+  /* Updated sidebar-primary color to match new blue primary */
+  --sidebar-primary: oklch(0.42 0.1 240);
   --sidebar-primary-foreground: oklch(0.99 0 0);
   --sidebar-accent: oklch(0.96 0 0);
   --sidebar-accent-foreground: oklch(0.15 0 0);
   --sidebar-border: oklch(0.9 0 0);
-  --sidebar-ring: oklch(0.52 0.12 192);
+  /* Updated sidebar-ring color to match new blue primary */
+  --sidebar-ring: oklch(0.42 0.1 240);
 }
 
 .dark {
@@ -46,7 +51,8 @@
   --card-foreground: oklch(0.98 0 0);
   --popover: oklch(0.12 0 0);
   --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.52 0.12 192);
+  /* Updated primary color from teal to blue #135c98 */
+  --primary: oklch(0.42 0.1 240);
   --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.18 0 0);
   --secondary-foreground: oklch(0.98 0 0);
@@ -58,25 +64,29 @@
   --destructive-foreground: oklch(0.98 0 0);
   --border: oklch(0.22 0 0);
   --input: oklch(0.18 0 0);
-  --ring: oklch(0.52 0.12 192);
-  --chart-1: oklch(0.52 0.12 192);
+  /* Updated ring color to match new blue primary */
+  --ring: oklch(0.42 0.1 240);
+  /* Updated chart-1 color to match new blue primary */
+  --chart-1: oklch(0.42 0.1 240);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
   --sidebar: oklch(0.12 0 0);
   --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.52 0.12 192);
+  /* Updated sidebar-primary color to match new blue primary */
+  --sidebar-primary: oklch(0.42 0.1 240);
   --sidebar-primary-foreground: oklch(0.99 0 0);
   --sidebar-accent: oklch(0.18 0 0);
   --sidebar-accent-foreground: oklch(0.98 0 0);
   --sidebar-border: oklch(0.22 0 0);
-  --sidebar-ring: oklch(0.52 0.12 192);
+  /* Updated sidebar-ring color to match new blue primary */
+  --sidebar-ring: oklch(0.42 0.1 240);
 }
 
+/* Updated theme configuration to use Poppins font */
 @theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-poppins);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -113,24 +123,6 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --animate-marquee: marquee var(--duration) infinite linear;
-  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
-  @keyframes marquee {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(calc(-100% - var(--gap)));
-    }
-  }
-  @keyframes marquee-vertical {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(calc(-100% - var(--gap)));
-    }
-  }
 }
 
 @layer base {
@@ -186,11 +178,6 @@
   }
 }
 
-/* Updated hero gradient to light theme with teal accent */
-.hero-gradient {
-  background: linear-gradient(135deg, #f0fffe 0%, #e0f7f7 50%, #d0f0f0 100%);
-}
-
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
 }
@@ -221,4 +208,8 @@
 
 .animation-delay-800 {
   animation-delay: 0.8s;
+}
+
+.animation-delay-1200 {
+  animation-delay: 1.2s;
 }

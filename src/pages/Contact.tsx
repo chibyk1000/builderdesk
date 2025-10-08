@@ -39,7 +39,7 @@ export default function ContactPage() {
       <main className="pt-24 pb-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-[#039A9A]/10 text-[#039A9A] text-sm font-medium mb-4">
+            <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
               Contact us
             </div>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
@@ -47,7 +47,7 @@ export default function ContactPage() {
               help on one project or across your entire operation, we're here to
               support you. Reach out today for a free consultation.
             </p>
-            <Button className="bg-[#039A9A] hover:bg-[#028080] text-white">
+            <Button className=" text-white">
               Schedule Free Call →
             </Button>
           </div>
@@ -60,13 +60,13 @@ export default function ContactPage() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`pb-4 px-2 text-base font-medium transition-colors relative ${
                   activeTab === tab.id
-                    ? "text-[#039A9A]"
+                    ? "text-primary"
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {tab.label}
                 {activeTab === tab.id && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#039A9A]" />
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
                 )}
               </button>
             ))}
@@ -77,7 +77,7 @@ export default function ContactPage() {
             {/* Left: Image */}
             <div className="rounded-2xl overflow-hidden shadow-lg">
               <img
-                src="/building.jpg"
+                src="/img/building.jpg"
                 alt="BuildersDesk team ready to help"
                 className="w-full h-full object-cover"
               />
@@ -166,7 +166,7 @@ export default function ContactPage() {
                     </div>
                     <Button
                       type="submit"
-                      className="w-full bg-[#039A9A] hover:bg-[#028080]"
+                      className="w-full "
                     >
                       Send Message →
                     </Button>
@@ -174,24 +174,24 @@ export default function ContactPage() {
 
                   <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-border">
                     <div className="text-center">
-                      <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#039A9A]/10 mb-2">
-                        <Mail className="h-5 w-5 text-[#039A9A]" />
+                      <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 mb-2">
+                        <Mail className="h-5 w-5 text-primary" />
                       </div>
                       <p className="text-xs text-muted-foreground">
                         support@buildersdesk.com
                       </p>
                     </div>
                     <div className="text-center">
-                      <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#039A9A]/10 mb-2">
-                        <Phone className="h-5 w-5 text-[#039A9A]" />
+                      <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 mb-2">
+                        <Phone className="h-5 w-5 text-primary" />
                       </div>
                       <p className="text-xs text-muted-foreground">
                         (123) 456-7890
                       </p>
                     </div>
                     <div className="text-center">
-                      <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#039A9A]/10 mb-2">
-                        <MapPin className="h-5 w-5 text-[#039A9A]" />
+                      <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary/10 mb-2">
+                        <MapPin className="h-5 w-5 text-primary" />
                       </div>
                       <p className="text-xs text-muted-foreground">
                         U.S. Based
@@ -216,8 +216,8 @@ export default function ContactPage() {
                     <Card className="border-border bg-card/50">
                       <CardContent className="pt-6">
                         <div className="flex items-start gap-4">
-                          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#039A9A]/10 flex-shrink-0">
-                            <Clock className="h-6 w-6 text-[#039A9A]" />
+                          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 flex-shrink-0">
+                            <Clock className="h-6 w-6 text-primary" />
                           </div>
                           <div>
                             <h3 className="font-semibold mb-2">
@@ -240,8 +240,8 @@ export default function ContactPage() {
                     <Card className="border-border bg-card/50">
                       <CardContent className="pt-6">
                         <div className="flex items-start gap-4">
-                          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#039A9A]/10 flex-shrink-0">
-                            <MessageSquare className="h-6 w-6 text-[#039A9A]" />
+                          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 flex-shrink-0">
+                            <MessageSquare className="h-6 w-6 text-primary" />
                           </div>
                           <div>
                             <h3 className="font-semibold mb-2">
@@ -264,8 +264,8 @@ export default function ContactPage() {
                     <Card className="border-border bg-card/50">
                       <CardContent className="pt-6">
                         <div className="flex items-start gap-4">
-                          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#039A9A]/10 flex-shrink-0">
-                            <MapPin className="h-6 w-6 text-[#039A9A]" />
+                          <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 flex-shrink-0">
+                            <MapPin className="h-6 w-6 text-primary" />
                           </div>
                           <div>
                             <h3 className="font-semibold mb-2">
@@ -285,7 +285,7 @@ export default function ContactPage() {
                     </Card>
                   </div>
 
-                  <Button className="w-full mt-8 bg-[#039A9A] hover:bg-[#028080]">
+                  <Button className="w-full mt-8 ">
                     Schedule a Call Now →
                   </Button>
                 </div>
@@ -358,7 +358,7 @@ export default function ContactPage() {
                     </Card>
                   </div>
 
-                  <Button className="w-full mt-8 bg-[#039A9A] hover:bg-[#028080]">
+                  <Button className="w-full mt-8 ">
                     View All FAQs →
                   </Button>
                 </div>

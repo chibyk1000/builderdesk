@@ -88,7 +88,7 @@ export default function PricingPage() {
       <section className="pt-32 pb-12 px-4 md:px-16 lg:px-24 xl:px-32">
         <div className="max-w-6xl mx-auto">
           <div className="mb-4">
-            <span className="text-[#039A9A] text-sm font-semibold uppercase tracking-wider">
+            <span className="text-primary text-sm font-semibold uppercase tracking-wider">
               Pricing Details
             </span>
           </div>
@@ -112,22 +112,22 @@ export default function PricingPage() {
                 key={index}
                 className={`bg-white border rounded-2xl p-8 transition-all duration-300 ${
                   plan.popular
-                    ? "border-[#039A9A] shadow-lg"
-                    : "border-gray-200 hover:border-[#039A9A]/30"
+                    ? "border-primary shadow-lg"
+                    : "border-gray-200 hover:border-primary/30"
                 }`}
               >
                 <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
                   {/* Left Section */}
                   <div className="flex items-start gap-6 flex-1">
-                    <div className="bg-[#039A9A]/10 p-4 rounded-xl flex-shrink-0">
-                      <IconComponent className="w-8 h-8 text-[#039A9A]" />
+                    <div className="bg-primary/10 p-4 rounded-xl flex-shrink-0">
+                      <IconComponent className="w-8 h-8 text-primary" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold mb-1">{plan.name}</h3>
                       <p className="text-muted-foreground mb-4">
                         {plan.subtitle}
                       </p>
-                      <p className="text-[#039A9A] font-semibold mb-2">
+                      <p className="text-primary font-semibold mb-2">
                         {plan.savings}
                       </p>
                       <div className="flex items-baseline gap-1">
@@ -144,7 +144,7 @@ export default function PricingPage() {
                     <ul className="space-y-3">
                       {plan.features.map((feature, i) => (
                         <li key={i} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-[#039A9A] flex-shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <span className="text-sm">{feature}</span>
                         </li>
                       ))}
@@ -155,13 +155,13 @@ export default function PricingPage() {
                   <div className="flex flex-col gap-3 lg:min-w-[180px]">
                     <Button
                       variant="outline"
-                      className="border-gray-300 hover:border-[#039A9A] hover:bg-[#039A9A]/5"
+                      className="border-gray-300 hover:border-primary hover:bg-primary/5"
                     >
                       Try For 15 Day's
                     </Button>
                     <Button
                       asChild
-                      className="bg-[#039A9A] hover:bg-[#028080] text-white"
+                      className="bg-primary hover:bg-primary/80 text-white"
                     >
                       <Link to="/contact">Get Started →</Link>
                     </Button>
@@ -174,7 +174,7 @@ export default function PricingPage() {
       </section>
 
       {/* FAQ Section with ShadCN Accordion */}
-      <section className="py-20 px-4 md:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-transparent to-[#039A9A]/5">
+      <section className="py-20 px-4 md:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-transparent to-primary/5">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
             Frequently Asked Questions
@@ -187,7 +187,7 @@ export default function PricingPage() {
                 value={`item-${index}`}
                 className="border border-border rounded-2xl px-4 bg-card/80 backdrop-blur-sm"
               >
-                <AccordionTrigger className="text-lg font-medium py-4 hover:text-[#039A9A] transition-all">
+                <AccordionTrigger className="text-lg font-medium py-4 hover:text-primary transition-all">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground pb-4">

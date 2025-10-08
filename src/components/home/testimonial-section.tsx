@@ -11,7 +11,7 @@ const testimonials = [
     name: "Sarah Chen",
     role: "Project Manager",
     company: "UrbanAxis Builders",
-    avatar: "/professional-woman-headshot.png",
+    avatar: "/img/professional-woman-headshot.png",
     content:
       "The Builders Desk assistant helps me stay on top of daily priorities without digging through spreadsheets or emails.",
     rating: 5,
@@ -21,7 +21,7 @@ const testimonials = [
     name: "Marcus Rodriguez",
     role: "CEO",
     company: "InnovateLab Construction",
-    avatar: "/professional-man-headshot.png",
+    avatar: "/img/professional-man-headshot.png",
     content:
       "Builders Desk has become an essential part of our operations — saving me hours every week.",
     rating: 5,
@@ -31,7 +31,7 @@ const testimonials = [
     name: "Emily Watson",
     role: "Operations Director",
     company: "DataSync Build Co.",
-    avatar: "/professional-woman-headshot.png",
+    avatar: "/img/professional-woman-headshot.png",
     content:
       "No more chasing updates or digging for files. It keeps everything organized and accessible.",
     rating: 5,
@@ -41,7 +41,7 @@ const testimonials = [
     name: "David Kim",
     role: "Founder",
     company: "NextGen Dev Group",
-    avatar: "/professional-man-headshot.png",
+    avatar: "/img/professional-man-headshot.png",
     content:
       "As a startup, we rely on tools that keep us lean. Builders Desk feels like an extra assistant.",
     rating: 5,
@@ -51,7 +51,7 @@ const testimonials = [
     name: "Lisa Thompson",
     role: "Marketing Lead",
     company: "GrowthCorp Projects",
-    avatar: "/professional-woman-headshot.png",
+    avatar: "/img/professional-woman-headshot.png",
     content:
       "The assistant helps me pull client updates fast — our turnaround speed is up significantly.",
     rating: 5,
@@ -61,7 +61,7 @@ const testimonials = [
     name: "Alex Johnson",
     role: "CTO",
     company: "CloudTech Build Systems",
-    avatar: "/professional-man-headshot.png",
+    avatar: "/img/professional-man-headshot.png",
     content:
       "Builders Desk hits that perfect balance between simplicity and function.",
     rating: 5,

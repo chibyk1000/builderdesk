@@ -102,7 +102,7 @@ export function ModernHero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.8 }}
       >
-        <Button className="text-white  px-7 h-11">Get started</Button>
+        <Button className="text-white bg-blue-500  px-7 h-11">Get started</Button>
         <Button
           className="flex items-center gap-2 border transition bg-transparent px-6 h-11"
           variant={"outline"}

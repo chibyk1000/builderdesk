@@ -12,7 +12,7 @@ export function Footer() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Ready to transform{" "}
-            <span className="text-teal-500">your workflow</span>?
+            <span className="text-blue-500">your workflow</span>?
           </h2>
           <p className="text-xl text-slate-400 mb-8 max-w-3xl mx-auto">
             Join thousands of teams already using BuildersDesk to boost
@@ -21,7 +21,7 @@ export function Footer() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className=" text-lg px-8 bg-teal-600 text-white hover:bg-teal-500"
+              className=" text-lg px-8 bg-blue-600 text-white hover:bg-blue-500"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />

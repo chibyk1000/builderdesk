@@ -17,13 +17,13 @@ export function TrustedSection() {
       <div className="relative mx-auto overflow-hidden bg-slate-900 py-32 md:py-40">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 px-6">
           {/* Background blobs */}
-          <div className="absolute pointer-events-none top-10 -z-10 left-20 size-72 bg-gradient-to-b from-cyan-500/20 to-teal-500/10 blur-[180px]" />
-          <div className="absolute pointer-events-none bottom-10 -z-10 right-20 size-72 bg-gradient-to-br from-cyan-500/20 to-teal-500/10 blur-[180px]" />
+          <div className="absolute pointer-events-none top-10 -z-10 left-20 size-72 bg-gradient-to-b from-blue-500/20 to-blue-500/10 blur-[180px]" />
+          <div className="absolute pointer-events-none bottom-10 -z-10 right-20 size-72 bg-gradient-to-br from-blue-500/20 to-blue-500/10 blur-[180px]" />
 
           {/* Left side */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="group flex items-center gap-2 rounded-full text-sm p-1 pr-3 text-cyan-400 bg-cyan-400/10">
-              <span className="bg-cyan-400 text-slate-900 text-xs px-3.5 py-1 rounded-full font-medium">
+            <div className="group flex items-center gap-2 rounded-full text-sm p-1 pr-3 text-blue-400 bg-blue-400/10">
+              <span className="bg-blue-400 text-slate-900 text-xs px-3.5 py-1 rounded-full font-medium">
                 NEW
               </span>
               <p className="flex items-center gap-1">
@@ -66,23 +66,23 @@ export function TrustedSection() {
             {/* Icon showcase instead of company logos */}
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-10 mt-12 opacity-80">
               <div className="flex flex-col items-center gap-2 text-slate-300">
-                <Building2 className="w-8 h-8 text-cyan-400" />
+                <Building2 className="w-8 h-8 text-blue-400" />
                 <span className="text-xs">Enterprises</span>
               </div>
               <div className="flex flex-col items-center gap-2 text-slate-300">
-                <Rocket className="w-8 h-8 text-cyan-400" />
+                <Rocket className="w-8 h-8 text-blue-400" />
                 <span className="text-xs">Startups</span>
               </div>
               <div className="flex flex-col items-center gap-2 text-slate-300">
-                <Users className="w-8 h-8 text-cyan-400" />
+                <Users className="w-8 h-8 text-blue-400" />
                 <span className="text-xs">Agencies</span>
               </div>
               <div className="flex flex-col items-center gap-2 text-slate-300">
-                <Briefcase className="w-8 h-8 text-cyan-400" />
+                <Briefcase className="w-8 h-8 text-blue-400" />
                 <span className="text-xs">Freelancers</span>
               </div>
               <div className="flex flex-col items-center gap-2 text-slate-300">
-                <Globe className="w-8 h-8 text-cyan-400" />
+                <Globe className="w-8 h-8 text-blue-400" />
                 <span className="text-xs">Remote Teams</span>
               </div>
             </div>
@@ -92,7 +92,7 @@ export function TrustedSection() {
           <div className="md:mr-16">
             <div className="max-w-xs md:max-w-sm aspect-square rounded-2xl overflow-hidden shadow-xl border border-slate-700">
               <img
-                src="/trusted.png"
+                src="/img/trusted.png"
                 alt="Happy client testimonial"
                 className="w-full h-full object-cover"
               />

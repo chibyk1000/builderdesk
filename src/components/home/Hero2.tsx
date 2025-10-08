@@ -6,25 +6,25 @@ import { ArrowRight } from "lucide-react";
 
 export function Hero2() {
   return (
-    <section className="md:min-h-[90vh] min-h-[70dvh] bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 flex items-center justify-center px-4 pt-16 relative overflow-hidden text-white">
+    <section className="md:min-h-[90vh] min-h-[70dvh] bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 flex items-center justify-center px-4 pt-16 relative overflow-hidden text-white">
       <div className="max-w-6xl mx-auto grid   lg:grid-cols-2 gap-12 items-center">
         {/* Left side - Phone mockup */}
         <div className="max-md:hidden">
 
           {/* <PhoneChat/> */}
-          <img src="/chat_img.png" loading="lazy" alt="" className="rounded-3xl" />
+          <img src="/img/chat_img.png" loading="lazy" alt="" className="rounded-3xl" />
         </div>
     
 
         {/* Right side - Content */}
         <div className="animate-fade-in-right opacity-0 animation-delay-200 order-1 lg:order-2 text-center lg:text-left">
-          <div className="inline-flex items-center gap-2 bg-teal-500/10 backdrop-blur-sm rounded-full px-3 py-1.5 text-xs text-teal-400 mb-6">
+          <div className="inline-flex items-center gap-2 bg-blue-500/10 backdrop-blur-sm rounded-full px-3 py-1.5 text-xs text-blue-400 mb-6">
             BuildersDesk
           </div>
 
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 leading-snug">
             Always have a virtual assistant{" "}
-            <span className="text-teal-400">even when you are offline</span>
+            <span className="text-blue-400">even when you are offline</span>
           </h1>
 
           <p className="text-base text-slate-300 mb-6 max-w-xl mx-auto lg:mx-0 leading-relaxed">
@@ -33,7 +33,7 @@ export function Hero2() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-            <Button className=" text-sm px-6 bg-teal-500 text-white hover:bg-teal-600">
+            <Button className=" text-sm px-6 bg-blue-500 text-white hover:bg-blue-600">
               Watch Demo
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
@@ -42,7 +42,7 @@ export function Hero2() {
       </div>
 
       {/* Background blobs */}
-      <div className="absolute top-1/4 left-1/4 w-40 h-40 bg-teal-500/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 left-1/4 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-slate-700/30 rounded-full blur-3xl"></div>
     </section>
   );

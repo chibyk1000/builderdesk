@@ -5,17 +5,17 @@ import { Button } from "@/components/ui/button"
 export function ApproachSection() {
   const approaches = [
     {
-      image: "/business-handshake-partnership.png",
+      image: "/img/business-handshake-partnership.png",
       title: "Partnership",
       description: "Collaborative relationships built on trust and shared success",
     },
     {
-      image: "/modern-staircase-architecture-design.jpg",
+      image: "/img/modern-staircase-architecture-design.jpg",
       title: "Growth",
       description: "Scalable strategies that evolve with your business needs",
     },
     {
-      image: "/luxury-crystal-glass-design.jpg",
+      image: "/img/luxury-crystal-glass-design.jpg",
       title: "Excellence",
       description: "Uncompromising quality in every solution we deliver",
     },
