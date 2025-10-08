@@ -36,7 +36,8 @@ function Navbar() {
       >
         {/* Logo */}
         <Link to="/" className="font-bold text-xl flex items-center gap-2">
-          <img src="/a2.png" alt="Logo" className="w-20" />
+          <img src="/logo.png" alt="Logo" className="w-30 h-10 object-contain
+          " />
         </Link>
 
         {/* Desktop Nav Links */}

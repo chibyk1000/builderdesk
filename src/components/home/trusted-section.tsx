@@ -57,7 +57,8 @@ export function TrustedSection() {
             {/* CTA */}
             <Button
               variant="outline"
-              className="flex items-center gap-2 text-sm px-6 py-2.5 active:scale-95 transition rounded-full mt-8"
+              className="flex items-center gap-2 text-sm px-6 py-2.5 active:scale-95 transition mt-8"
+              
             >
               See why they trust us
               <ChevronRight className="w-4 h-4" />

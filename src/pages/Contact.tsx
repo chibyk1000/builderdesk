@@ -214,7 +214,7 @@ export default function ContactPage() {
 
                   <div className="space-y-6">
                     <Card className="border-border bg-card/50">
-                      <CardContent className="pt-6">
+                      <CardContent className="pt-2">
                         <div className="flex items-start gap-4">
                           <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 flex-shrink-0">
                             <Clock className="h-6 w-6 text-primary" />
@@ -238,7 +238,7 @@ export default function ContactPage() {
                     </Card>
 
                     <Card className="border-border bg-card/50">
-                      <CardContent className="pt-6">
+                      <CardContent className="pt-2">
                         <div className="flex items-start gap-4">
                           <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 flex-shrink-0">
                             <MessageSquare className="h-6 w-6 text-primary" />
@@ -262,7 +262,7 @@ export default function ContactPage() {
                     </Card>
 
                     <Card className="border-border bg-card/50">
-                      <CardContent className="pt-6">
+                      <CardContent className="pt-2">
                         <div className="flex items-start gap-4">
                           <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 flex-shrink-0">
                             <MapPin className="h-6 w-6 text-primary" />
@@ -304,7 +304,7 @@ export default function ContactPage() {
 
                   <div className="space-y-6">
                     <Card className="border-border bg-card/50">
-                      <CardContent className="pt-6">
+                      <CardContent className="pt-2">
                         <h3 className="font-semibold mb-2">
                           How quickly can you start?
                         </h3>
@@ -317,7 +317,7 @@ export default function ContactPage() {
                     </Card>
 
                     <Card className="border-border bg-card/50">
-                      <CardContent className="pt-6">
+                      <CardContent className="pt-2">
                         <h3 className="font-semibold mb-2">
                           Do you require long-term contracts?
                         </h3>
@@ -330,7 +330,7 @@ export default function ContactPage() {
                     </Card>
 
                     <Card className="border-border bg-card/50">
-                      <CardContent className="pt-6">
+                      <CardContent className="pt-2">
                         <h3 className="font-semibold mb-2">
                           What software do you work with?
                         </h3>
@@ -344,7 +344,7 @@ export default function ContactPage() {
                     </Card>
 
                     <Card className="border-border bg-card/50">
-                      <CardContent className="pt-6">
+                      <CardContent className="pt-2">
                         <h3 className="font-semibold mb-2">
                           How do you ensure data security?
                         </h3>

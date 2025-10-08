@@ -175,7 +175,7 @@ export default function PricingPage() {
 
       {/* FAQ Section with ShadCN Accordion */}
       <section className="py-20 px-4 md:px-16 lg:px-24 xl:px-32 bg-gradient-to-b from-transparent to-primary/5">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
             Frequently Asked Questions
           </h2>
@@ -185,7 +185,7 @@ export default function PricingPage() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="border border-border rounded-2xl px-4 bg-card/80 backdrop-blur-sm"
+                className="border border-border  px-4 bg-card/80 backdrop-blur-sm"
               >
                 <AccordionTrigger className="text-lg font-medium py-4 hover:text-primary transition-all">
                   {faq.question}
