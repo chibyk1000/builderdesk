@@ -4,7 +4,7 @@ import React, { ReactNode } from 'react'
 
 const AppLayout = ({children}:{children:ReactNode}) => {
   return (
-      <main className='flex flex-col'>
+      <main className='flex flex-col min-h-screen'>
           <Navbar />
           <div className='flex-1'>
           {children}

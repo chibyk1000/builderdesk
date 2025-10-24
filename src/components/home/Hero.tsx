@@ -56,9 +56,9 @@ const Hero = () => {
                 </article>
 
                 <div className="flex gap-1">
-                  {offer.map((o) => {
+                  {offer.map((o, i) => {
                     return (
-                      <span className="flex gap-2">
+                      <span className="flex gap-2" key={i}>
                         <CircleCheck className="text-accent" />
                         <span>{o}</span>
                       </span>
