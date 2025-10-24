@@ -61,17 +61,21 @@ const services = [
     description: "Design and drafting support using latest software.",
   },
 ];
+
+
 const qualifications = [
   {
     title: "Project Management Support",
     sub: "Expert project managers with industry credentials.",
     icon: ClipboardList,
     items: [
-      "Coordinate project timelines and deliverables",
-      "Facilitate team communication and collaboration",
-      "Track project milestones and report progress",
-      "Manage project documentation and resources",
-      "Support stakeholder engagement and reporting",
+      "Bachelor's degree in Construction Management or Engineering",
+      "PMP (Project Management Professional) certification",
+      "Expert proficiency in project management software (Procore, Buildertrend, CoConstruct)",
+      "Expert proficiency in MS Office suite and Google Suite",
+      "Expert proficiency in scheduling software (Primavera P6, MS Project)",
+      "OSHA safety certification",
+      "Minimum 5+ years construction industry experience",
     ],
   },
   {
@@ -79,11 +83,13 @@ const qualifications = [
     sub: "Highly trained administrative professionals.",
     icon: Users,
     items: [
-      "Calendar management and scheduling",
-      "Email and correspondence management",
-      "Data entry and database maintenance",
-      "Document preparation and formatting",
-      "Travel arrangements and expense reporting",
+      "Bachelor's degree in relevant field",
+      "Customer Service Rep training course",
+      "Expert proficiency in CRM Management (ClickUp, HubSpot, Salesforce, Trello, Asana, Monday, etc.)",
+      "Expert proficiency in MS Office suite and Google Suite",
+      "Advanced communication and organizational skills",
+      "Experience in construction industry preferred",
+      "Document management expertise",
     ],
   },
   {
@@ -91,11 +97,13 @@ const qualifications = [
     sub: "Strategic professionals driving your growth.",
     icon: TrendingUp,
     items: [
-      "Market research and competitive analysis",
-      "Lead generation and qualification",
-      "Partnership development and management",
-      "Proposal preparation and presentation support",
-      "Client relationship management",
+      "Bachelor's degree in Business Administration or related field",
+      "Expert proficiency in estimating software (Planswift, Bluebeam, On-Screen Takeoff)",
+      "Advanced knowledge of construction bidding processes",
+      "Proposal writing and RFP response expertise",
+      "Expert proficiency in MS Office suite and Google Suite",
+      "Experience with pre-qualification and bonding requirements",
+      "Strong analytical and presentation skills",
     ],
   },
   {
@@ -103,11 +111,13 @@ const qualifications = [
     sub: "Certified accounting professionals.",
     icon: DollarSign,
     items: [
-      "Accounts payable and receivable management",
-      "Bank reconciliation and financial reporting",
-      "Expense tracking and categorization",
-      "Invoice preparation and processing",
-      "Financial data organization and maintenance",
+      "Degree in Accounting or Finance",
+      "Expert proficiency in QuickBooks and/or Xero",
+      "Construction accounting specialization",
+      "Payroll processing certification",
+      "Knowledge of job costing and WIP reporting",
+      "Expert proficiency in MS Office suite and Google Suite",
+      "Understanding of construction-specific tax requirements",
     ],
   },
   {
@@ -115,11 +125,13 @@ const qualifications = [
     sub: "Creative professionals with industry expertise.",
     icon: Palette,
     items: [
-      "Social media management and content creation",
-      "Email marketing campaign execution",
-      "Content writing and copywriting",
-      "Marketing analytics and reporting",
-      "Brand consistency and guidelines management",
+      "Bachelor's degree in Marketing, Communications, or Design",
+      "Expert proficiency in Adobe Creative Suite (Photoshop, Illustrator, InDesign)",
+      "Social media management certification",
+      "SEO and digital marketing expertise",
+      "Website development and management skills",
+      "Content creation and copywriting experience",
+      "Construction industry marketing experience preferred",
     ],
   },
   {
@@ -127,26 +139,33 @@ const qualifications = [
     sub: "HR professionals ensuring compliance and efficiency.",
     icon: UserCheck,
     items: [
-      "Recruitment and onboarding support",
-      "Employee records management",
-      "Benefits administration assistance",
-      "HR policy documentation and compliance",
-      "Performance review coordination",
+      "Bachelor's degree in Human Resources or Business Administration",
+      "HR certification (PHR, SPHR, or SHRM-CP)",
+      "Expert proficiency in HRIS systems",
+      "Knowledge of labor laws and construction industry regulations",
+      "Recruitment and talent acquisition expertise",
+      "Expert proficiency in MS Office suite and Google Suite",
+      "Employee relations and conflict resolution skills",
     ],
   },
   {
-    title: "Administrative Support",
+    title: "Architecture & Design",
     sub: "Licensed architects and design professionals.",
     icon: Ruler,
     items: [
-      "Virtual assistant services",
-      "Meeting coordination and minutes",
-      "File organization and management",
-      "Customer service support",
-      "General administrative tasks",
+      "Bachelor's or Master's degree in Architecture or related field",
+      "Proficiency in AutoCAD, REVIT, SketchUp",
+      "Expert proficiency in rendering software (V-ray, Lumion, 3ds Max)",
+      "Shop drawing and as-built documentation expertise",
+      "3D modeling and visualization skills",
+      "Understanding of building codes and regulations",
+      "Minimum 5+ years of design and drafting experience",
     ],
   },
 ];
+
+
+
 
 const steps = [
   {
@@ -202,7 +221,8 @@ const benefits = [
 ];
 function Page() {
   return (
-    <>
+      <>
+          
       <section
         className="relative "
         style={{
@@ -322,7 +342,7 @@ function Page() {
                   <div className="flex items-start gap-3">
                     <div className=" size-31.5 rounded-lg relative bg-[#F3F4F6] flex items-center justify-center flex-shrink-0 mt-1">
                       <User className="size-16 text-[#99A1AF]" />
-                      <div className="bg-[#E28C1B] absolute top-23 left-23 backdrop-blur-sm rounded-[12px] p-3 flex items-center justify-center shadow-[0px_4px_6px_-4px_rgba(0,0,0,0.1),0px_10px_15px_-3px_rgba(0,0,0,0.1)]">
+                      <div className="bg-[#E28C1B] absolute top-23 left-23 backdrop-blur-sm rounded-[12px] size-12 flex items-center justify-center shadow-[0px_4px_6px_-4px_rgba(0,0,0,0.1),0px_10px_15px_-3px_rgba(0,0,0,0.1)]">
                         <qualification.icon className="text-white" />
                       </div>
                     </div>
@@ -337,9 +357,9 @@ function Page() {
                 <CardContent>
                   <ul className="space-y-3">
                     {qualification.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start gap-3">
-                        <CircleCheck className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-muted-foreground leading-relaxed">
+                      <li key={itemIndex} className="flex items-center gap-2">
+                        <CircleCheck className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-[#364153] text-sm leading-relaxed">
                           {item}
                         </span>
                       </li>
@@ -352,13 +372,13 @@ function Page() {
         </div>
       </section>
 
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+      <section className="">
+        <div className="container mx-auto px-4 bg-[#F9FAFB] py-20 ">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-balance">
+            <h2 className="text-4xl  mb-4 text-balance text-[#1A1A1A]">
               How We Work With You
             </h2>
-            <p className="text-primary underline decoration-2 underline-offset-4">
+            <p className="text-[#4A5565] text-xl ">
               A simple, straightforward process to get you the support you need
             </p>
           </div>
@@ -369,7 +389,7 @@ function Page() {
                 key={step.number}
                 className="flex flex-col items-center text-center"
               >
-                <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold mb-4">
+                <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl  mb-4">
                   {step.number}
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
@@ -384,25 +404,25 @@ function Page() {
 
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-start">
+          <div className="grid lg:grid-cols-2 gap-12 items-center  mx-auto ">
             {/* Left Column - Benefits */}
             <div>
-              <h2 className="text-4xl font-bold mb-12 text-balance">
+              <h2 className="text-4xl  mb-12 text-balance">
                 Why Construction Companies Choose Us
               </h2>
               <div className="space-y-8">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex gap-4">
                     <div className="flex-shrink-0">
-                      <div className="w-10 h-10 rounded-full border-2 border-primary flex items-center justify-center">
-                        <CheckCircle2 className="w-5 h-5 text-primary" />
+                      <div className="w-12 h-12 rounded-[8px]  bg-[#F3F4F6] flex items-center justify-center">
+                        <CheckCircle2 className="w-6 h-6 text-primary" />
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold mb-2">
+                      <h3 className="text-xl font-medium text-[#1A1A1A] mb-2">
                         {benefit.title}
                       </h3>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-[#4A5565] leading-relaxed">
                         {benefit.description}
                       </p>
                     </div>
@@ -412,7 +432,7 @@ function Page() {
             </div>
 
             {/* Right Column - CTA Box */}
-            <div className="bg-primary text-primary-foreground rounded-lg p-8 lg:sticky lg:top-8">
+            <div className="bg-primary text-primary-foreground rounded-lg p-8  ">
               <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
               <p className="mb-8 opacity-90 leading-relaxed">
                 Let's discuss your specific needs and create a custom support
@@ -421,16 +441,16 @@ function Page() {
               <div className="space-y-4">
                 <Button
                   size="lg"
-                  variant="secondary"
-                  className="w-full justify-center gap-2"
+                  variant="ghost"
+                  className="w-full justify-center gap-2 bg-white"
                 >
                   <Phone className="w-4 h-4" />
                   Schedule a Consultation
                 </Button>
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="w-full justify-center gap-2 bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                  variant="ghost"
+                  className="w-full justify-center gap-2 bg-white border-primary-foreground hover:bg-primary-foreground text-primary"
                 >
                   <FileText className="w-4 h-4" />
                   View Pricing Plans
@@ -441,13 +461,13 @@ function Page() {
         </div>
       </section>
 
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6 text-balance">
+      <section className=" mb-20">
+        <div className="container mx-auto max-w-3xl px-4 py-10 bg-[#F9FAFB]">
+          <div className=" mx-auto text-center">
+            <h2 className="text-4xl  mb-6 text-balance">
               Let Us Handle the Back Office
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed text-pretty">
+            <p className="text-xl text-[#4A5565] mb-8 leading-relaxed text-pretty">
               Focus on building great projects while we take care of project
               management, estimating, bookkeeping, and more.
             </p>

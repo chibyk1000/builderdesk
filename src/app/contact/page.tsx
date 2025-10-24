@@ -4,37 +4,42 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Mail, Clock, MapPin } from "lucide-react";
+import Image from "next/image";
 const Page = () => {
-
-      const stats = [
-        {
-          value: "15+",
-          label: "Years of Experience",
-          description:
-            "Serving the construction industry with proven expertise and results",
-        },
-        {
-          value: "98%",
-          label: "Client Satisfaction",
-          description:
-            "Our clients consistently rate us highly for quality, reliability, and results",
-        },
-        {
-          value: "50+",
-          label: "Construction Partners",
-          description: "Construction companies currently rely on our support",
-        },
-      ];
+  const stats = [
+    {
+      value: "15+",
+      label: "Years of Experience",
+      description:
+        "Serving the construction industry with proven expertise and results",
+    },
+    {
+      value: "98%",
+      label: "Client Satisfaction",
+      description:
+        "Our clients consistently rate us highly for quality, reliability, and results",
+    },
+    {
+      value: "50+",
+      label: "Construction Partners",
+      description: "Construction companies currently rely on our support",
+    },
+  ];
 
   return (
     <div>
-      <section className="bg-gradient-to-br from-[#1e3a5f] to-[#2d5a8c] text-white py-16 px-6">
+      <section
+        className="text-white py-16 px-6"
+        style={{
+          background: `linear-gradient(180deg, #0E4571 0%, #0A3554 50%, #063049
+      100%)`,
+        }}
+      >
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
-          <p className="text-lg text-white/90 max-w-2xl">
-            Have a question about our services? Want to discuss how we can help
-            your business? We&apos;re here to help. Reach out and let&apos;s
-            start a conversation today.
+          <p className="text-xl text-white max-w-186 leading-[28px]">
+            Ready to build better business? Let's discuss how our back-office
+            support services can help your construction company thrive.today.
           </p>
         </div>
       </section>
@@ -42,14 +47,30 @@ const Page = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Contact Form */}
-            <Card className="shadow-lg">
-              <CardHeader className="bg-gradient-to-r from-[#2d5a8c] to-[#1e3a5f] text-white rounded-t-lg">
-                <CardTitle className="text-2xl text-center">
-                  Let&apos;s Build Together
-                </CardTitle>
-                <p className="text-center text-white/90 text-sm">
-                  Quick 15-Minute consultation call
-                </p>
+            <Card className=" border-none pt-0">
+              <CardHeader className="text-white rounded-t-lg block   p-0" >
+                <div
+                  className="rounded-t-lg h-48 relative grid place-content-center"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, #0E4571 0%, #0A3554 50%, #062D4A 100%)",
+                  }}
+                >
+                  <div className="h-19 ">
+                    <CardTitle className="text-4xl text-center text-white font-normal ">
+                      Let&apos;s Build Together
+                    </CardTitle>
+                    <p className="text-center text-white text-lg">
+                      Schedule a free consultation today
+                    </p>
+                  </div>
+                  <Image
+                    src={"/letsbuild.png"}
+                    fill
+                    className="opacity-20"
+                    alt=""
+                  />
+                </div>
               </CardHeader>
               <CardContent className="p-6 space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
@@ -217,7 +238,6 @@ const Page = () => {
           </div>
         </div>
       </section>
-
       <section className="py-16 px-6 bg-muted/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
