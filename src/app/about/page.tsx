@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import {
     Award,
@@ -338,7 +339,7 @@ const Page = () => {
             {values.map((v, i) => (
               <Card
                 key={i}
-                className="p-8 border-0 shadow-md hover:shadow-lg transition-all duration-300"
+                className="p-8 border-0 border-none shadow-none transition-all duration-300"
               >
                 <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-accent/10 flex items-center justify-center">
                   <v.icon className="text-accent w-7 h-7" />
@@ -372,10 +373,10 @@ const Page = () => {
             {team.map((t, i) => (
               <Card
                 key={i}
-                className="p-8 border border-[#E6E9EC] hover:shadow-md transition-all duration-300"
+                className="p-8   transition-all duration-300 border-none"
               >
-                <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-[#0E4571]/10 flex items-center justify-center">
-                  <t.icon className="text-[#0E4571] w-7 h-7" />
+                <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-[#0E4571] flex items-center justify-center">
+                  <t.icon className="text-white w-7 h-7" />
                 </div>
                 <CardTitle className="text-[#0E4571] text-xl mb-2">
                   {t.title}
@@ -387,6 +388,46 @@ const Page = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="relative h-80 mb-16 max-w-6xl mx-auto rounded-2xl overflow-hidden">
+        {/* Overlay */}
+        <div
+          className="absolute inset-0 z-10 pointer-events-none"
+          style={{
+            background: `linear-gradient(90deg, rgba(14, 69, 113, 0.9) 0%, rgba(14, 69, 113, 0.6) 100%)`,
+          }}
+        ></div>
+
+        {/* Image */}
+        <Image src="/expert.png" alt="" fill className="object-cover" />
+      </div>
+
+      <section
+        style={{
+          background: `linear-gradient(180deg, #0E4571 0%, #0A3554 100%)`,
+        }}
+        className="relative h-92 isolate overflow-y-hidden text-white grid place-items-center "
+      >
+        <div className="absolute top-20 left-40 size-40 rounded-full rem]  bg-accent blur-[148px]"></div>
+        <div className="absolute -top-24 right-40 size-40 rounded-full   bg-accent blur-[148px]"></div>
+
+        <div className="max-w-224 w-full px-8 text-center space-y-4">
+          <h3 className="text-5xl">Ready to Build Better Business?</h3>
+          <p className="text-xl">
+            Experience the difference that reliable, construction-focused
+            back-office support can make for your business.
+          </p>
+
+          <div className="space-x-4">
+            <Button className="w-52 bg-accent hover:bg-accent/90">
+              Get Started Today
+            </Button>
+            <Button className="w-42 bg-white text-primary hover:bg-white/90">
+              View Pricing
+            </Button>
           </div>
         </div>
       </section>
