@@ -5,6 +5,7 @@ import {
     Award,
   Building2,
   CheckCircle2,
+  CircleCheckBig,
   Clock,
   Eye,
   Handshake,
@@ -20,7 +21,7 @@ import React from "react";
 const Page = () => {
   const features = [
     {
-      icon: CheckCircle2,
+      icon: CircleCheckBig,
       title: "Save Time & Money",
       description:
         "Reduce overhead costs and free up time for what matters most—building.",
@@ -111,9 +112,9 @@ const Page = () => {
         style={{
           background: `linear-gradient(180deg, #0E4571 0%, #0A3554 100%)`,
         }}
-        className="h-[514px] px-6 md:px-40 pt-20 overflow-hidden"
+        className="h-[514px] px-6   pt-20 overflow-hidden"
       >
-        <div className=" grid grid-cols-12 w-full  text-white">
+        <div className=" grid grid-cols-12 max-w-[1280px] mx-auto w-full  text-white">
           <div className="col-span-6 grid h-96">
             <Badge className="bg-accent text-white h-7">About Us</Badge>
 
@@ -141,7 +142,7 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-4">
+          <div className="col-span-6">
             <div className="relative w-full h-full top-13 max-h-144.5">
               <Image
                 src={"/about-hero.png"}
@@ -154,7 +155,7 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="py-20 px-40">
+      <div className="py-20  max-w-[1280px] mx-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="text-center mb-16">
             <Badge className="bg-accent/10 font-medium h-9 w-32.5 p-0 rounded-full text-sm text-accent border-none mb-3">
@@ -213,48 +214,49 @@ const Page = () => {
         }}
         className="pt-20 pb-40 px-6 md:px-20 lg:px-40"
       >
-        <Badge className="bg-accent/10 font-normal h-9 px-4 rounded-full text-sm text-accent border-none mb-14">
-          Our Purpose
-        </Badge>
-
-        <div className="grid grid-cols-2 gap-12 h-206 items-center">
+        <div className="grid grid-cols-2 gap-12 max-w-[1260px] mx-auto h-206 items-center">
           {/* Left side - Mission & Vision */}
-          <div className="space-y-8 grid gap-10 grid-rows-2">
-            {/* Mission */}
-            <Card className="border-2 border-accent/20 w-full h-full flex-1 p-8">
-              <div className="size-16 rounded-full bg-accent/10 grid place-content-center mb-4">
-                <Target className="text-accent size-8.5" />
-              </div>
-              <CardTitle className="text-[#0E4571] text-3xl mb-3">
-                Our Mission
-              </CardTitle>
-              <CardContent className="p-0">
-                <p className="text-[#364153] text-lg leading-relaxed">
-                  To empower construction companies to focus on what they do
-                  best—building—by providing comprehensive, reliable back-office
-                  support that streamlines operations, improves efficiency, and
-                  drives business growth.
-                </p>
-              </CardContent>
-            </Card>
+          <div>
+            <Badge className="bg-accent/10 font-normal h-9 px-4 rounded-full text-sm text-accent border-none mb-14">
+              Our Purpose
+            </Badge>
+            <div className="space-y-8 grid gap-10 grid-rows-2">
+              {/* Mission */}
+              <Card className="border-2 border-accent/20 w-full h-full flex-1 p-8">
+                <div className="size-16 rounded-full bg-accent/10 grid place-content-center mb-4">
+                  <Target className="text-accent size-8.5" />
+                </div>
+                <CardTitle className="text-[#0E4571] text-3xl mb-3">
+                  Our Mission
+                </CardTitle>
+                <CardContent className="p-0">
+                  <p className="text-[#364153] text-lg leading-relaxed">
+                    To empower construction companies to focus on what they do
+                    best—building—by providing comprehensive, reliable
+                    back-office support that streamlines operations, improves
+                    efficiency, and drives business growth.
+                  </p>
+                </CardContent>
+              </Card>
 
-            {/* Vision */}
-            <Card className="border-2 border-accent/20 w-full h-full flex-1 p-8">
-              <div className="size-16 rounded-full bg-accent/10 grid place-content-center mb-4">
-                <Eye className="text-accent size-8.5" />
-              </div>
-              <CardTitle className="text-[#0E4571] text-3xl mb-3">
-                Our Vision
-              </CardTitle>
-              <CardContent className="p-0">
-                <p className="text-[#364153] text-lg leading-relaxed">
-                  To be the most trusted partner for construction companies
-                  nationwide, recognized for our industry expertise, commitment
-                  to excellence, and ability to help businesses scale
-                  efficiently.
-                </p>
-              </CardContent>
-            </Card>
+              {/* Vision */}
+              <Card className="border-2 border-accent/20 w-full h-full flex-1 p-8">
+                <div className="size-16 rounded-full bg-accent/10 grid place-content-center mb-4">
+                  <Eye className="text-accent size-8.5" />
+                </div>
+                <CardTitle className="text-[#0E4571] text-3xl mb-3">
+                  Our Vision
+                </CardTitle>
+                <CardContent className="p-0">
+                  <p className="text-[#364153] text-lg leading-relaxed">
+                    To be the most trusted partner for construction companies
+                    nationwide, recognized for our industry expertise,
+                    commitment to excellence, and ability to help businesses
+                    scale efficiently.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
           {/* Right side - Image */}
@@ -285,9 +287,9 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="h-177.5 grid grid-cols-2 items-center px-40 gap-10">
+      <section className="h-177.5 grid max-w-[1280px] mx-auto grid-cols-2 items-center  gap-10">
         <div
-          className="relative h-144"
+          className="relative h-144 w-f"
           style={{ boxShadow: `0px 25px 50px -12px #00000040` }}
         >
           <Image src={"/experience.png"} alt="" fill className="rounded-2xl" />

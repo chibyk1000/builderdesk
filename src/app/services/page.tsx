@@ -221,15 +221,14 @@ const benefits = [
 ];
 function Page() {
   return (
-      <>
-          
+    <>
       <section
         className="relative "
         style={{
           background: `linear-gradient(180deg, #0E4571 0%, #FFFFFF 100%)`,
         }}
       >
-        <div className="container mx-auto px-4 py-16 md:py-24">
+        <div className="container max-w-[1280px] mx-auto px-4 py-16 md:py-24">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="text-white space-y-6">
@@ -247,11 +246,10 @@ function Page() {
                   <div className="h-1 bg-accent w-5 rounded-full"></div>
                 </div>
               </div>
-              <p className="text-lg md:text-xl text-[#404040] leading-relaxed max-w-xl">
-                Comprehensive back-office support designed to help you focus on
-                what matters most. From project management to administrative
-                support, we've got you covered with professional services
-                tailored to your business needs.
+              <p className="text-lg md:text-xl text-[#404040] leading-relaxed max-w-x l">
+                Comprehensive back-office support services designed specifically
+                for construction companies. From project management to
+                bookkeeping, we've got you covered.
               </p>
 
               {/* Service Features */}
