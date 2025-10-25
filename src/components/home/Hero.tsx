@@ -19,7 +19,7 @@ const Hero = () => {
     "Industry specialists",
   ];
     return (
-      <section className="min-h-screen relative text-white  bg-[linear-gradient(180deg,#0E4571_0%,#0A3554_50%,#063049_100%)] overflow-hidden  pt-10 ">
+      <section className=" relative text-white  bg-[linear-gradient(180deg,#0E4571_0%,#0A3554_50%,#063049_100%)] overflow-hidden  pt-10 h-fit flex flex-col ">
         {/* Top blue blur light */}
         <div className="absolute right-0 top-0 size-[400px] rounded-full bg-[#5EA0D5] z-40 blur-[200px]" />
 
