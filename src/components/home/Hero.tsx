@@ -39,7 +39,7 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className=" grid grid-cols-12  w-full gap-20 items-end ">
+            <div className=" grid grid-cols-12 justify-between  w-full gap-20 items-end ">
               <section className="space-y-8  flex-1 col-span-6">
                 {/* Headline */}
                 <article className="mt-8 ">
@@ -87,9 +87,9 @@ const Hero = () => {
                   </Button>
                 </div>
               </section>
-              <div className="col-span-5">
+              <div className="col-span-6 grid">
                 {/* Image wrapper */}
-                <div className="relative rounded-2xl grid  ">
+                <div className="relative rounded-2xl grid justify-end  ">
                   {/* Gradient Glass Overlay */}
                   <div className="absolute -top-8 -left-8   z-10 rounded-3xl bg-[linear-gradient(135deg,rgba(219,164,0,0.2)_0%,rgba(255,255,255,0.1)_50%,rgba(0,0,0,0)_100%)] blur-[80px] w-[533px] h-[377px] pointer-events-none"></div>
                   {/* Image Wrapper */}
