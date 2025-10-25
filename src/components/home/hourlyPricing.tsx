@@ -9,6 +9,7 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react";
+import { Badge } from "../ui/badge";
 
 const hourlyServices = [
   {
@@ -53,7 +54,8 @@ export default function HourlyPricing() {
     <section className="py-20 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <p className="text-accent font-semibold mb-2">Flexible Pricing</p>
+          <Badge className="bg-accent/10 text-accent">Flexible Pricing</Badge>
+          {/* <p className="text-accent  mb-2"></p> */}
           <h2 className="text-3xl md:text-4xl  text-primary mb-4">
             Hourly & Project-Based Pricing
           </h2>
@@ -67,7 +69,7 @@ export default function HourlyPricing() {
           {hourlyServices.map((service, index) => (
             <Card
               key={index}
-              className="p-6 border-2 border-gray-200 hover:border-primary/30 transition"
+              className="p-6 border-2 border-gray-200  transition"
             >
               <div className="flex items-start gap-4 ">
                 <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center shrink-0">
@@ -123,10 +125,7 @@ export default function HourlyPricing() {
               Purchase 20+ hours upfront and save 10-15% on hourly rates
             </p>
           </div>
-          <Button
-           
-            className=" t "
-          >
+          <Button className=" t ">
             View All Options
             <ArrowRight className="w-4 h-4 ml-2" />
           </Button>

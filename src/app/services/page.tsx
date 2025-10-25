@@ -253,7 +253,7 @@ function Page() {
               </p>
 
               {/* Service Features */}
-              <div className="flex flex-wrap gap-6 pt-4 text-primary">
+              <div className="flex flex-wrap gap-6 max-w- pt-4 text-primary">
                 <div className="flex items-center gap-3 ">
                   <div className="w-10 h-10 rounded-full bg-primary  flex items-center justify-center">
                     <CircleCheck className="w-5 h-5 text-primary-foreground" />
@@ -289,7 +289,7 @@ function Page() {
           </div>
         </div>
       </section>
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 max-w-[1280px] mx-auto bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 space-y-3">
             <h2 className="text-3xl md:text-4xl  text-[#1A1A1A]">
@@ -322,7 +322,7 @@ function Page() {
           </div>
         </div>
       </section>
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24 max-w-[1280px] mx-auto bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl  text-[#1A1A1A] mb-3">
@@ -371,7 +371,7 @@ function Page() {
       </section>
 
       <section className="">
-        <div className="container mx-auto px-4 bg-[#F9FAFB] py-20 ">
+        <div className="container max-w-[1280px] mx-auto px-4 bg-[#F9FAFB] py-20 ">
           <div className="text-center mb-16">
             <h2 className="text-4xl  mb-4 text-balance text-[#1A1A1A]">
               How We Work With You
@@ -401,7 +401,7 @@ function Page() {
       </section>
 
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="container max-w-[1280px] mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center  mx-auto ">
             {/* Left Column - Benefits */}
             <div>
@@ -460,8 +460,8 @@ function Page() {
       </section>
 
       <section className=" mb-20">
-        <div className="container mx-auto max-w-3xl px-4 py-10 bg-[#F9FAFB]">
-          <div className=" mx-auto text-center">
+        <div className="container mx-auto max-w-4xl px-4 py-10 bg-[#F9FAFB]">
+          <div className="mx-auto text-center">
             <h2 className="text-4xl  mb-6 text-balance">
               Let Us Handle the Back Office
             </h2>

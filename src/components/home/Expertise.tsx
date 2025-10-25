@@ -15,6 +15,7 @@ import {
   CircleCheck,
 } from "lucide-react";
 import Image from "next/image";
+import { Badge } from "../ui/badge";
 
 // --- 1. Data Definitions ---
 
@@ -72,7 +73,7 @@ const SectorCard: React.FC<SectorCardProps> = ({
   title,
   description,
 }) => (
-  <Card className="flex items-center flex-row p-4 shadow-sm hover:shadow-md transition-shadow duration-300">
+  <Card className="flex items-center flex-row p-4 shadow-sm transition-shadow duration-300">
     <div className="bg-primary text-white p-3 rounded-md mr-4">
       <Icon className="w-6 h-6" />
     </div>
@@ -104,9 +105,8 @@ export default function IndustryExpertise() {
     <section className="py-20 bg-white">
       {/* --- Header --- */}
       <div className="text-center mb-12 px-4">
-        <span className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white bg-primary rounded-full mb-3">
-          Industry Expertise
-        </span>
+     
+        <Badge className="bg-accent/10 text-accent"> Industry Expertise</Badge>
         <h2 className="text-4xl md:text-5xl  text-gray-900 mb-4">
           Built for Construction Companies
         </h2>

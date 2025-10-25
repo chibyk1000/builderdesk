@@ -165,8 +165,8 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="py-16 px-6 bg-muted/30">
-        <div className="max-w-7xl mx-auto">
+      <section className=" ">
+        <div className="max-w-7xl mx-auto bg-muted/30 py-16 px-6 ">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl text-primary mb-4">
               Pricing That Scales With You
@@ -178,19 +178,25 @@ const Page = () => {
 
           <Pricing2 />
 
-          <p className="text-center text-sm text-muted-foreground mt-8">
-            Need a custom solution?{" "}
-            <a href="#" className="text-blue-600 hover:underline">
-              Let&apos;s build a custom pricing plan
-            </a>
-          </p>
+          <div className="text-center">
+            <p className="text-center text-sm text-[#4A5565] mt-8">
+              Need a custom solution? We can create a tailored plan for your
+              specific needs.
+            </p>
+            <Button
+              variant={"outline"}
+              className="border-primary border mx-auto   mt-8 text-primary"
+            >
+              Contact Us for Custom Pricing
+            </Button>
+          </div>
         </div>
       </section>
 
       <section className="py-16 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl  mb-4">Hourly Pricing</h2>
+            <h2 className="text-3xl md:text-4xl  mb-4 text-primary">Hourly Pricing</h2>
             <p className="text-muted-foreground">
               Flexible hourly rates for every stage of your construction
               business
@@ -199,10 +205,7 @@ const Page = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {services.map((service, index) => (
-              <Card
-                key={index}
-                className="shadow-md hover:shadow-lg h-45.5 transition-shadow"
-              >
+              <Card key={index} className="shadow-md  h-45.5 transition-shadow">
                 <CardHeader className="font-normal">
                   <CardTitle className="text-xl text-primary font-normal">
                     {service.name}
@@ -218,23 +221,33 @@ const Page = () => {
             ))}
           </div>
 
-          <Card className="bg-orange-50 border-orange-200  mx-auto">
-            <CardContent className="p-6 flex items-start gap-4">
-              <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center text-white flex-shrink-0">
-                <Star fill="white" />
+          <Card
+            className=" border-orange-200  mx-auto"
+            style={{
+              background: `linear-gradient(90deg, rgba(219, 164, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%)`,
+            }}
+          >
+            <CardContent className="p-6 flex justify-between gap-4">
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center text-white flex-shrink-0">
+                  <Star fill="white" />
+                </div>
+                <div>
+                  <h3 className=" text-lg mb-1">Volume Discount</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Purchase 20+ hours upfront and save 10-15% on all hourly
+                    rates
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className=" text-lg mb-1">Volume Discount</h3>
-                <p className="text-sm text-muted-foreground">
-                  Purchase 20+ hours upfront and save 10-15% on all hourly rates
-                </p>
-              </div>
+
+              <Button>Get Quote</Button>
             </CardContent>
           </Card>
         </div>
       </section>
-      <section className="py-16 px-6 bg-muted/30">
-        <div className="max-w-7xl mx-auto">
+      <section className="">
+        <div className="max-w-7xl mx-auto bg-muted/30 py-16 px-6 mb-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl text-primary md:text-4xl  mb-4">
               Project-Based Pricing
@@ -275,6 +288,87 @@ const Page = () => {
             <Button className="bg-accent hover:bg-accent/90 text-white px-8 h-12">
               Request Custom Quote
             </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-muted/60 max-w-7xl mx-auto">
+        <h2 className="text-center text-2xl md:text-3xl font-semibold text-gray-800 mb-10">
+          Why Our Pricing Makes Sense
+        </h2>
+
+        <div className="max-w-6xl mx-auto  grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Card */}
+          <div className="bg-white border h-[230px] grid border-gray-200 rounded-xl p-6 text-center">
+            <p className="text-3xl  text-primary">60%</p>
+            <h3 className="text-gray-800 font-medium mt-2">Cost Savings</h3>
+            <p className="text-gray-500 text-sm mt-2">
+              Compared to hiring full-time employees with benefits and overhead
+            </p>
+          </div>
+
+          <div className="bg-white border h-[230px] grid border-gray-200 rounded-xl p-6 text-center">
+            <p className="text-3xl  text-primary">No</p>
+            <h3 className="text-gray-800 font-medium mt-2">Hidden Fees</h3>
+            <p className="text-gray-500 text-sm mt-2">
+              Transparent pricing with no surprise charges or setup fees
+            </p>
+          </div>
+
+          <div className="bg-white border h-[230px] grid border-gray-200 rounded-xl p-6 text-center">
+            <p className="text-3xl  text-primary">100%</p>
+            <h3 className="text-gray-800 font-medium mt-2">Scalable</h3>
+            <p className="text-gray-500 text-sm mt-2">
+              Easily adjust your plan as your business needs change
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <h2 className="text-center text-2xl md:text-3xl font-semibold text-gray-800 mb-10">
+          Frequently Asked Questions
+        </h2>
+
+        <div className="max-w-[704px] mx-auto space-y-4">
+          <div className="bg-white border border-gray-200 rounded-xl p-5">
+            <h3 className="font-medium text-gray-800">
+              Can I customize my plan?
+            </h3>
+            <p className="text-sm text-gray-600 mt-2">
+              Absolutely! We understand every construction business is unique.
+              Contact us to create a custom plan that fits your specific needs.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-xl p-5">
+            <h3 className="font-medium text-gray-800">
+              What if I need more hours?
+            </h3>
+            <p className="text-sm text-gray-600 mt-2">
+              Additional hours can be purchased at competitive rates. We also
+              offer flexible upgrades to higher tier plans as your needs grow.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-xl p-5">
+            <h3 className="font-medium text-gray-800">
+              Is there a contract commitment?
+            </h3>
+            <p className="text-sm text-gray-600 mt-2">
+              We offer both month-to-month and annual plans. Annual plans
+              include a 10% discount.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-xl p-5">
+            <h3 className="font-medium text-gray-800">
+              How quickly can we get started?
+            </h3>
+            <p className="text-sm text-gray-600 mt-2">
+              Most clients are up and running within 5-7 business days after the
+              initial consultation and plan selection.
+            </p>
           </div>
         </div>
       </section>

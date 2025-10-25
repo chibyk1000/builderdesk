@@ -194,10 +194,10 @@ export function Pricing2() {
       },
     ];
   return (
-    <section id="pricing" className="py-20 md:py-32 bg-white">
+    <section id="pricing" className=" ">
       <div className="relative">
         <Swiper
-          modules={[Navigation, Pagination,Autoplay ]}
+          modules={[Navigation, Pagination, Autoplay]}
           autoplay
           navigation={{
             prevEl: ".swiper-button-prev-custom",
@@ -220,65 +220,70 @@ export function Pricing2() {
             },
           }}
           className="pricing-swiper w-10/12 overflow-visible mx-auto"
-     
         >
           {plans.map((plan, index) => (
-            <SwiperSlide key={index} className="overflow-visible">
-             
-                <Card
-                  key={index}
-                  className={`relative shadow-lg border overflow-visible  h-[696px] flex-1  rounded-[12px] max-w-112 ${
-                    plan.popular ? "border-[#1e3a5f] border-2" : ""
-                  }`}
-                >
-                  {/* {plan.popular && (
-                    <div
-                      className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent z-200 text-white px-4 py-1 rounded-full text-sm "
-                      style={{
-                        boxShadow:
-                          "0px 4px 6px -4px #0000001A, 0px 10px 15px -3px #0000001A",
-                      }}
-                    >
-                      Most Popular
+            <SwiperSlide key={index} className="overflow-visible py-5">
+              <Card
+                key={index}
+                className={`relative shadow-lg border overflow-visible  h-[696px] flex-1  rounded-[12px] max-w-112 ${
+                  plan.popular ? "border-[#1e3a5f] border-2" : ""
+                }`}
+              >
+                {plan.popular && (
+                  <div
+                    className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent z-200 text-white px-4 py-1 rounded-full text-sm "
+                    style={{
+                      boxShadow:
+                        "0px 4px 6px -4px #0000001A, 0px 10px 15px -3px #0000001A",
+                    }}
+                  >
+                    Most Popular
+                  </div>
+                )}
+                <CardHeader className="text-center pb-8 text-primary font-normal relative">
+                  <CardTitle className="text-2xl mb-2 font-normal">
+                    {plan.name}
+                  </CardTitle>
+                  <p className="text-sm text-[#4A5565] mt-2">
+                    {plan.description}
+                  </p>
+                  <div className="flex items-baseline justify-center gap-1">
+                    <span className="text-4xl font-normal">{plan.price}</span>
+                    <span className="text-[#6A7282]">{plan.period}</span>
+                  </div>
+                  {plan.ads && (
+                    <div className="absolute -bottom-2.5 w-full">
+                      <p className="text-accent text-sm max-w-[341px] mx-auto">
+                        Maximum of 2 projects at once. For 3 to 4 projects add
+                        $1,000
+                      </p>
                     </div>
-                  )} */}
-                  <CardHeader className="text-center pb-8 text-primary font-normal">
-                    <CardTitle className="text-2xl mb-2 font-normal">
-                      {plan.name}
-                    </CardTitle>
-                    <p className="text-sm text-[#4A5565] mt-2">
-                      {plan.description}
-                    </p>
-                    <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-4xl font-normal">{plan.price}</span>
-                      <span className="text-[#6A7282]">{plan.period}</span>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="space-y-4 flex-1 flex flex-col">
-                    <div className="space-y-3 flex-1">
-                      {plan.features.map((feature, featureIndex) => (
-                        <div
-                          key={featureIndex}
-                          className="flex items-start gap-3"
-                        >
-                          <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <Button
-                      className={`w-full mt-auto ${
-                        plan.buttonVariant === "default"
-                          ? "bg-[#1e3a5f] hover:bg-[#2d5a8c]"
-                          : ""
-                      }`}
-                      variant={plan.buttonVariant}
-                    >
-                      {plan.buttonText}
-                    </Button>
-                  </CardContent>
-                </Card>
-         
+                  )}
+                </CardHeader>
+                <CardContent className="space-y-3 flex-1 flex flex-col">
+                  <div className="space-y-3 flex-1">
+                    {plan.features.map((feature, featureIndex) => (
+                      <div
+                        key={featureIndex}
+                        className="flex items-start gap-3"
+                      >
+                        <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                        <span className="text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Button
+                    className={`w-full mt-auto ${
+                      plan.buttonVariant === "default"
+                        ? "bg-[#1e3a5f] hover:bg-[#2d5a8c]"
+                        : ""
+                    }`}
+                    variant={plan.buttonVariant}
+                  >
+                    {plan.buttonText}
+                  </Button>
+                </CardContent>
+              </Card>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -310,9 +315,6 @@ export function Pricing2() {
           height: 12px;
           border-radius: 33554400px;
         }
-
-
-        
       `}</style>
     </section>
   );
