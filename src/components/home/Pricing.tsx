@@ -7,10 +7,13 @@ import {
   CardTitle,
   CardAction,
   CardDescription,
+  CardHeader,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
+
+  Check,
 
   ChevronLeft,
   ChevronRight,
@@ -102,6 +105,218 @@ const filters = [
   "Dedicated support",
 ];
 
+
+
+export function Pricing2() {
+    const plans = [
+      {
+        name: "Administrative Support",
+        price: "$1,000",
+        period: "/month",
+        description: "Perfect for small to medium construction companies",
+        features: [
+          "Dedicated admin support",
+          "Email management",
+          "Calendar scheduling",
+          "Document organization",
+          "Data entry and filing",
+          "Phone/email correspondence",
+          "Meeting coordination",
+          "Travel arrangements",
+          "Expense tracking",
+          "Client communication",
+          "Limited project tracking",
+          "Basic reporting",
+        ],
+        buttonText: "Get Started",
+        buttonVariant: "outline" as const,
+        ads: "",
+      },
+      {
+        name: "Project Management Support",
+        price: "$1,500",
+        period: "/month",
+        description: "Ideal for growing construction businesses",
+        ads: "Maximum of 2 projects at once. For 3 to 4 projects add $1,000",
+        popular: true,
+        features: [
+          "Project plan and schedule",
+          "Budget tracking",
+          "Resource allocation",
+          "Risk management",
+          "Quality control",
+          "Stakeholder communication",
+          "Change order management",
+          "Progress reporting",
+          "Team coordination",
+          "Vendor management",
+          "Safety compliance",
+          "Document control",
+        ],
+        buttonText: "Get Started",
+        buttonVariant: "default" as const,
+      },
+      {
+        name: "Marketing Branding Package",
+        price: "$1,200",
+        period: "/one time",
+        description: "Comprehensive marketing and branding solutions",
+        features: [
+          "Website, hosting and management",
+          "Graphic Design",
+          "Logo",
+          "Capability statement",
+          "Business cards",
+          "Brochures",
+        ],
+        buttonText: "Get Started",
+        buttonVariant: "outline" as const,
+        ads: "",
+      },
+
+      {
+        name: "Social Media Management",
+        price: "$600",
+        period: "/month",
+        description:
+          "Professional social media management to grow your online presence",
+        features: [
+          "5 Posts a week",
+          "Graphic design",
+          "3 platforms of the client's choice",
+          "Content calendar + Captions + Designs",
+          "Posting of clients videos or pictures",
+          "Hashtag research and keyword optimization",
+        ],
+        buttonText: "Get Started",
+        buttonVariant: "outline" as const,
+        ads: "",
+      },
+    ];
+  return (
+    <section id="pricing" className="py-20 md:py-32 bg-white">
+      <div className="relative">
+        <Swiper
+          modules={[Navigation, Pagination,Autoplay ]}
+          autoplay
+          navigation={{
+            prevEl: ".swiper-button-prev-custom",
+            nextEl: ".swiper-button-next-custom",
+          }}
+          pagination={{
+            el: ".swiper-pagination-custom",
+            clickable: true,
+            bulletClass: "swiper-pagination-bullet-custom",
+            bulletActiveClass: "swiper-pagination-bullet-active-custom",
+          }}
+          spaceBetween={40}
+          slidesPerView={1}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 2,
+            },
+          }}
+          className="pricing-swiper w-10/12 overflow-visible mx-auto"
+     
+        >
+          {plans.map((plan, index) => (
+            <SwiperSlide key={index} className="overflow-visible">
+             
+                <Card
+                  key={index}
+                  className={`relative shadow-lg border overflow-visible  h-[696px] flex-1  rounded-[12px] max-w-112 ${
+                    plan.popular ? "border-[#1e3a5f] border-2" : ""
+                  }`}
+                >
+                  {/* {plan.popular && (
+                    <div
+                      className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent z-200 text-white px-4 py-1 rounded-full text-sm "
+                      style={{
+                        boxShadow:
+                          "0px 4px 6px -4px #0000001A, 0px 10px 15px -3px #0000001A",
+                      }}
+                    >
+                      Most Popular
+                    </div>
+                  )} */}
+                  <CardHeader className="text-center pb-8 text-primary font-normal">
+                    <CardTitle className="text-2xl mb-2 font-normal">
+                      {plan.name}
+                    </CardTitle>
+                    <p className="text-sm text-[#4A5565] mt-2">
+                      {plan.description}
+                    </p>
+                    <div className="flex items-baseline justify-center gap-1">
+                      <span className="text-4xl font-normal">{plan.price}</span>
+                      <span className="text-[#6A7282]">{plan.period}</span>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-4 flex-1 flex flex-col">
+                    <div className="space-y-3 flex-1">
+                      {plan.features.map((feature, featureIndex) => (
+                        <div
+                          key={featureIndex}
+                          className="flex items-start gap-3"
+                        >
+                          <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span className="text-sm">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <Button
+                      className={`w-full mt-auto ${
+                        plan.buttonVariant === "default"
+                          ? "bg-[#1e3a5f] hover:bg-[#2d5a8c]"
+                          : ""
+                      }`}
+                      variant={plan.buttonVariant}
+                    >
+                      {plan.buttonText}
+                    </Button>
+                  </CardContent>
+                </Card>
+         
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <button className="swiper-button-prev-custom absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white border border-gray-300 rounded-full p-2 hover:bg-gray-50 transition shadow-[0px_4px_6px_-4px_#0000001A,0px_10px_15px_-3px_#0000001A]">
+          <ChevronLeft className="w-6 h-6 text-primary" />
+        </button>
+
+        <button className="swiper-button-next-custom absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white border border-gray-300 rounded-full p-2 hover:bg-gray-50 transition shadow-[0px_4px_6px_-4px_#0000001A,0px_10px_15px_-3px_#0000001A]">
+          <ChevronRight className="w-6 h-6 text-primary" />
+        </button>
+
+        <div className="swiper-pagination-custom flex justify-center gap-2 mt-8"></div>
+      </div>
+
+      <style jsx>{`
+        :global(.swiper-pagination-bullet-custom) {
+          width: 10px;
+          height: 10px;
+          background-color: #d1d5db;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: background-color 0.3s;
+        }
+
+        :global(.swiper-pagination-bullet-active-custom) {
+          background-color: #1a3a52;
+          width: 32px;
+          height: 12px;
+          border-radius: 33554400px;
+        }
+
+
+        
+      `}</style>
+    </section>
+  );
+}
 export default function Pricing() {
 
 
@@ -244,27 +459,27 @@ export default function Pricing() {
         </div>
 
         <div className="w-full  mt-8">
-          <div
-            className="bg-linear-to-r from-[#F9FAFB] to-white
- rounded-xl shadow-xs px-8 py-8  w-full text-center border"
-          >
-            <h3 className="text-lg font-semibold mb-2 text-primary">
-              Not sure which plan is right for you?
-            </h3>
-            <p className="text-gray-600 mb-6 text-sm max-w-lg mx-auto">
-              Our team will help you find the perfect solution based on your
-              company size, project volume, and specific needs.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button
-                variant="outline"
-                className="border-primary text-primary px-6 py-2 font-medium"
-              >
-                See All Pricing Options <ArrowRight />
-              </Button>
-              <Button className="bg-primary hover:bg-primary px-6 py-2 font-medium text-white">
-                Schedule a Consultation
-              </Button>
+          <div className="w-full mt-8">
+            <div className="bg-gradient-to-r from-[#F9FAFB] to-white rounded-xl shadow-sm px-8 py-8 w-full text-center border">
+              <h3 className="text-lg font-semibold mb-2 text-primary">
+                Not sure which plan is right for you?
+              </h3>
+              <p className="text-gray-600 mb-6 text-sm max-w-lg mx-auto">
+                Our team will help you find the perfect solution based on your
+                company size, project volume, and specific needs.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Button
+                  variant="outline"
+                  className="border-primary text-primary px-6 py-2 font-medium"
+                >
+                  See All Pricing Options{" "}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+                <Button className="bg-primary hover:bg-primary px-6 py-2 font-medium text-white">
+                  Schedule a Consultation
+                </Button>
+              </div>
             </div>
           </div>
         </div>

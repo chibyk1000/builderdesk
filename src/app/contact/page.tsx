@@ -3,9 +3,25 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, Mail, Clock, MapPin, Gift, Headphones } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  Clock,
+  MapPin,
+  Gift,
+  Headphones,
+  PhoneCall,
+  MessageSquare,
+  Send,
+} from "lucide-react";
 import Image from "next/image";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 const Page = () => {
   const stats = [
     {
@@ -48,7 +64,7 @@ const Page = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-12 gap-8">
             {/* Contact Form */}
-            <Card className=" border-none pt-0 col-span-6">
+            <Card className=" border-none pt-0 col-span-6 self-start">
               <CardHeader className="text-white rounded-t-lg block   p-0">
                 <div
                   className="rounded-t-lg h-48 relative grid place-content-center"
@@ -75,7 +91,7 @@ const Page = () => {
               </CardHeader>
               <CardContent className="p-6 space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <Card className="flex items-center justify-center py-4 border-none shadow-none">
+                  <Card className="flex items-center justify-center py-2 border-none shadow-none bg-[#F9FAFB]">
                     <CardContent className="flex items-center gap-2 p-0">
                       <span className="size-10 rounded-[8px] inline-flex items-center justify-center bg-[linear-gradient(135deg,#2B7FFF_0%,#155DFC_100%)]">
                         <Clock className="w-5 h-5 text-white" />
@@ -86,7 +102,7 @@ const Page = () => {
                       </span>
                     </CardContent>
                   </Card>
-                  <Card className="flex items-center justify-center py-4 border-none shadow-none">
+                  <Card className="flex items-center justify-center py-2 border-none shadow-none bg-[#F9FAFB]">
                     <CardContent className="flex items-center gap-2 p-0">
                       <span className="size-10 rounded-[8px] inline-flex items-center justify-center bg-[linear-gradient(135deg,#DBA400_0%,#F54900_100%)]">
                         <Headphones className="text-white w-5 h-5" />
@@ -97,10 +113,10 @@ const Page = () => {
                       </span>
                     </CardContent>
                   </Card>
-                  <Card className="flex items-center justify-center py-4 border-none shadow-none">
+                  <Card className="flex items-center justify-center py-2 border-none shadow-none bg-[#F9FAFB]">
                     <CardContent className="flex items-center gap-2 p-0">
                       <span className="size-10 rounded-[8px] inline-flex items-center justify-center bg-[linear-gradient(135deg,#00C950_0%,#00A63E_100%)]">
-                        <Gift className="text-white w-5 h-5" />
+                        <MessageSquare className="text-white w-5 h-5" />
                       </span>
 
                       <span className="font-medium text-sm  text-[#404040]">
@@ -185,7 +201,7 @@ const Page = () => {
     shadow-[0px_8px_10px_-6px_#0000001A,0px_20px_25px_-5px_#0000001A]
   "
                     >
-                      Send Message
+                  <Send/>    Send Message
                     </Button>
                   </div>
                 </form>
@@ -195,7 +211,6 @@ const Page = () => {
                 </p>
               </CardContent>
             </Card>
-
             {/* Support Team Info */}
             <div className="space-y-6 col-span-4">
               <Card className="shadow-lg p-0 max-w-">
@@ -274,50 +289,78 @@ const Page = () => {
                 </CardContent>
               </Card>
 
-              <Button className="w-full bg-green-600 hover:bg-green-700 text-white h-14 text-lg">
-                Schedule Support
-              </Button>
-
-              <Button
-                variant="outline"
-                className="w-full h-14 text-lg bg-transparent"
-              >
-                View Pricing Plans
-              </Button>
-
-              <Card className="bg-orange-50 border-orange-200">
-                <CardContent className="p-4 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center text-white flex-shrink-0">
-                    🎧
-                  </div>
-                  <div>
-                    <p className="font-semibold text-sm">
-                      24/7 Live Dispatcher
+              <div className="max-w-md mx-auto space-y-4">
+                {/* --- Instant Support Card --- */}
+                <Card className="bg-[linear-gradient(135deg,#25D366_0%,#20BD5A_100%)] h-[208px] text-white border-none shadow-md">
+                  <CardContent className=" space-y-3">
+                    <div className="flex items-center gap-2">
+                      <span className="size-12 bg-white/20 rounded-[12px] grid place-items-center">
+                        <Phone className="w-5 h-5" />
+                      </span>
+                      <div>
+                        <h3 className=" text-lg">Instant Support</h3>
+                        <p className="text-xs opacity-80">Available 24/7</p>
+                      </div>
+                    </div>
+                    <p className="text-sm opacity-80">
+                      Get immediate answers to your questions via WhatsApp
                     </p>
-                    <p className="text-xs text-muted-foreground">
-                      Get instant support anytime, day or night. Our team is
-                      always here.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+                    <Button
+                      variant="secondary"
+                      className="bg-white text-[#25D366] w-full hover:bg-green-100 font-medium mt-3"
+                    >
+                      <MessageSquare className="w-4 h-4 mr-2" />
+                      Chat Now
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                {/* --- 24-Hour Guarantee Card --- */}
+                <Card
+                  className="bg-[linear-gradient(155deg,rgba(219,164,0,40%)_0%,#ffffff_50%,#ffffff_100%)] border-none shadow-sm h-32.5 p-0 justify-center items-center"
+                  style={{
+                    boxShadow:
+                      "0px 4px 6px -4px #0000001A, 0px 10px 15px -3px #0000001A",
+                  }}
+                >
+                  <CardContent className="p-5 space-y-2">
+                    <div className="flex items-center gap-2">
+                      <span className="bg-[linear-gradient(135deg,#DBA400_0%,#F54900_100%)] grid place-content-center size-12 rounded-[12px] shrink-0 self-start">
+                        <Clock className=" w-6 h-6 text-white" />
+                      </span>
+                      <div>
+                        <h3 className=" text-primary text-base">
+                          24-Hour Guarantee
+                        </h3>
+                        <p className="text-sm text-secondary">
+                          We promise to respond to every inquiry within one
+                          business day
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section className="py-16 px-6 bg-muted/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl md:text-4xl  text-center mb-12">
             Why Construction Companies Trust Us
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 h-58.5 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-5xl md:text-6xl font-bold text-[#1e3a5f] mb-2">
+              <div
+                key={index}
+                className="text-center shadow pt-10 border border-[#0000001A] grid rounded-[12px]"
+              >
+                <div className="text-3xl md:text-4xl  text-primary mb-2">
                   {stat.value}
                 </div>
-                <div className="text-xl font-semibold mb-2">{stat.label}</div>
-                <p className="text-sm text-muted-foreground max-w-xs mx-auto">
+                <div className="text-xl  mb-2 text-[#1A1A1A]">{stat.label}</div>
+                <p className=" text-[#4A5565] max-w-xs mx-auto">
                   {stat.description}
                 </p>
               </div>
