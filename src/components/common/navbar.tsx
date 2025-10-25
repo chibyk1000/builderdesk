@@ -25,7 +25,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="h-20 flex items-center relative px-6 lg:px-20 xl:px-40 border justify-between">
+    <nav className="h-20 flex items-center relative px-6  container mx-auto  justify-between">
       {/* Logo */}
       <Link href={"/"} className="relative inline-block">
         <Image
@@ -37,7 +37,7 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop Menu */}
-      <ul className="flex items-center md:max-w-[70%] lg:max-w-[64%] w-full justify-between max-lg:hidden">
+      <ul className="flex items-center md:max-w-[60%]  w-full justify-between max-lg:hidden">
         {links.map((link) => (
           <li key={link.text}>
             <Link href={link.href} className="text-sm">
