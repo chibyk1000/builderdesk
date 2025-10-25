@@ -19,17 +19,18 @@ const Hero = () => {
     "Industry specialists",
   ];
     return (
-      <section className=" relative text-white  bg-[linear-gradient(180deg,#0E4571_0%,#0A3554_50%,#063049_100%)] overflow-hidden  pt-10 h-fit flex flex-col ">
+      <section className=" relative text-white  bg-[linear-gradient(180deg,#0E4571_0%,#0A3554_50%,#063049_100%)] overflow-hidden  pt-28  h-fit flex flex-col ">
         {/* Top blue blur light */}
+        
         <div className="absolute right-0 top-0 size-[600px] rounded-full bg-[#5EA0D5] z-40 blur-[240px] opacity-50" />
-        <div className="absolute left-0 bottom-0 size-[500px] rounded-full bg-white z-40 blur-[200px] opacity-10" />
+        <div className="absolute left-0 bottom-0 size-[500px]  bg-white z-40 blur-[200px] opacity-15" />
 
-        {/* Center gradient glow */}
+        {/* Center gradient glow */} 
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[800px] rounded-[33554400px] bg-[linear-gradient(180deg,#0E4571_0%,rgba(0,0,0,0)_100%)] blur-[300px] "></div>
 
         {/* Content */}
-        <section className="relative z-50 container mx-auto  space-y-4  text-center md:text-left">
-          <div className="w-full mx-auto md:mx-0  ">
+        <section className="relative z-50 container max-w-[1216px] mx-auto  space-y-4  text-center md:text-left">
+          <div className="w-full  md:mx-0  ">
             {/* Trust Badge */}
             <div className="rounded-full border border-white/20 w-80 justify-center px-2 h-[42px] flex items-center gap-2 bg-white/10 mx-auto md:mx-0">
               <span className="inline-block bg-yellow-400 rounded-full size-2"></span>
@@ -129,18 +130,18 @@ const Hero = () => {
               <div className="w-53 bg-white/5 border-white/10 h-35 border rounded-xl grid place-content-center text-center">
                 <ClipboardList className="text-accent inline-block mx-auto" />
                 <h3 className="text-4xl font-bold text-white">500+</h3>
-                <p className="text-gray-400 text-sm">Projects Delivered</p>
+                <p className="text-white/70 text-sm">Projects Delivered</p>
               </div>
               <div className="w-53 bg-white/5 border-white/10 h-35 border rounded-xl grid place-content-center text-center">
                 <Clock className="text-accent inline-block mx-auto" />
                 <h3 className="text-4xl font-bold text-white">500+</h3>
-                <p className="text-gray-400 text-sm">Projects Delivered</p>
+                <p className="text-white/70 text-sm">Projects Delivered</p>
               </div>
               <div className="w-53 bg-white/5 border-white/10 h-35 border rounded-xl grid place-content-center text-center">
                 <Shield className="text-accent inline-block mx-auto" />
 
                 <h3 className="text-4xl font-bold text-white">500+</h3>
-                <p className="text-gray-400 text-sm">Projects Delivered</p>
+                <p className="text-white/70 text-sm">Projects Delivered</p>
               </div>
             </div>
           </div>

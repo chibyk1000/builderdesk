@@ -15,8 +15,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   description,
   services,
 }) => {
+
+
   return (
-    <Card className="group relative border border-gray-200 rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] h-[400px]">
+    <Card
+      className="group relative border shadow-[0px_4px_6px_-4px_#0000001A,0px_10px_15px_-3px_#0000001A]
+ border-gray-200 rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] h-[400px]"
+    >
       {/* Base Content */}
       <CardContent className="p-6 flex flex-col gap-12 h-full z-10 relative bg-white transition-all duration-500 group-hover:opacity-0 group-hover:scale-95">
         {/* Icon + Title */}

@@ -105,11 +105,11 @@ const services = [
   return (
     <section className="py-24">
       <header className="text-center ">
-        <Badge className="text-primary font-medium" variant={"outline"}>
+        <Badge className="text-primary bg-primary/5 mb-4 font-medium" variant={"outline"}>
           Our Services
         </Badge>
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+          <h2 className="text-3xl md:text-[40px]  text-primary mb-4">
             What We Do
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -118,7 +118,7 @@ const services = [
           </p>
         </div>
       </header>
-      <div className="grid grid-cols-3 gap-2 max-w-10/12 mx-auto">
+      <div className="grid grid-cols-3 gap-8  container  max-w-[1280px] px-8 mx-auto">
         {services.map((service) => {
           return (
             <ServiceCard

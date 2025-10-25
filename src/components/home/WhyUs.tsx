@@ -90,7 +90,8 @@ export default function WhyChoose() {
             return (
               <Card
                 key={index}
-                className="p-8 border-0 h-[292px] gap-2 hover:shadow-lg transition relative"
+                className="p-8 border-0 h-[292px] gap-2 hover:shadow-lg transition relative shadow-[0px_4px_6px_-4px_#0000001A,0px_10px_15px_-3px_#0000001A]
+"
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center shrink-0">
