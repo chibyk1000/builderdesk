@@ -1,3 +1,4 @@
+"use client"
 import { Card } from "@/components/ui/card";
 import {
   Shield,
@@ -8,7 +9,17 @@ import {
   Users,
 
 } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { Badge } from "../ui/badge";
+import { Button } from "../ui/button";
+import { useState } from "react";
 
 const reasons = [
   {
@@ -68,6 +79,7 @@ const reasons = [
 ];
 
 export default function WhyChoose() {
+  const [content, setContent] = useState("")
   return (
     <section id="why" className="py-20 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,12 +124,21 @@ export default function WhyChoose() {
                 <p className="text-secondary text-sm mb-4">
                   {reason.description}
                 </p>
-                <a
-                  href="#"
-                  className="text-primary/60 font-semibold text-sm hover:underline"
-                >
-                  Click to learn more →
-                </a>
+
+                <Dialog>
+                  <DialogHeader>
+                    <DialogTitle></DialogTitle>
+                  </DialogHeader>
+                  <DialogTrigger>
+                    <p
+                      onClick={() => {}}
+                      className="text-primary/60 font-semibold text-sm hover:underline"
+                    >
+                      Click to learn more →
+                    </p>
+                  </DialogTrigger>
+                  <DialogContent className="leading-8">{reason.fulldesc}</DialogContent>
+                </Dialog>
               </Card>
             );
           })}
