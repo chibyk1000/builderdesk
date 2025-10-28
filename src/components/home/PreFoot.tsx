@@ -7,6 +7,7 @@ import {
   FileText,
   MessageSquare,
 } from "lucide-react";
+import Link from "next/link";
 `Ready to Build Better Business?
 Join hundreds of construction companies who trust us with their back-office operations.
 Get Started Today
@@ -25,28 +26,32 @@ const PreFoot = () => {
       <div className="absolute top-[80px] left-[1072px] opacity- 3 0 w-[384px] h-[384px] rounded-full bg-[#4584B7]/40  blur-[128px] "></div>
 
       <div className="w-full min-h-[350px] relative z-100 max-w-7xl flex flex-col items-center justify-center  py-16">
-        <h1 className="text-3xl md:text-4xl font-semibold text-white mb-3 text-center">
+        <h1 className="text-4xl w-80  md:max-w-xl text-white mb-3 text-center">
           Ready to Build Better Business?
         </h1>
-        <p className="text-white/80 mb-8 text-center max-w-xl">
+        <p className="text-white/80 mb-8 text-center w-80  md:max-w-xl">
           Join hundreds of construction companies who trust us with their
           back-office operations.
         </p>
-        <div className="flex gap-4 mb-10">
+        <div className=" md:flex max-md:space-y-4 gap-4 mb-10">
           <Button
             variant={"ghost"}
-            className="bg-white  shadow-2xl w-55 shadow-[#00000040] h-14   text-primary font-medium"
+            asChild
+            className="bg-white max-md:w-full  shadow-2xl w-55 shadow-[#00000040] h-14   text-primary font-medium"
           >
+            <Link href={"/contact"}>
+            
             Get Started Today <ArrowRight />
+            </Link>
           </Button>
           <Button
             variant={"success"}
-            className=" h-14 w-55 text-white font-medium"
+            className=" h-14 w-55 max-md:w-full text-white font-medium"
           >
             <MessageSquare /> Chat on WhatsApp
           </Button>
         </div>
-        <div className="bg-white/10 backdrop-blur-md rounded-xl w-[960px]   p-4 flex flex-col md:flex-row  md:gap-6 items-center text-white/80  h-24.5 pt-[25px] px-[55px] w-fu ll justify-between">
+        <div className="bg-white/10 backdrop-blur-md rounded-xl xl:w-[960px]   p-4 flex max-md:gap-4 flex-col md:flex-row  md:gap-6 sm:items-center text-white/80  lg:h-24.5 pt-[25px] px-[55px] w-fu ll justify-between">
           <div className="flex gap-2 items-center">
             <span
               className="bg-white/10 size-12 rounded-[8px] grid place-content-center
@@ -91,7 +96,6 @@ const PreFoot = () => {
               <p className="text-sm">Within 24 hours</p>
             </div>
           </div>
-        
         </div>
       </div>
     </div>

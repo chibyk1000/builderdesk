@@ -10,6 +10,7 @@ import {
   Users,
 } from "lucide-react";
 import { Badge } from "../ui/badge";
+import Link from "next/link";
 
 const hourlyServices = [
   {
@@ -110,13 +111,15 @@ export default function HourlyPricing() {
               Flexible packages for specific projects or deliverables
             </p>
 
-            <Button className="bg-white mt-auto  hover:bg-white/90  w-full text-primary font-semibold">
+            <Button asChild className="bg-white mt-auto  hover:bg-white/90  w-full text-primary font-semibold">
+              <Link href="/contact">
               Get Quote
+              </Link>
             </Button>
           </Card>
         </div>
 
-        <div className="rounded-lg p-8 gap-8 items-center bg-gray-50  flex justify-between">
+        <div className="rounded-lg p-8 gap-8 items-center border border-[#E5E7EB] bg-gray-50 max-md:flex-col max-md:items-center flex justify-between">
           <div className="  flex-1 ">
             <h3 className="text-lg  text-primary mb-2">
               Volume Discounts Available
@@ -125,9 +128,11 @@ export default function HourlyPricing() {
               Purchase 20+ hours upfront and save 10-15% on hourly rates
             </p>
           </div>
-          <Button className=" t ">
+          <Button className=" mx-auto " asChild>
+            <Link href={"/pricing"}>
             View All Options
             <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
           </Button>
         </div>
       </div>

@@ -26,6 +26,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Badge } from "../ui/badge";
 import CheckIcon from "./Icon";
+import Link from "next/link";
 
 const plans = [
   {
@@ -219,7 +220,7 @@ export function Pricing2() {
               slidesPerView: 2,
             },
           }}
-          className="pricing-swiper w-10/12 overflow-visible mx-auto"
+          className="pricing-swiper sm:w-10/12 overflow-visible mx-auto"
         >
           {plans.map((plan, index) => (
             <SwiperSlide key={index} className="overflow-visible py-5">
@@ -241,14 +242,14 @@ export function Pricing2() {
                   </div>
                 )}
                 <CardHeader className="text-center pb-8 text-primary font-normal relative">
-                  <CardTitle className="text-2xl mb-2 font-normal">
+                  <CardTitle className="text-xl sm:text-2xl mb-2 font-normal">
                     {plan.name}
                   </CardTitle>
-                  <p className="text-sm text-[#4A5565] mt-2">
+                  <p className="text-sm text-[#4A5565] sm:mt-2">
                     {plan.description}
                   </p>
                   <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-4xl font-normal">{plan.price}</span>
+                    <span className="text-2xl sm:text-4xl font-normal">{plan.price}</span>
                     <span className="text-[#6A7282]">{plan.period}</span>
                   </div>
                   {plan.ads && (
@@ -279,8 +280,13 @@ export function Pricing2() {
                         : ""
                     }`}
                     variant={plan.buttonVariant}
+
+                    asChild
                   >
+                    <Link href={"/contact"}>
+                    
                     {plan.buttonText}
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -288,11 +294,11 @@ export function Pricing2() {
           ))}
         </Swiper>
 
-        <button className="swiper-button-prev-custom absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white border border-gray-300 rounded-full p-2 hover:bg-gray-50 transition shadow-[0px_4px_6px_-4px_#0000001A,0px_10px_15px_-3px_#0000001A]">
+        <button className="swiper-button-prev-custom max-sm:hidden absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-white border border-gray-300 rounded-full p-2 hover:bg-gray-50 transition shadow-[0px_4px_6px_-4px_#0000001A,0px_10px_15px_-3px_#0000001A]">
           <ChevronLeft className="w-6 h-6 text-primary" />
         </button>
 
-        <button className="swiper-button-next-custom absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white border border-gray-300 rounded-full p-2 hover:bg-gray-50 transition shadow-[0px_4px_6px_-4px_#0000001A,0px_10px_15px_-3px_#0000001A]">
+        <button className="swiper-button-next-custom max-sm:hidden absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-white border border-gray-300 rounded-full p-2 hover:bg-gray-50 transition shadow-[0px_4px_6px_-4px_#0000001A,0px_10px_15px_-3px_#0000001A]">
           <ChevronRight className="w-6 h-6 text-primary" />
         </button>
 
@@ -421,8 +427,11 @@ export default function Pricing() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full  bg-white border border-primary group-hover:text-white group-hover:bg-primary  hover:bg-primary/90 transition-all duration-500 text-primary">
+                  <Button className="w-full  bg-white border border-primary group-hover:text-white group-hover:bg-primary  hover:bg-primary/90 transition-all duration-500 text-primary" asChild>
+                    <Link href={"/pricing"}>
+                    
                     Get Started <ArrowRight />
+                    </Link>
                   </Button>
                   <p className="text-xs text-secondary text-center">
                     Start free 14-day trial
@@ -445,16 +454,16 @@ export default function Pricing() {
         <div className="mt-16 bg-[linear-gradient(180deg,#0E4571_0%,#0A3554_100%)] text-white rounded-2xl p-12 text-center">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className="text-4xl font-bold mb-2">98%</div>
+              <div className="text-4xl  mb-2">98%</div>
               <p className="text-white/80">Client Satisfaction</p>
             </div>
             <div>
-              <div className="text-4xl font-bold text-white mb-2">500+</div>
+              <div className="text-4xl  text-white mb-2">500+</div>
               <p className="text-white/80">Projects Completed</p>
             </div>
 
             <div>
-              <div className="text-4xl font-bold  mb-2">15+</div>
+              <div className="text-4xl   mb-2">15+</div>
               <p className="text-white/80">Years Experience</p>
             </div>
           </div>
@@ -473,13 +482,19 @@ export default function Pricing() {
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button
                   variant="outline"
+                  asChild
                   className="border-primary text-primary px-6 py-2 font-medium"
                 >
+                  <Link href={"/pricing"}>
                   See All Pricing Options{" "}
                   <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </Button>
-                <Button className="bg-primary hover:bg-primary px-6 py-2 font-medium text-white">
+                <Button asChild className="bg-primary hover:bg-primary px-6 py-2 font-medium text-white">
+                  <Link href={"/contact"}>
+                  
                   Schedule a Consultation
+                  </Link>
                 </Button>
               </div>
             </div>

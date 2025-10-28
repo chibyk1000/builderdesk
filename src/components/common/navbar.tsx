@@ -11,11 +11,12 @@ import {
 import { useState } from "react";
 import { Globe, Menu, MessageCircle, X } from "lucide-react";
 import { Button } from "../ui/button";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [lang, setLang] = useState("english");
   const [open, setOpen] = useState(false);
-
+const pathname = usePathname()
   const links = [
     { text: "Home", href: "/" },
     { text: "About Us", href: "/about" },
@@ -40,7 +41,7 @@ const Navbar = () => {
       <ul className="flex items-center md:max-w-[60%]  w-full justify-between max-lg:hidden">
         {links.map((link) => (
           <li key={link.text}>
-            <Link href={link.href} className="text-sm">
+            <Link href={link.href} className={`text-sm ${pathname === link.href && "text-primary"}`}>
               {link.text}
             </Link>
           </li>
@@ -57,7 +58,7 @@ const Navbar = () => {
           </SelectContent>
         </Select>
 
-        <Button variant={"success"}>
+        <Button variant={"success"} >
           <MessageCircle /> WhatsAppUs
         </Button>
       </ul>
@@ -95,7 +96,7 @@ const Navbar = () => {
       {/* Mobile Menu with slide + fade animation */}
       <div
         className={`
-          absolute top-20 left-0 w-full bg-white border-t z-50 md:hidden 
+          absolute top-20 left-0 w-full bg-white border-t z-80 lg:hidden 
           flex flex-col px-4 py-4 gap-4 
           transition-all duration-300 ease-in-out overflow-hidden
           ${open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}

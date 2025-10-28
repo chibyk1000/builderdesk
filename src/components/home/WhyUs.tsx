@@ -84,7 +84,7 @@ export default function WhyChoose() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1  lg:grid-cols-3 gap-8">
           {reasons.map((reason, index) => {
             const IconComponent = reason.icon;
             return (

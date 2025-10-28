@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "../ui/button";
 import { CheckCircle } from "lucide-react";
+import Link from "next/link";
 
 interface ServiceCardProps {
   icon: React.ReactNode;
@@ -102,9 +103,13 @@ export const ServiceCtaCard: React.FC<ServiceCtaCardProps> = ({
         <Button
           onClick={onClick}
           variant="secondary"
+          asChild
           className="w-full bg-white text-primary hover:bg-white/90 font-medium mt-auto"
         >
+          <Link href={"/services"}>
+          
           {buttonText}
+          </Link>
         </Button>
       </CardContent>
     </Card>

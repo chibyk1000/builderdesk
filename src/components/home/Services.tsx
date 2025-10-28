@@ -105,7 +105,10 @@ const services = [
   return (
     <section className="py-24">
       <header className="text-center ">
-        <Badge className="text-primary bg-primary/5 mb-4 font-medium" variant={"outline"}>
+        <Badge
+          className="text-primary bg-primary/5 mb-4 font-medium"
+          variant={"outline"}
+        >
           Our Services
         </Badge>
         <div className="text-center mb-16">
@@ -113,15 +116,17 @@ const services = [
             What We Do
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Comprehensive solutions designed to help construction companies
-            operate more efficiently.
+            Comprehensive back-office services designed specifically for design
+            and construction solutions for sole-proprietors, small, medium and
+            large companies.
           </p>
         </div>
       </header>
-      <div className="grid grid-cols-3 gap-8  container  max-w-[1280px] px-8 mx-auto">
+      <div className="grid md:grid-cols-2   gap-8   xl:max-w-[1280px] px-2 sm:px-8 mx-auto">
         {services.map((service) => {
           return (
             <ServiceCard
+              key={service.title}
               description={service.description}
               icon={<service.icon />}
               title={service.title}

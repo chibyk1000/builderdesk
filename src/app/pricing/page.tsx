@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import { Pricing2 } from "@/components/home/Pricing";
+import Link from "next/link";
 const Page = () => {
   const plans = [
     {
@@ -116,7 +117,7 @@ const Page = () => {
 
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12 relative overflow-hidden">
-            <div className="  flex items-center justify-center">
+            <div className="   items-center justify-center hidden lg:flex">
               <div className="text-4xl size-78 relative">
                 <Image src={"/pricing-hero-l.png"} alt="" fill />
               </div>
@@ -137,19 +138,19 @@ const Page = () => {
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <div className="flex items-center gap-2  px-4 py-2 rounded-lg">
-                  <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
+                  <div className="size-7 sm:size-10 rounded-lg bg-primary flex items-center justify-center">
                     <CircleCheck className="w-5 h-5 text-primary-foreground" />
                   </div>
                   <span className="text-sm font-medium">Pay Per Task</span>
                 </div>
                 <div className="flex items-center gap-2 0 px-4 py-2 rounded-lg">
-                  <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
+                  <div className="size-7 sm:size-10 rounded-lg bg-primary flex items-center justify-center">
                     <CircleCheck className="w-5 h-5 text-primary-foreground" />
                   </div>
                   <span className="text-sm font-medium">Unlimited</span>
                 </div>
                 <div className="flex items-center gap-2  px-4 py-2 rounded-lg">
-                  <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
+                  <div className="size-7 sm:size-10 rounded-lg bg-primary flex items-center justify-center">
                     <CircleCheck className="w-5 h-5 text-primary-foreground" />
                   </div>
                   <span className="text-sm font-medium">Custom Quote</span>
@@ -157,7 +158,7 @@ const Page = () => {
               </div>
             </div>
 
-            <div className="  flex items-center justify-center">
+            <div className="   items-center justify-center hidden lg:flex">
               <div className="text-4xl size-78 relative">
                 <Image src={"/pricing-hero-r.png"} alt="" fill />
               </div>
@@ -168,10 +169,10 @@ const Page = () => {
       <section className=" ">
         <div className="max-w-7xl mx-auto bg-muted/30 py-16 px-6 ">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl text-primary mb-4">
+            <h2 className="max-sm:text-2xl text-3xl md:text-4xl text-primary mb-4">
               Pricing That Scales With You
             </h2>
-            <p className="text-[#4A5565] text-xl">
+            <p className="text-[#4A5565] text-lg sm:text-xl">
               Flexible pricing for every stage of your construction business
             </p>
           </div>
@@ -186,8 +187,11 @@ const Page = () => {
             <Button
               variant={"outline"}
               className="border-primary border mx-auto   mt-8 text-primary"
+              asChild
             >
+              <Link  href="/contact">
               Contact Us for Custom Pricing
+              </Link>
             </Button>
           </div>
         </div>
@@ -196,7 +200,9 @@ const Page = () => {
       <section className="py-16 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl  mb-4 text-primary">Hourly Pricing</h2>
+            <h2 className="text-xl sm:text-3xl md:text-4xl  mb-4 text-primary">
+              Hourly Pricing
+            </h2>
             <p className="text-muted-foreground">
               Flexible hourly rates for every stage of your construction
               business
@@ -207,13 +213,15 @@ const Page = () => {
             {services.map((service, index) => (
               <Card key={index} className="shadow-md  h-45.5 transition-shadow">
                 <CardHeader className="font-normal">
-                  <CardTitle className="text-xl text-primary font-normal">
+                  <CardTitle className="text-lg sm:text-xl text-primary font-normal">
                     {service.name}
                   </CardTitle>
-                  <div className="text-2xl  text-primary">{service.rate}</div>
+                  <div className="sm:text-2xl text-xl  text-primary">
+                    {service.rate}
+                  </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-[#4A5565]">
+                  <p className="text-xs sm:text-sm text-[#4A5565]">
                     {service.description}
                   </p>
                 </CardContent>
@@ -227,32 +235,38 @@ const Page = () => {
               background: `linear-gradient(90deg, rgba(219, 164, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%)`,
             }}
           >
-            <CardContent className="p-6 flex justify-between gap-4">
-              <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center text-white flex-shrink-0">
+            <CardContent className="p-6 flex max-lg:flex-col justify-between gap-4">
+              <div className="flex max-lg:flex-col max-lg:items-center gap-4">
+                <div className="w-12 h-12 rounded-lg bg-accent flex  items-center justify-center text-white flex-shrink-0">
                   <Star fill="white" />
                 </div>
                 <div>
-                  <h3 className=" text-lg mb-1">Volume Discount</h3>
-                  <p className="text-sm text-muted-foreground">
+                  <h3 className=" text-lg mb-1 max-lg:text-center">
+                    Volume Discount
+                  </h3>
+                  <p className="text-sm text-muted-foreground max-lg:text-center">
                     Purchase 20+ hours upfront and save 10-15% on all hourly
                     rates
                   </p>
                 </div>
               </div>
 
-              <Button>Get Quote</Button>
+              <Button asChild>
+                <Link href="/contact">
+                Get Quote
+                </Link> 
+              </Button>
             </CardContent>
           </Card>
         </div>
       </section>
       <section className="">
-        <div className="max-w-7xl mx-auto bg-muted/30 py-16 px-6 mb-6">
+        <div className="max-w-7xl mx-auto bg-muted/30 py-16 px-3 lg:px-6 mb-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl text-primary md:text-4xl  mb-4">
+            <h2 className="text-2xl sm:text-3xl text-primary md:text-4xl  mb-4">
               Project-Based Pricing
             </h2>
-            <p className="text-[#4A5565] text-xl">
+            <p className="text-[#4A5565] text-lg sm:text-xl">
               Flexible pricing for specific projects, no commitment required for
               one-off projects
             </p>
@@ -261,7 +275,7 @@ const Page = () => {
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
             {projects.map((project, index) => (
               <Card key={index} className="border-[#E5E7EB]">
-                <CardContent className="p-6 flex flex-col  gap-4">
+                <CardContent className="p-3 lg:p-6 flex flex-col  gap-4">
                   <div className="flex-1 flex  justify-between ">
                     <h3 className="text-primary text-lg mb-1">
                       {project.name}
@@ -285,14 +299,16 @@ const Page = () => {
           </p>
 
           <div className="text-center">
-            <Button className="bg-accent hover:bg-accent/90 text-white px-8 h-12">
+            <Button className="bg-accent hover:bg-accent/90 text-white px-8 h-12" asChild>
+              <Link href="/contact">
               Request Custom Quote
+              </Link>
             </Button>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-muted/60 max-w-7xl mx-auto">
+      <section className="py-16 bg-muted/60 max-md:px-2 max-w-7xl mx-auto">
         <h2 className="text-center text-2xl md:text-3xl font-semibold text-gray-800 mb-10">
           Why Our Pricing Makes Sense
         </h2>
@@ -300,7 +316,7 @@ const Page = () => {
         <div className="max-w-6xl mx-auto  grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card */}
           <div className="bg-white border h-[230px] grid border-gray-200 rounded-xl p-6 text-center">
-            <p className="text-3xl  text-primary">60%</p>
+            <p className="sm:text-3xl text-2xl  text-primary">60%</p>
             <h3 className="text-gray-800 font-medium mt-2">Cost Savings</h3>
             <p className="text-gray-500 text-sm mt-2">
               Compared to hiring full-time employees with benefits and overhead
@@ -308,7 +324,7 @@ const Page = () => {
           </div>
 
           <div className="bg-white border h-[230px] grid border-gray-200 rounded-xl p-6 text-center">
-            <p className="text-3xl  text-primary">No</p>
+            <p className="sm:text-3xl text-2xl text-primary">No</p>
             <h3 className="text-gray-800 font-medium mt-2">Hidden Fees</h3>
             <p className="text-gray-500 text-sm mt-2">
               Transparent pricing with no surprise charges or setup fees
@@ -316,7 +332,7 @@ const Page = () => {
           </div>
 
           <div className="bg-white border h-[230px] grid border-gray-200 rounded-xl p-6 text-center">
-            <p className="text-3xl  text-primary">100%</p>
+            <p className="sm:text-3xl text-2xl  text-primary">100%</p>
             <h3 className="text-gray-800 font-medium mt-2">Scalable</h3>
             <p className="text-gray-500 text-sm mt-2">
               Easily adjust your plan as your business needs change
@@ -325,7 +341,7 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white max-md:px-2">
         <h2 className="text-center text-2xl md:text-3xl font-semibold text-gray-800 mb-10">
           Frequently Asked Questions
         </h2>

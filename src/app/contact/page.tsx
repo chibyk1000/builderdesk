@@ -60,9 +60,9 @@ const Page = () => {
           </p>
         </div>
       </section>
-      <section className="py-16 px-6 bg-background">
+      <section className="py-16 px-2 lg:px-6 bg-background">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-12 gap-8">
+          <div className="sm:grid lg:grid-cols-12 gap-8">
             {/* Contact Form */}
             <Card className=" border-none pt-0 col-span-6 self-start">
               <CardHeader className="text-white rounded-t-lg block   p-0">
@@ -91,7 +91,7 @@ const Page = () => {
               </CardHeader>
               <CardContent className="p-6 space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <Card className="flex items-center justify-center py-2 border-none shadow-none bg-[#F9FAFB]">
+                  <Card className="flex max-sm:pl-2 sm:items-center  justify-center py-2 border-none shadow-none bg-[#F9FAFB]">
                     <CardContent className="flex items-center gap-2 p-0">
                       <span className="size-10 rounded-[8px] inline-flex items-center justify-center bg-[linear-gradient(135deg,#2B7FFF_0%,#155DFC_100%)]">
                         <Clock className="w-5 h-5 text-white" />
@@ -102,7 +102,7 @@ const Page = () => {
                       </span>
                     </CardContent>
                   </Card>
-                  <Card className="flex items-center justify-center py-2 border-none shadow-none bg-[#F9FAFB]">
+                  <Card className="flex max-sm:pl-2 sm:items-center  justify-center py-2 border-none shadow-none bg-[#F9FAFB]">
                     <CardContent className="flex items-center gap-2 p-0">
                       <span className="size-10 rounded-[8px] inline-flex items-center justify-center bg-[linear-gradient(135deg,#DBA400_0%,#F54900_100%)]">
                         <Headphones className="text-white w-5 h-5" />
@@ -113,7 +113,7 @@ const Page = () => {
                       </span>
                     </CardContent>
                   </Card>
-                  <Card className="flex items-center justify-center py-2 border-none shadow-none bg-[#F9FAFB]">
+                  <Card className="flex max-sm:pl-2 sm:items-center  justify-center py-2 border-none shadow-none bg-[#F9FAFB]">
                     <CardContent className="flex items-center gap-2 p-0">
                       <span className="size-10 rounded-[8px] inline-flex items-center justify-center bg-[linear-gradient(135deg,#00C950_0%,#00A63E_100%)]">
                         <MessageSquare className="text-white w-5 h-5" />
@@ -128,14 +128,14 @@ const Page = () => {
 
                 <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {/* Full Name */}
-                  <div className="space-y-1">
-                    <Label htmlFor="fullName">Full Name *</Label>
+                  <div className="space-y-2">
+                    <Label htmlFor="fullName" className="max-sm:text-sm">Full Name *</Label>
                     <Input id="fullName" placeholder="John Smith" />
                   </div>
 
                   {/* Email */}
-                  <div className="space-y-1">
-                    <Label htmlFor="email">Email Address *</Label>
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="max-sm:text-sm">Email Address *</Label>
                     <Input
                       id="email"
                       placeholder="john@company.com"
@@ -144,20 +144,20 @@ const Page = () => {
                   </div>
 
                   {/* Phone Number */}
-                  <div className="space-y-1">
-                    <Label htmlFor="phone">Phone Number</Label>
+                  <div className="space-y-2">
+                    <Label htmlFor="phone" className="max-sm:text-sm">Phone Number</Label>
                     <Input id="phone" placeholder="000 000 0000" />
                   </div>
 
                   {/* Company Name */}
-                  <div className="space-y-1">
+                  <div className="space-y-2">
                     <Label htmlFor="company">Company Name</Label>
                     <Input id="company" placeholder="ABC Construction Ltd" />
                   </div>
 
                   {/* Service */}
-                  <div className="space-y-1 md:col-span-2">
-                    <Label htmlFor="service">
+                  <div className="space-y-2 md:col-span-2">
+                    <Label htmlFor="service" className="max-sm:text-sm">
                       What service are you interested in?
                     </Label>
                     <Select>
@@ -182,8 +182,8 @@ const Page = () => {
                   </div>
 
                   {/* Message */}
-                  <div className="space-y-1 md:col-span-2">
-                    <Label htmlFor="message">Tell us about your needs *</Label>
+                  <div className="space-y-2 md:col-span-2">
+                    <Label htmlFor="message" className="max-sm:text-sm">Tell us about your needs *</Label>
                     <Textarea
                       id="message"
                       placeholder="Share details about your business, current challenges, and how we can help..."
@@ -347,20 +347,20 @@ const Page = () => {
       </section>
       <section className="py-16 px-6 bg-muted/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl  text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl  md:text-4xl  text-center mb-12">
             Why Construction Companies Trust Us
           </h2>
-          <div className="grid md:grid-cols-3 h-58.5 gap-8">
+          <div className="grid md:grid-cols-3 md:h-58.5 gap-8">
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="text-center shadow pt-10 border border-[#0000001A] grid rounded-[12px]"
+                className="text-center shadow py-10 px-2 border border-[#0000001A] grid rounded-[12px]"
               >
                 <div className="text-3xl md:text-4xl  text-primary mb-2">
                   {stat.value}
                 </div>
                 <div className="text-xl  mb-2 text-[#1A1A1A]">{stat.label}</div>
-                <p className=" text-[#4A5565] max-w-xs mx-auto">
+                <p className=" text-[#4A5565]   max-w-xs mx-auto">
                   {stat.description}
                 </p>
               </div>

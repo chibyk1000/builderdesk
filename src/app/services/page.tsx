@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 const services = [
   {
@@ -337,15 +338,18 @@ function Page() {
             {qualifications.map((qualification, index) => (
               <Card key={index} className="border-2">
                 <CardHeader className="pb-4">
-                  <div className="flex items-start gap-3">
-                    <div className=" size-31.5 rounded-lg relative bg-[#F3F4F6] flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="flex max-sm: flex-col items-start gap-3">
+                    <div className="relative  w-full">
+
+                    <div className=" size-24 lg:size-31.5 rounded-lg sm:relative bg-[#F3F4F6] flex items-center justify-center flex-shrink-0 mt-1">
                       <User className="size-16 text-[#99A1AF]" />
-                      <div className="bg-[#E28C1B] absolute top-23 left-23 backdrop-blur-sm rounded-[12px] size-12 flex items-center justify-center shadow-[0px_4px_6px_-4px_rgba(0,0,0,0.1),0px_10px_15px_-3px_rgba(0,0,0,0.1)]">
+                      <div className=" bg-primary   lg:bg-[#E28C1B] absolute  bottom-0 right-0 sm:top-17 lg:top-23 sm:left-15 lg:left-23 backdrop-blur-sm rounded-[12px] size-10 lg:size-12 flex items-center justify-center shadow-[0px_4px_6px_-4px_rgba(0,0,0,0.1),0px_10px_15px_-3px_rgba(0,0,0,0.1)]">
                         <qualification.icon className="text-white" />
                       </div>
                     </div>
+                    </div>
                     <CardTitle className=" font-normal grid text-primary pt-1">
-                      <span className="text-2xl">{qualification.title}</span>
+                      <span className=" text-xl md:text-2xl">{qualification.title}</span>
                       <span className="text-sm leading-5.5">
                         {qualification.sub}
                       </span>
@@ -373,10 +377,10 @@ function Page() {
       <section className="">
         <div className="container max-w-[1280px] mx-auto px-4 bg-[#F9FAFB] py-20 ">
           <div className="text-center mb-16">
-            <h2 className="text-4xl  mb-4 text-balance text-[#1A1A1A]">
+            <h2 className="text-2xl lg:text-4xl  mb-4 text-balance text-[#1A1A1A]">
               How We Work With You
             </h2>
-            <p className="text-[#4A5565] text-xl ">
+            <p className="text-[#4A5565] text-sm lg:text-xl ">
               A simple, straightforward process to get you the support you need
             </p>
           </div>
@@ -387,10 +391,10 @@ function Page() {
                 key={step.number}
                 className="flex flex-col items-center text-center"
               >
-                <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl  mb-4">
+                <div className="size-14 lg:size-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl  mb-4">
                   {step.number}
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+                <h3 className="text-lg lg:text-xl mb-3">{step.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {step.description}
                 </p>
@@ -405,7 +409,7 @@ function Page() {
           <div className="grid lg:grid-cols-2 gap-12 items-center  mx-auto ">
             {/* Left Column - Benefits */}
             <div>
-              <h2 className="text-4xl  mb-12 text-balance">
+              <h2 className="text-2xl lg:text-4xl  mb-12 ">
                 Why Construction Companies Choose Us
               </h2>
               <div className="space-y-8">
@@ -441,17 +445,25 @@ function Page() {
                   size="lg"
                   variant="ghost"
                   className="w-full justify-center gap-2 bg-white"
+                  asChild
                 >
+                  <Link href="/contact">
+                  
                   <Phone className="w-4 h-4" />
                   Schedule a Consultation
+                  </Link>
                 </Button>
                 <Button
                   size="lg"
                   variant="ghost"
                   className="w-full justify-center gap-2 bg-white border-primary-foreground hover:bg-primary-foreground text-primary"
+                  asChild
+
                 >
+                  <Link href="/pricing">
                   <FileText className="w-4 h-4" />
                   View Pricing Plans
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -462,15 +474,17 @@ function Page() {
       <section className=" mb-20">
         <div className="container mx-auto max-w-4xl px-4 py-10 bg-[#F9FAFB]">
           <div className="mx-auto text-center">
-            <h2 className="text-4xl  mb-6 text-balance">
+            <h2 className="text-2xl sm:text-4xl  mb-6 text-balance">
               Let Us Handle the Back Office
             </h2>
-            <p className="text-xl text-[#4A5565] mb-8 leading-relaxed text-pretty">
+            <p className="text-lg sm:text-xl text-[#4A5565] mb-8 leading-relaxed text-pretty">
               Focus on building great projects while we take care of project
               management, estimating, bookkeeping, and more.
             </p>
-            <Button size="lg" className="px-8">
+            <Button size="lg" className="px-8" asChild>
+              <Link href="/contact">
               Get Your Free Consultation
+              </Link>
             </Button>
           </div>
         </div>

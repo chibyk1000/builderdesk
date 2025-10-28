@@ -42,7 +42,7 @@ export default function Testimonials() {
           {testimonials.map((t, index) => (
             <Card
               key={index}
-              className="border max-w-98 w-full h-[293px] border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+              className="border max-w-98 w-full lg:h-[293px] border-gray-100 shadow-sm hover:shadow-md transition-shadow"
             >
               <CardContent className="p-6 text-left">
                 {/* Stars */}
