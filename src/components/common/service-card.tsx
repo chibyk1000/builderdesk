@@ -19,7 +19,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   return (
     <Card
-      className="group self-start relative border border-gray-200 rounded-2xl overflow-hidden 
+      className="group self-start relative border bg-white dark:bg-white border-gray-200 rounded-2xl overflow-hidden 
       shadow-[0px_4px_6px_-4px_#0000001A,0px_10px_15px_-3px_#0000001A]
       transition-all duration-500 ease-in-out
       hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)]
