@@ -4,40 +4,28 @@ import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function HowItWorks() {
-  const steps = [
-    {
-      number: "1",
-      title: "Discover",
-      text: "We learn about your company, challenges, and specific needs through an in-depth consultation.",
-    },
-    {
-      number: "2",
-      title: "Plan",
-      text: "We tailor a support package with the right services and frequency for your business.",
-    },
-    {
-      number: "3",
-      title: "Implement",
-      text: "In one week, we will select and onboard the right team member to commence working on your projects.",
-    },
-    {
-      number: "4",
-      title: "Grow & Scale",
-      text: "As you expand, we scale with you—adding services or hours as needed.",
-    },
-  ];
+
+const t = useTranslations("Home.HowItWorks");
+
+const steps = [1, 2, 3, 4].map((i) => ({
+  number: t(`steps-${i}-number`),
+  title: t(`steps-${i}-title`),
+  text: t(`steps-${i}-text`),
+}));
+  
 
   return (
     <section className="py-20  text-center">
       <div className="max-w-6xl mx-auto px-6">
         <Badge className="bg-blue-50 text-primary border-none mb-4">
-          Our Process
+          {t("badge")}
         </Badge>
-        <h2 className="text-4xl font-semibold text-primary">How It Works</h2>
+        <h2 className="text-4xl font-semibold text-primary">{ t("title")}</h2>
         <p className="text-secondary mt-3 mb-12 max-w-2xl mx-auto">
-          A simple, proven process to get you the support you need
+       {t("description")}
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 md:gap-6 relative">
@@ -74,7 +62,7 @@ export default function HowItWorks() {
                   <Button className="bg-primary inline-flex gap-4 hover:bg-primary/90 text h-12  text-white rounded-md max-w-67 w-full py-2 shadow-[0px_4px_6px_-4px_#0000001A,0px_10px_15px_-3px_#0000001A]">
                       <Link href="/contact">
                           
-                      Start Your Journey Today 
+                {t("ctabutton")}
                       </Link>
             
                       <ArrowRight />

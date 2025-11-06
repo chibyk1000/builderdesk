@@ -12,13 +12,20 @@ import React from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
-  const offer = [
-    "No long-term contracts",
-    "Scale as you grow",
-    "Industry specialists",
-  ];
+  const t = useTranslations("Home.Hero");
+
+  
+   const offer = [
+     t("offers.noContract"),
+     t("offers.scale"),
+     t("offers.specialists"),
+   ];
+
+  
+
     return (
       <section className=" relative text-white  bg-[linear-gradient(180deg,#0E4571_0%,#0A3554_50%,#063049_100%)] overflow-hidden  pt-28   h-fit flex flex-col ">
         {/* Top blue blur light */}
@@ -30,7 +37,7 @@ const Hero = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[800px] rounded-[33554400px] bg-[linear-gradient(180deg,#0E4571_0%,rgba(0,0,0,0)_100%)] blur-[300px] "></div>
 
         {/* Content */}
-        <section className="relative z-50 container px-2 sm:px-10 max-w-[1216px] mx-auto  space-y-4  text-left md:text-left">
+        <section className="relative z-50 container px-2 sm:px-10 max-w-[1260px] mx-auto  space-y-4  text-left md:text-left">
           <div className="w-full  md:mx-0  ">
             {/* Trust Badge */}
 
@@ -38,23 +45,19 @@ const Hero = () => {
               <section className="space-y-8  flex-1 col-span-12  xl:col-span-6">
                 <div className="rounded-full border border-white/20 w-80 justify-center px-2 h-[42px] flex items-center gap-2 bg-white/10 mx-auto md:mx-0">
                   <span className="inline-block bg-yellow-400 rounded-full size-2"></span>
-                  <p className="text-white text-sm">
-                    Trusted by 50+ Construction Companies
-                  </p>
+                  <p className="text-white text-sm">{t("badge")}</p>
                 </div>
                 {/* Headline */}
                 <article className="mt-8 ">
                   <h2 className="text-white max-sm:text-4xl text-6xl md:text-7xl mb-2 font-bold">
-                    Build Better
+                    {t("headline1")}
                   </h2>
                   <h2 className="text-yellow-400 max-sm:text-4xl text-6xl md:text-7xl font-bold">
-                    Business
+                    {t("headline2")}
                   </h2>
 
                   <p className="text-white/80 text-lg mt-6 leading-relaxed max-w-140">
-                    Expert back-office support for design and construction
-                    companies. Project management, bookkeeping, estimating &
-                    more—so you can focus on what you do best.
+                    {t("description")}
                   </p>
                 </article>
 
@@ -70,7 +73,7 @@ const Hero = () => {
                 </div>
                 <div className="flex max-sm:flex-col  gap-4">
                   <Button
-                    className="flex font-medium items-center gap-2 bg-accent text-white  px-6 py-3 rounded-lg transition-all duration-300 hover:bg-accent/90 [box-shadow:0_25px_30px_-12px_#DBA4004D] h-14 sm:w-60 text-[18px] "
+                    className="flex font-medium items-center gap-2 bg-accent text-white  px-6 py-3 rounded-lg transition-all duration-300 hover:bg-accent/90 [box-shadow:0_25px_30px_-12px_#DBA4004D] h-14  text-[18px] "
                     asChild
                     style={
                       {
@@ -79,20 +82,16 @@ const Hero = () => {
                     }
                   >
                     <Link href={"/contact"}>
-                    
-                    <span>Get Free Consultation</span>
-                    <ArrowRight className="size-4" />
-                    
+                      <span>{t("buttons.consultation")}</span>
+                      <ArrowRight className="size-4" />
                     </Link>
                   </Button>
                   <Button
-                    variant={"ghost"}
                     asChild
-                    className="font-medium h-14 sm:w-45.5 text-[18px]  bg-white hover:bg-white/80  text-black"
+                    className="font-medium h-14 sm:w-45.5 text-[18px] dark:bg-white bg-white hover:bg-white/80  text-black"
                   >
-                    <Link href={"/pricing"}>
-                    
-                    View Pricing
+                    <Link href={"/pricing"} className="bg-white">
+                      {t("buttons.pricing")}
                     </Link>
                   </Button>
                 </div>
@@ -106,7 +105,7 @@ const Hero = () => {
                   <div className="relative z-20 w-[476px] h-[313px] [box-shadow:0px_25px_50px_-12px_#00000040]">
                     <Button className="bg-accent hover:bg-accent text-white absolute -top-4 z-105 -right-4">
                       <CircleCheck />
-                      <span>Full-Service Support</span>
+                      <span>{t("image.tag")}</span>
                     </Button>
 
                     <div className="bg-white rounded-xl bg-liner grid place-content-center absolute -bottom-4 z-105 h-[106px] w-[188px] -left-4">
@@ -117,7 +116,7 @@ const Hero = () => {
                         <div>
                           <p className="text-primary text-3xl">4.9/5</p>
                           <p className="text-secondary text-xs">
-                            Client Rating
+                            {t("image.ratingLabel")}
                           </p>
                         </div>
                       </div>
@@ -125,9 +124,9 @@ const Hero = () => {
                     <div className="bg-[linear-gradient(0deg,rgba(14,69,113,0.4)_0%,rgba(0,0,0,0)_50%,rgba(0,0,0,0)_100%)]">
                       <Image
                         src="/ImageWithFallback.png"
-                        alt="Construction team at work"
+                        alt={t("image.alt")}
                         fill
-                        className="object-cover z-[5] object-center rounded-2xl"
+                        className="object-cover z-5 object-center rounded-2xl"
                         priority
                       />
                     </div>
@@ -137,35 +136,44 @@ const Hero = () => {
             </div>
 
             <div className="grid grid-cols-3 max-w-[682.65625px] gap-2 md:gap-6 pt-8 text-center md:text-left">
-              <div className=" bg-white/5 border-white/10 h-35 border rounded-xl grid place-content-center text-center">
+              <div className=" bg-white/5 border-white/10 space-y-1 h-35 border rounded-xl grid place-content-center text-center">
                 <ClipboardList className="text-accent inline-block mx-auto max-md:size-4" />
                 <h3 className="text-2xl md:text-4xl font-bold text-white">
-                  500+
+                  {t("stats.projects.value")}
                 </h3>
-                <p className="text-white/70 text-sm md:hidden">Projects </p>
+                <p className="text-white/70 text-sm md:hidden">
+                  {" "}
+                  {t("stats.projects.labelShort")}{" "}
+                </p>
                 <p className="text-white/70 text-xs max-md:hidden">
-                  Projects Delivered
+                  {t("stats.projects.labelFull")}
                 </p>
               </div>
-              <div className=" bg-white/5 border-white/10 h-35 border rounded-xl grid place-content-center text-center">
+              <div className=" bg-white/5 border-white/10 h-35 space-y-1 border rounded-xl grid place-content-center text-center">
                 <Clock className="text-accent inline-block mx-auto max-md:size-4" />
                 <h3 className="text-2xl md:text-4xl font-bold text-white">
-                  500+
+                  {t("stats.onTime.value")}
                 </h3>
-                <p className="text-white/70 text-sm md:hidden">On-Time</p>
+                <p className="text-white/70 text-sm md:hidden">
+                  {" "}
+                  {t("stats.onTime.labelShort")}
+                </p>
                 <p className="text-white/70 text-sm max-md:hidden">
-                  On-Time Rate
+                  {t("stats.onTime.labelFull")}
                 </p>
               </div>
-              <div className=" bg-white/5 border-white/10 h-35 border rounded-xl grid place-content-center text-center">
+              <div className=" bg-white/5 border-white/10 h-35 space-y-1 border rounded-xl grid place-content-center text-center">
                 <Shield className="text-accent inline-block mx-auto max-md:size-4" />
-
                 <h3 className="text-2xl md:text-4xl font-bold text-white">
-                  500+
+                  {t("stats.experience.value")}
                 </h3>
-                <p className="text-white/70 text-sm md:hidden">Years</p>
+
+                <p className="text-white/70 text-sm md:hidden">
+                  {" "}
+                  {t("stats.onTime.labelShort")}
+                </p>
                 <p className="text-white/70 text-sm max-md:hidden">
-                  Years Experience
+                  {t("stats.onTime.labelFull")}
                 </p>
               </div>
             </div>
@@ -180,7 +188,7 @@ const Hero = () => {
               <div className="relative z-20 xs:w-[342px] md:w-[677px]  h-[313px] [box-shadow:0px_25px_50px_-12px_#00000040]">
                 <Button className="bg-accent hover:bg-accent  max-sm:h-8 top-10 right-2 text-white absolute sm:-top-4 z-105 sm:-right-4">
                   <CircleCheck />
-                  <span>Full-Service Support</span>
+                  <span>{t("image.tag")}</span>
                 </Button>
 
                 <div className="bg-white rounded-xl bg-liner grid place-content-center absolute -bottom-4 z-105 h-[78px] sm:h-[106px] w-[154px] sm:w-[188px] left-4 sm:-left-4">
@@ -190,7 +198,9 @@ const Hero = () => {
                     </div>
                     <div>
                       <p className="text-primary text-xl sm:text-3xl">4.9/5</p>
-                      <p className="text-secondary text-xs">Client Rating</p>
+                      <p className="text-secondary text-xs">
+                        {t("image.ratingLabel")}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -199,7 +209,7 @@ const Hero = () => {
                     src="/ImageWithFallback.png"
                     alt="Construction team at work"
                     fill
-                    className="object-cover z-[5] object-center rounded-2xl"
+                    className="object-cover z-5 object-center rounded-2xl"
                     priority
                   />
                 </div>
@@ -212,25 +222,25 @@ const Hero = () => {
           {/* Item 1 */}
           <div className="flex items-center    md:justify-center gap-2 px-6">
             <Shield className="text-accent" />
-            <p>Industry Certified</p>
+            <p>{t("footer.certified")}</p>
           </div>
 
           {/* Custom Divider */}
-          <div className="w-[1px] hidden sm:block h-6 bg-gradient-to-b from-white/10 to-white/5 mx-4" />
+          <div className="w-px hidden sm:block h-6 bg-linear-to-b from-white/10 to-white/5 mx-4" />
 
           {/* Item 2 */}
           <div className="flex items-center md:justify-center gap-2 px-6">
             <Users className="text-accent" />
-            <p>Dedicated Support Team</p>
+            <p> {t("footer.support")}</p>
           </div>
 
           {/* Custom Divider */}
-          <div className="w-[1px] h-6 bg-gradient-to-b  hidden sm:block from-white/10 to-white/5 mx-4" />
+          <div className="w-px h-6 bg-linear-to-b  hidden sm:block from-white/10 to-white/5 mx-4" />
 
           {/* Item 3 */}
           <div className="flex items-center md:justify-center gap-2 px-6">
             <TrendingUp className="text-accent" />
-            <p>Proven Track Record</p>
+            <p>{t("footer.trackRecord")}</p>
           </div>
         </div>
       </section>

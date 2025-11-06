@@ -1,0 +1,1074 @@
+{
+  "Home": {
+    "Hero": {
+      "badge": "Trusted by 50+ Construction Companies",
+      "headline1": "Build Better",
+      "headline2": "Business",
+      "description": "Expert back-office support for design and construction companies. Project management, bookkeeping, estimating & more—so you can focus on what you do best.",
+      "offers": {
+        "noContract": "No long-term contracts",
+        "scale": "Scale as you grow",
+        "specialists": "Industry specialists"
+      },
+      "buttons": {
+        "consultation": "Get Free Consultation",
+        "pricing": "View Pricing"
+      },
+      "image": {
+        "alt": "Construction team at work",
+        "tag": "Full-Service Support",
+        "ratingLabel": "Client Rating",
+        "ratingValue": "4.9/5"
+      },
+      "stats": {
+        "projects": {
+          "value": "500+",
+          "labelShort": "Projects",
+          "labelFull": "Projects Delivered"
+        },
+        "onTime": {
+          "value": "98%",
+          "labelShort": "On-Time",
+          "labelFull": "On-Time Rate"
+        },
+        "experience": {
+          "value": "15+",
+          "labelShort": "Years",
+          "labelFull": "Years Experience"
+        }
+      },
+      "footer": {
+        "certified": "Industry Certified",
+        "support": "Dedicated Support Team",
+        "trackRecord": "Proven Track Record"
+      }
+    },
+    "Services": {
+      "badge": "Our Services",
+      "heading": "What We Do",
+      "description": "Comprehensive back-office services designed specifically for design and construction solutions for sole proprietors, small, medium, and large companies.",
+      "cta": {
+        "title": "Need Something Else?",
+        "description": "We offer custom solutions tailored to your specific needs.",
+        "button": "View All Services"
+      },
+      "items": {
+        "projectManagement": {
+          "title": "Project Management Support",
+          "description": "Comprehensive support to keep your projects on track and organized.",
+          "services": [
+            "Project setup and closeout",
+            "Schedule of values",
+            "AJA Billing",
+            "Submittal preparation and tracking",
+            "Change orders preparation",
+            "Document control",
+            "RFI",
+            "Safety plan",
+            "Project scheduling"
+          ]
+        },
+        "adminSupport": {
+          "title": "Administrative Support",
+          "description": "Professional administrative assistance to streamline your operations.",
+          "services": [
+            "Filing, tracking, appointment setup",
+            "Follow-up emails",
+            "Insurance COI management",
+            "Onboarding and offboarding",
+            "Call answering",
+            "Letter drafting"
+          ]
+        },
+        "businessDev": {
+          "title": "Business Development",
+          "description": "Strategic growth services including bidding, estimating, and marketing.",
+          "services": [
+            "Bidding and estimating",
+            "Bid follow-up/tracking",
+            "Prequalifications",
+            "Proposal writing"
+          ]
+        },
+        "bookkeeping": {
+          "title": "Bookkeeping",
+          "description": "Financial tracking and reporting tailored for construction.",
+          "services": [
+            "Payroll",
+            "Chart of accounts setup",
+            "Accounts receivable/payable tracking"
+          ]
+        },
+        "marketing": {
+          "title": "Marketing",
+          "description": "Build your brand and online presence with our marketing services.",
+          "services": [
+            "Social media management",
+            "Website design",
+            "Graphic design",
+            "Capability statements",
+            "Overall branding"
+          ]
+        },
+        "hr": {
+          "title": "Human Resources",
+          "description": "HR support to manage your team effectively.",
+          "services": [
+            "Employee onboarding",
+            "Recruitment assistance",
+            "PTO tracking",
+            "Employee offboarding",
+            "Policy drafting"
+          ]
+        },
+        "archSupport": {
+          "title": "Architectural Support",
+          "description": "Design and drafting support using the latest software.",
+          "services": [
+            "Shop drawings",
+            "Design drafting",
+            "As-builts",
+            "3D modeling",
+            "Rendering",
+            "Software: AutoCAD, Revit, SketchUp, V-Ray, Lumion"
+          ]
+        }
+      }
+    },
+    "WhyChoose": {
+      "badge": "Our Competitive Edge",
+      "title": "Why Construction Companies Choose Us",
+      "description": "We combine industry expertise with dedicated support to help your business thrive.",
+      "learnMore": "Click to learn more →",
+      "stats": {
+        "projects": { "value": "500+", "label": "Projects Completed" },
+        "onTime": { "value": "95%", "label": "On-Time Delivery" },
+        "experience": { "value": "15+", "label": "Projects Managed" }
+      },
+      "reasons": {
+        "reliability": {
+          "title": "Reliability",
+          "badge": "98% On-Time",
+          "description": "We commit to deadlines, organized workflows, and consistent communication. Our 99% on-time delivery rate speaks for itself.",
+          "fulldesc": "At The Builders Desk, reliability is at the core of everything we do. We understand that in construction, timing is critical. Our team is committed to meeting deadlines, maintaining organized workflows, and ensuring consistent communication with your team. Our 98% on-time delivery rate demonstrates our dedication to being a partner you can count on, project after project."
+        },
+        "scalability": {
+          "title": "Scalability and Flexibility",
+          "badge": "Fully Flexible",
+          "description": "Our solutions fit with your business. Add services, scale up with your business, and adjust as needed.",
+          "fulldesc": "No long-term contracts. Stop when you need to, and pick back up when you are ready. From sole proprietors and small builders to large firms, our services scale with your business. Whether you need 10 hours a week or full-time support across multiple services, we adapt to your changing needs without the overhead of hiring full-time staff."
+        },
+        "industry": {
+          "title": "Industry-Specific Expertise",
+          "badge": "15+ Years",
+          "description": "We understand construction's unique challenges, budget issues, and regulatory requirements. We know the industry.",
+          "fulldesc": "Our project managers are PMP trained and have a minimum of Bachelor's degrees in their respective fields. We don't just understand business—we understand construction specifically: every permit requirement, estimate detail, budget nuance, and regulatory compliance issue. We speak your language and bring real industry expertise to every task."
+        },
+        "technology": {
+          "title": "Technology and Software",
+          "badge": "Cutting Edge",
+          "description": "We invest in the latest tools to give you the best experience and competitive advantage.",
+          "fulldesc": "We invest in the latest and greatest tools to get the task done. We own and have proficiency in software like: Planswift, Primavera P6, AutoCAD, Revit, Lumion, 3D Max, Sketch Up, and more. This ensures we can seamlessly integrate with your existing workflows and deliver professional results."
+        },
+        "training": {
+          "title": "Continued Training",
+          "badge": "Always Learning",
+          "description": "Our team stays ahead through specialized training and continuous learning.",
+          "fulldesc": "We stay ahead of the times by enrolling our team members in specialized training programs like PMP, Microsoft Office Suite, Customer Service Representative certification, and more. Continuous professional development ensures our team brings the latest best practices to your business."
+        },
+        "hiring": {
+          "title": "Hiring Selection",
+          "badge": "Top Talent",
+          "description": "We hire the top 1% with optimal education, experience, and certifications.",
+          "fulldesc": "We hire the top 1% with a basic requirement of undergraduate degrees in the areas of specialization like: construction management, architecture, engineering, etc. Our Admins hold undergraduate degrees in fields like business administration, communication, English, and more. Quality starts with quality people."
+        }
+      }
+    },
+    "HowItWorks": {
+      "badge": "Our Process",
+      "title": "How It Works",
+      "description": "A simple, proven process to get you the support you need",
+
+      "steps-1-number": "1",
+      "steps-1-title": "Discover",
+      "steps-1-text": "We learn about your company, challenges, and specific needs through an in-depth consultation.",
+
+      "steps-2-number": "2",
+      "steps-2-title": "Plan",
+      "steps-2-text": "We tailor a support package with the right services and frequency for your business.",
+
+      "steps-3-number": "3",
+      "steps-3-title": "Implement",
+      "steps-3-text": "In one week, we will select and onboard the right team member to commence working on your projects.",
+
+      "steps-4-number": "4",
+      "steps-4-title": "Grow & Scale",
+      "steps-4-text": "As you expand, we scale with you—adding services or hours as needed.",
+
+      "ctabutton": "Start Your Journey Today"
+    },
+    "hourlyPricing": {
+      "badge": "Flexible Pricing",
+      "title": "Hourly & Project-Based Pricing",
+      "description": "Need more flexibility? Pay only for the services you use, when you need them",
+      "services": {
+        "projectManagement": {
+          "title": "Project Management",
+          "description": "Professional project coordination, scheduling, and"
+        },
+        "estimating": {
+          "title": "Estimating",
+          "description": "Accurate cost estimates, takeoffs, and bid preparation"
+        },
+        "bookkeeping": {
+          "title": "Bookkeeping",
+          "description": "Construction-focused financial management and reporting"
+        },
+        "adminAssistance": {
+          "title": "Admin Assistance",
+          "description": "General administrative support and documentation"
+        },
+        "businessDevelopment": {
+          "title": "Business Development",
+          "description": "Lead generation, proposals, and growth strategies"
+        }
+      },
+      "pricing": {
+        "perProject": {
+          "title": "Per-Project Pricing",
+          "description": "Flexible packages for specific projects or deliverables",
+          "button": "Get Quote"
+        },
+        "volumeDiscount": {
+          "title": "Volume Discounts Available",
+          "description": "Purchase 20+ hours upfront and save 10-15% on hourly rates",
+          "button": "View All Options"
+        }
+      },
+      "priceUnit": "per hour"
+    },
+    "industryExpertise": {
+      "badge": "Industry Expertise",
+      "headerTitle": "Built for Construction Companies",
+      "headerDescription": "We understand your industry inside and out, bringing specialized knowledge to every project type.",
+      "sectorsTitle": "Sectors We Serve",
+      "sectors": {
+        "residential": {
+          "title": "Residential",
+          "description": "Single & multi-family homes"
+        },
+        "commercial": {
+          "title": "Commercial",
+          "description": "Office buildings & retail"
+        },
+        "industrial": {
+          "title": "Industrial",
+          "description": "Warehouses & facilities"
+        },
+        "infrastructure": {
+          "title": "Infrastructure",
+          "description": "Roads, bridges & utilities"
+        }
+      },
+      "stats": [
+        { "num": "500+", "label": "Projects" },
+        { "num": "15+", "label": "Years" },
+        { "num": "98%", "label": "On-Time" }
+      ],
+      "footerTitle": "Our Construction Expertise",
+      "footerDetails": [
+        "Regional material costs & vendor relationships",
+        "Local & state regulatory compliance",
+        "Subcontractor coordination best practices",
+        "Construction-specific accounting standards"
+      ]
+    },
+    "preFoot": {
+      "heading": "Ready to Build Better Business?",
+      "subheading": "Join hundreds of construction companies who trust us with their back-office operations.",
+      "buttons": {
+        "getStarted": "Get Started Today",
+        "chatWhatsapp": "Chat on WhatsApp"
+      },
+      "contact": {
+        "call": "Call Us",
+        "phone": "(800) 123-4567",
+        "emailLabel": "Email",
+        "email": "info@buildersdesk.com",
+        "responseTimeLabel": "Response Time",
+        "responseTime": "Within 24 hours"
+      }
+    }
+  },
+
+  "Navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "whatsapp": "WhatsApp Us"
+  },
+  "Pricing1": {
+    "badge": "Our Process",
+    "title": "Pricing That Scales With You",
+    "subtitle": "Transparent monthly plans with no hidden fees. Pay for what you need.",
+    "filters": [
+      "No setup fees",
+      "Cancel anytime",
+      "30 day money back",
+      "Dedicated support"
+    ],
+    "plans": [
+      {
+        "name": "Administrative Support",
+        "price": "$1,500",
+        "maxProject": "Maximum of 2 projects at once",
+        "period": "/month",
+        "description": "Professional administrative assistance to streamline your operations",
+        "features": [
+          "Filing and tracking",
+          "Appointment setup",
+          "Follow-up emails",
+          "Insurance COI management",
+          "Onboarding and offboarding",
+          "Call answering",
+          "Letter drafting",
+          "License expiration tracking"
+        ]
+      },
+      {
+        "name": "Project Management Support",
+        "price": "$1,500",
+        "maxProject": "Maximum of 2 projects at once",
+        "period": "/month",
+        "description": "Complete project management and analysis on-site",
+        "features": [
+          "For 3 to 4 projects at once, add $1,000.00",
+          "Project set up and close out",
+          "Schedule of values",
+          "AIA Billing",
+          "Submittal preparation and tracking",
+          "Change orders preparation",
+          "Document control",
+          "RFI's"
+        ]
+      },
+      {
+        "name": "Marketing Branding Package",
+        "price": "$1,200",
+        "period": "/one time",
+        "description": "Comprehensive marketing and branding solutions",
+        "features": [
+          "Website, hosting and management",
+          "Graphic Design",
+          "Logo",
+          "Capability statement",
+          "Business cards",
+          "Brochures"
+        ]
+      },
+      {
+        "name": "Social Media Management",
+        "price": "$600",
+        "period": "/month",
+        "description": "Professional social media management to grow your online presence",
+        "features": [
+          "5 Posts a week",
+          "Graphic design",
+          "3 platforms of the client's choice",
+          "Content calendar + Captions + Designs",
+          "Posting of clients videos or pictures",
+          "Hashtag research and keyword optimization"
+        ]
+      }
+    ],
+    "cta": {
+      "button": "Get Started",
+      "trial": "Start free 14-day trial",
+      "unsure_title": "Not sure which plan is right for you?",
+      "unsure_text": "Our team will help you find the perfect solution based on your company size, project volume, and specific needs.",
+      "see_all": "See All Pricing Options",
+      "consultation": "Schedule a Consultation"
+    },
+    "stats": {
+      "satisfaction": "Client Satisfaction",
+      "projects": "Projects Completed",
+      "experience": "Years Experience"
+    }
+  },
+  "aboutPage": {
+    "header": {
+      "badge": "About Us",
+      "title": "Your Trusted Back-Office Partner for Construction Success",
+      "description": "We provide comprehensive support services that help construction companies streamline operations and scale efficiently.",
+      "stats": {
+        "years": "Years Experience",
+        "projects": "Projects",
+        "completion": "Projects Completed"
+      }
+    },
+    "whyChooseUs": {
+      "badge": "Why Choose Us",
+      "title": "Your Trusted Back-Office Partner",
+      "description": "We handle the administrative details so you can focus on building great projects and growing your business."
+    },
+    "features": [
+      {
+        "title": "Save Time & Money",
+        "description": "Reduce overhead costs and free up time for what matters most—building."
+      },
+      {
+        "title": "Scale Efficiently",
+        "description": "Grow your business without the growing pains of hiring in-house staff."
+      },
+      {
+        "title": "Industry Experts",
+        "description": "Work with professionals who understand construction inside and out."
+      },
+      {
+        "title": "24/7 Support",
+        "description": "Get help when you need it with our dedicated support team."
+      }
+    ],
+    "missionVision": {
+      "badge": "Our Purpose",
+      "mission": {
+        "title": "Our Mission",
+        "description": "To empower construction companies to focus on what they do best—building—by providing comprehensive, reliable back-office support that streamlines operations, improves efficiency, and drives business growth."
+      },
+      "vision": {
+        "title": "Our Vision",
+        "description": "To be the most trusted partner for construction companies nationwide, recognized for our industry expertise, commitment to excellence, and ability to help businesses scale efficiently."
+      }
+    },
+    "values": {
+      "badge": "What Drives Us",
+      "title": "Our Core Values",
+      "description": "These principles guide everything we do and shape how we serve our clients.",
+      "items": [
+        {
+          "title": "Reliability",
+          "desc": "Consistent, dependable service you can count on day after day."
+        },
+        {
+          "title": "Excellence",
+          "desc": "Industry-leading standards in every task we handle for you."
+        },
+        {
+          "title": "Partnership",
+          "desc": "We work as an extension of your team, aligned with your goals."
+        },
+        {
+          "title": "Industry Expertise",
+          "desc": "Deep knowledge of construction business operations and challenges."
+        },
+        {
+          "title": "Integrity",
+          "desc": "Transparent communication and ethical business practices."
+        },
+        {
+          "title": "Results-Driven",
+          "desc": "Focused on measurable outcomes that grow your business."
+        }
+      ]
+    },
+    "team": {
+      "badge": "Meet Our Team",
+      "title": "Our Expert Team",
+      "description": "Construction professionals dedicated to your success",
+      "members": [
+        {
+          "title": "Project Managers",
+          "desc": "Certified professionals with extensive construction experience."
+        },
+        {
+          "title": "Estimators",
+          "desc": "Skilled in accurate takeoffs and cost analysis."
+        },
+        {
+          "title": "Bookkeepers",
+          "desc": "Construction accounting specialists."
+        },
+        {
+          "title": "Admin Support",
+          "desc": "Dedicated assistants for daily operations."
+        }
+      ]
+    },
+    "expertiseBanner": {
+      "title": "Industry-Specific Expertise",
+      "description": "Every member of our team has construction industry experience or specialized training in construction business operations. We speak your language and understand your unique challenges.",
+      "button": "See How We Can Help"
+    },
+    "cta": {
+      "heading": "Ready to Build Better Business?",
+      "description": "Experience the difference that reliable, construction-focused back-office support can make for your business.",
+      "buttons": {
+        "getStarted": "Get Started Today",
+        "viewPricing": "View Pricing"
+      }
+    },
+
+    "ourStory": {
+      "badge": "Our Story",
+      "title": "Built on Experience",
+      "experience": "15+",
+      "experienceLabel": "Years Experience",
+      "paragraphs": [
+        "The Builders Desk was founded by construction industry veterans who understood firsthand the challenges of managing back-office operations while trying to grow a construction business.",
+        "We saw too many talented contractors struggling with administrative tasks, project documentation, and financial management—taking time away from what they do best: building exceptional projects.",
+        "Today, we've assembled a team of construction-focused professionals who provide specialized support services, allowing construction companies to operate more efficiently and scale confidently."
+      ],
+      "conclusion": "Our commitment to reliability, scalability, and industry expertise has made us a trusted partner for construction companies across the nation."
+    }
+  },
+  "servicesPage": {
+    "hero": {
+      "badge": "PROFESSIONAL SOLUTIONS",
+      "title": "Our Services",
+      "subtitle": "Comprehensive back-office support services designed specifically for construction companies. From project management to bookkeeping, we've got you covered.",
+      "features": ["Learn More", "Free Trial", "24/7 Support"]
+    },
+    "services": {
+      "sectionTitle": "Our Services",
+      "sectionDescription": "Comprehensive back-office support services designed to help your business thrive",
+      "list": [
+        {
+          "title": "Project Management Support",
+          "description": "Comprehensive support to keep your projects on track and organized."
+        },
+        {
+          "title": "Administrative Support",
+          "description": "Professional administrative assistance to streamline your operations."
+        },
+        {
+          "title": "Business Development",
+          "description": "Strategic growth services including bidding, estimating, and marketing."
+        },
+        {
+          "title": "Bookkeeping",
+          "description": "Financial tracking and reporting tailored for construction."
+        },
+        {
+          "title": "Marketing",
+          "description": "Build your brand and online presence with our marketing services."
+        },
+        {
+          "title": "Human Resources",
+          "description": "HR support to manage your team effectively."
+        },
+        {
+          "title": "Architecture & Design",
+          "description": "Design and drafting support using the latest software."
+        }
+      ]
+    },
+    "qualifications": {
+      "sectionTitle": "Some key qualifications of your back office team",
+      "sectionDescription": "Expert capabilities across all service areas",
+      "list": [
+        {
+          "title": "Project Management Support",
+          "sub": "Expert project managers with industry credentials.",
+          "items": [
+            "Bachelor's degree in Construction Management or Engineering",
+            "PMP (Project Management Professional) certification",
+            "Expert proficiency in project management software (Procore, Buildertrend, CoConstruct)",
+            "Expert proficiency in MS Office suite and Google Suite",
+            "Expert proficiency in scheduling software (Primavera P6, MS Project)",
+            "OSHA safety certification",
+            "Minimum 5+ years construction industry experience"
+          ]
+        },
+        {
+          "title": "Administrative Support",
+          "sub": "Highly trained administrative professionals.",
+          "items": [
+            "Bachelor's degree in relevant field",
+            "Customer Service Rep training course",
+            "Expert proficiency in CRM Management (ClickUp, HubSpot, Salesforce, Trello, Asana, Monday, etc.)",
+            "Expert proficiency in MS Office suite and Google Suite",
+            "Advanced communication and organizational skills",
+            "Experience in construction industry preferred",
+            "Document management expertise"
+          ]
+        },
+        {
+          "title": "Business Development",
+          "sub": "Strategic professionals driving your growth.",
+          "items": [
+            "Bachelor's degree in Business Administration or related field",
+            "Expert proficiency in estimating software (Planswift, Bluebeam, On-Screen Takeoff)",
+            "Advanced knowledge of construction bidding processes",
+            "Proposal writing and RFP response expertise",
+            "Expert proficiency in MS Office suite and Google Suite",
+            "Experience with pre-qualification and bonding requirements",
+            "Strong analytical and presentation skills"
+          ]
+        },
+        {
+          "title": "Bookkeeping",
+          "sub": "Certified accounting professionals.",
+          "items": [
+            "Degree in Accounting or Finance",
+            "Expert proficiency in QuickBooks and/or Xero",
+            "Construction accounting specialization",
+            "Payroll processing certification",
+            "Knowledge of job costing and WIP reporting",
+            "Expert proficiency in MS Office suite and Google Suite",
+            "Understanding of construction-specific tax requirements"
+          ]
+        },
+        {
+          "title": "Marketing",
+          "sub": "Creative professionals with industry expertise.",
+          "items": [
+            "Bachelor's degree in Marketing, Communications, or Design",
+            "Expert proficiency in Adobe Creative Suite (Photoshop, Illustrator, InDesign)",
+            "Social media management certification",
+            "SEO and digital marketing expertise",
+            "Website development and management skills",
+            "Content creation and copywriting experience",
+            "Construction industry marketing experience preferred"
+          ]
+        },
+        {
+          "title": "Human Resources",
+          "sub": "HR professionals ensuring compliance and efficiency.",
+          "items": [
+            "Bachelor's degree in Human Resources or Business Administration",
+            "HR certification (PHR, SPHR, or SHRM-CP)",
+            "Expert proficiency in HRIS systems",
+            "Knowledge of labor laws and construction industry regulations",
+            "Recruitment and talent acquisition expertise",
+            "Expert proficiency in MS Office suite and Google Suite",
+            "Employee relations and conflict resolution skills"
+          ]
+        },
+        {
+          "title": "Architecture & Design",
+          "sub": "Architects and design professionals.",
+          "items": [
+            "Bachelor's or Master's degree in Architecture or related field",
+            "Proficiency in AutoCAD, REVIT, SketchUp",
+            "Expert proficiency in rendering software (V-ray, Lumion, 3ds Max)",
+            "Shop drawing and as-built documentation expertise",
+            "3D modeling and visualization skills",
+            "Understanding of building codes and regulations",
+            "Minimum 5+ years of design and drafting experience"
+          ]
+        }
+      ]
+    },
+    "process": {
+      "sectionTitle": "How We Work With You",
+      "sectionDescription": "A simple, straightforward process to get you the support you need",
+      "steps": [
+        {
+          "title": "Discovery Call",
+          "description": "We learn about your business, challenges, and specific needs."
+        },
+        {
+          "title": "Custom Plan",
+          "description": "We create a tailored support plan that fits your requirements."
+        },
+        {
+          "title": "Team Integration",
+          "description": "Our experts integrate seamlessly with your existing team."
+        },
+        {
+          "title": "Ongoing Support",
+          "description": "Consistent, reliable service with regular check-ins and optimization."
+        }
+      ]
+    },
+    "benefits": {
+      "sectionTitle": "Why Construction Companies Choose Us",
+      "list": [
+        {
+          "title": "Industry Expertise",
+          "description": "Our team understands construction business operations, terminology, and unique challenges."
+        },
+        {
+          "title": "Scalable Solutions",
+          "description": "Grow your support as your business grows—no overhead costs or HR headaches."
+        },
+        {
+          "title": "Reliable Service",
+          "description": "Consistent, dependable support you can count on day after day, project after project."
+        },
+        {
+          "title": "Cost Effective",
+          "description": "Get expert support without the cost of hiring full-time employees and managing benefits."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Let's discuss your specific needs and create a custom support plan for your construction business.",
+      "buttons": {
+        "consultation": "Schedule a Consultation",
+        "pricing": "View Pricing Plans"
+      }
+    },
+    "finalSection": {
+      "title": "Let Us Handle the Back Office",
+      "description": "Focus on building great projects while we take care of project management, estimating, bookkeeping, and more.",
+      "button": "Get Your Free Consultation"
+    }
+  },
+  "Pricing2": {
+    "plans": [
+      {
+        "name": "Administrative Support",
+        "price": "$1,000",
+        "period": "/month",
+        "description": "Perfect for small to medium construction companies",
+        "features": [
+          "Dedicated admin support",
+          "Email management",
+          "Calendar scheduling",
+          "Document organization",
+          "Data entry and filing",
+          "Phone/email correspondence",
+          "Meeting coordination",
+          "Travel arrangements",
+          "Expense tracking",
+          "Client communication",
+          "Limited project tracking",
+          "Basic reporting"
+        ],
+        "ads": "",
+
+        "button": "Get Started",
+        "buttonVariant": "outline"
+      },
+      {
+        "name": "Project Management Support",
+        "price": "$1,500",
+        "period": "/month",
+        "description": "Ideal for growing construction businesses",
+        "ads": "Maximum of 2 projects at once. For 3 to 4 projects add $1,000",
+        "features": [
+          "Project plan and schedule",
+          "Budget tracking",
+          "Resource allocation",
+          "Risk management",
+          "Quality control",
+          "Stakeholder communication",
+          "Change order management",
+          "Progress reporting",
+          "Team coordination",
+          "Vendor management",
+          "Safety compliance",
+          "Document control"
+        ],
+        "popular": "Most Popular",
+        "button": "Get Started",
+        "buttonVariant": "default"
+      },
+      {
+        "name": "Marketing Branding Package",
+        "price": "$1,200",
+        "period": "/one time",
+        "description": "Comprehensive marketing and branding solutions",
+        "features": [
+          "Website, hosting and management",
+          "Graphic Design",
+          "Logo",
+          "Capability statement",
+          "Business cards",
+          "Brochures"
+        ],
+        "button": "Get Started",
+        "buttonVariant": "outline"
+      },
+      {
+        "name": "Social Media Management",
+        "price": "$600",
+        "period": "/month",
+        "description": "Professional social media management to grow your online presence",
+        "features": [
+          "5 Posts a week",
+          "Graphic design",
+          "3 platforms of the client's choice",
+          "Content calendar + Captions + Designs",
+          "Posting of clients videos or pictures",
+          "Hashtag research and keyword optimization"
+        ],
+        "button": "Get Started",
+        "buttonVariant": "outline"
+      }
+    ]
+  },
+  "pricingPage": {
+    "hero": {
+      "badge": "TRANSPARENT PRICING",
+      "title1": "Pricing That Scales",
+      "title2": "With You",
+      "subtitle": "Flexible plans designed to grow with your construction business — no hidden fees, no surprises",
+      "features": {
+        "payPerTask": "Pay Per Task",
+        "unlimited": "Unlimited",
+        "customQuote": "Custom Quote"
+      }
+    },
+
+    "pricingSection": {
+      "title": "Pricing That Scales With You",
+      "subtitle": "Flexible pricing for every stage of your construction business",
+      "customMessage": "Need a custom solution? We can create a tailored plan for your specific needs.",
+      "customButton": "Contact Us for Custom Pricing"
+    },
+
+    "hourlyPricing": {
+      "title": "Hourly Pricing",
+      "subtitle": "Flexible hourly rates for every stage of your business",
+      "services": [
+        {
+          "name": "Project Management",
+          "description": "Comprehensive project oversight and coordination",
+          "rate": "$19.25/hour"
+        },
+        {
+          "name": "Estimating",
+          "description": "Accurate cost estimates and bid preparation",
+          "rate": "$18.28/hour"
+        },
+        {
+          "name": "Bookkeeping",
+          "description": "Comprehensive financial record management",
+          "rate": "$12.18/hour"
+        },
+        {
+          "name": "Admin Support",
+          "description": "General administrative assistance",
+          "rate": "$8.12/hour"
+        },
+        {
+          "name": "Business Development",
+          "description": "Lead generation, proposals, and client outreach",
+          "rate": "$20.38/hour"
+        }
+      ],
+      "discount": {
+        "title": "Volume Discount",
+        "description": "Purchase 20+ hours upfront and save 10–15% on all hourly rates",
+        "button": "Get Quote"
+      }
+    },
+
+    "projectPricing": {
+      "title": "Project-Based Pricing",
+      "subtitle": "Flexible pricing for specific projects with no long-term commitment",
+      "projects": [
+        {
+          "name": "Single Project Estimate",
+          "description": "Comprehensive project estimate with detailed cost breakdown",
+          "price": "$150.00"
+        },
+        {
+          "name": "Monthly Bookkeeping Package",
+          "description": "Full financial management including reconciliation, invoicing, and reporting",
+          "price": "$200.00"
+        },
+        {
+          "name": "Project Setup & Documentation",
+          "description": "Complete project documentation including plans, permits, and contracts",
+          "price": "$250.00"
+        },
+        {
+          "name": "Bid Package Preparation",
+          "description": "Full bid package with estimates, documentation, and submission",
+          "price": "$195.00"
+        }
+      ],
+      "footerNote": "All project pricing is transparent and discussed upfront. No hidden fees or surprise charges.",
+      "button": "Request Custom Quote"
+    },
+
+    "stats": {
+      "title": "Why Our Pricing Makes Sense",
+      "items": [
+        {
+          "value": "60%",
+          "title": "Cost Savings",
+          "description": "Compared to hiring full-time employees with benefits and overhead"
+        },
+        {
+          "value": "No",
+          "title": "Hidden Fees",
+          "description": "Transparent pricing with no surprise charges or setup fees"
+        },
+        {
+          "value": "100%",
+          "title": "Scalable",
+          "description": "Easily adjust your plan as your business needs change"
+        }
+      ]
+    },
+
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Can I customize my plan?",
+          "answer": "Absolutely! We understand every construction business is unique. Contact us to create a custom plan that fits your specific needs."
+        },
+        {
+          "question": "What if I need more hours?",
+          "answer": "Additional hours can be purchased at competitive rates. We also offer flexible upgrades to higher-tier plans as your needs grow."
+        },
+        {
+          "question": "Is there a contract commitment?",
+          "answer": "We offer both month-to-month and annual plans. Annual plans include a 10% discount."
+        },
+        {
+          "question": "How quickly can we get started?",
+          "answer": "Most clients are up and running within 5–7 business days after the initial consultation and plan selection."
+        }
+      ]
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Get in Touch",
+      "subtitle": "Ready to build better business? Let's discuss how our back-office support services can help your construction company thrive."
+    },
+
+    "formSection": {
+      "title": "Let's Build Together",
+      "subtitle": "Schedule a free consultation today",
+
+      "features": {
+        "response": "24-Hour Response",
+        "support": "Expert Support",
+        "consultation": "Free Consultation"
+      },
+
+      "form": {
+        "fullName": "Full Name *",
+        "fullNamePlaceholder": "John Smith",
+
+        "email": "Email Address *",
+        "emailPlaceholder": "john@company.com",
+
+        "phone": "Phone Number",
+        "phonePlaceholder": "000 000 0000",
+
+        "company": "Company Name",
+        "companyPlaceholder": "ABC Construction Ltd",
+
+        "service": "What service are you interested in?",
+        "servicePlaceholder": "Select a service",
+
+        "services": {
+          "projectManagement": "Project Management",
+          "adminSupport": "Administrative Support",
+          "bookkeeping": "Bookkeeping",
+          "marketing": "Marketing",
+          "humanResources": "Human Resources",
+          "architectureDesign": "Architecture & Design"
+        },
+
+        "message": "Tell us about your needs *",
+        "messagePlaceholder": "Share details about your business, current challenges, and how we can help...",
+
+        "submit": "Send Message",
+        "secureNote": "Your information is secure and confidential"
+      }
+    },
+
+    "supportTeam": {
+      "title": "Our Support Team",
+      "subtitle": "We're available to answer your questions and provide assistance",
+
+      "phone": {
+        "label": "Phone",
+        "value": "(555) 123-4567"
+      },
+
+      "email": {
+        "label": "Email",
+        "value": "info@thebuildersdesk.com"
+      },
+
+      "location": {
+        "label": "Service Area",
+        "value": "Nationwide Coverage"
+      },
+
+      "hours": {
+        "label": "Business Hours",
+        "value": "Mon-Fri: 8am - 6pm EST"
+      }
+    },
+
+    "instantSupport": {
+      "title": "Instant Support",
+      "subtitle": "Available 24/7",
+      "description": "Get immediate answers to your questions via WhatsApp",
+      "button": "Chat Now"
+    },
+
+    "guarantee": {
+      "title": "24-Hour Guarantee",
+      "description": "We promise to respond to every inquiry within one business day"
+    },
+
+    "statsSection": {
+      "title": "Why Construction Companies Trust Us",
+      "stats": [
+        {
+          "value": "15+",
+          "label": "Years of Experience",
+          "description": "Serving the construction industry with proven expertise and results"
+        },
+        {
+          "value": "98%",
+          "label": "Client Satisfaction",
+          "description": "Our clients consistently rate us highly for quality, reliability, and results"
+        },
+        {
+          "value": "50+",
+          "label": "Construction Partners",
+          "description": "Construction companies currently rely on our support"
+        }
+      ]
+    }
+  },
+  "footer": {
+    "description": "Back-office support services for construction companies. Build Better Business.",
+
+    "quickLinks": {
+      "title": "Quick Links",
+      "links": {
+        "home": "Home",
+        "about": "About Us",
+        "services": "Services",
+        "pricing": "Pricing"
+      }
+    },
+
+    "services": {
+      "title": "Our Services",
+      "items": {
+        "projectManagement": "Project Management",
+        "adminAssistance": "Admin Assistance",
+        "estimating": "Estimating",
+        "bookkeeping": "Bookkeeping",
+        "businessDevelopment": "Business Development"
+      }
+    },
+
+    "contact": {
+      "title": "Contact Us",
+      "email": "info@thebuildersdesk.com",
+      "phone": "(800) 123-4567",
+      "location": "Nationwide Service"
+    },
+
+    "copyright": "© 2025 The Builders Desk. All rights reserved."
+  }
+}

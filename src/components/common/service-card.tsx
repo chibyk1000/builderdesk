@@ -10,23 +10,29 @@ interface ServiceCardProps {
   description: string;
   services: string[];
 }
+
 const ServiceCard: React.FC<ServiceCardProps> = ({
   icon,
   title,
   description,
   services,
 }) => {
-
-
   return (
     <Card
-      className="group relative border shadow-[0px_4px_6px_-4px_#0000001A,0px_10px_15px_-3px_#0000001A]
- border-gray-200 rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] h-[400px]"
+      className="group self-start relative border border-gray-200 rounded-2xl overflow-hidden 
+      shadow-[0px_4px_6px_-4px_#0000001A,0px_10px_15px_-3px_#0000001A]
+      transition-all duration-500 ease-in-out
+      hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)]
+      h-[260px] hover:h-[360px]" // 👈 Compact -> Expanded
     >
       {/* Base Content */}
-      <CardContent className="p-6 flex flex-col gap-12 h-full z-10 relative bg-white transition-all duration-500 group-hover:opacity-0 group-hover:scale-95">
+      <CardContent
+        className="p-6 py-2 flex flex-col gap-3 h-full z-10 relative bg-white 
+        transition-all duration-500 ease-in-out 
+        group-hover:opacity-0 group-hover:scale-95"
+      >
         {/* Icon + Title */}
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-6">
           <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center text-white">
             {icon}
           </div>
@@ -38,9 +44,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       </CardContent>
 
       {/* Hover Overlay */}
-      <div className="absolute inset-0 bg-primary text-white flex flex-col items-center pt-10 px-6 opacity-0 translate-y-6 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+      <div
+        className="absolute inset-0 bg-primary text-white flex flex-col items-center 
+        pt-10 px-6 opacity-0 translate-y-6 
+        transition-all duration-500 ease-in-out
+        group-hover:opacity-100 group-hover:translate-y-0"
+      >
         {/* Icon + Title */}
-        <div className="flex  items-center gap-6 mb-4">
+        <div className="flex items-center gap-4 mb-4">
           <h3 className="text-lg font-semibold">{title}</h3>
           <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center text-accent">
             {icon}
@@ -64,6 +75,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   );
 };
 
+
 export default ServiceCard;
 
 interface ServiceCtaCardProps {
@@ -82,7 +94,7 @@ export const ServiceCtaCard: React.FC<ServiceCtaCardProps> = ({
   onClick,
 }) => {
   return (
-    <Card className="rounded-2xl overflow-hidden border-none bg-[linear-gradient(180deg,#0E4571_0%,#0A3554_100%)] text-white">
+    <Card className="rounded-2xl self-start overflow-hidden border-none bg-[linear-gradient(180deg,#0E4571_0%,#0A3554_100%)] text-white">
       <CardContent className="p-6 flex flex-col justify-between h-full space-y-4">
         <div className="space-y-4">
           {/* Icon */}

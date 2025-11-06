@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,57 +15,57 @@ import {
 import { Badge } from "../ui/badge";
 import Link from "next/link";
 
-const hourlyServices = [
-  {
-    title: "Project Management",
-    icon: ClipboardList,
-    price: "$15-25",
-    period: "per hour",
-    description: "Professional project coordination, scheduling, and",
-  },
-  {
-    title: "Estimating",
-    icon: Calculator,
-    price: "$18-28",
-    period: "per hour",
-    description: "Accurate cost estimates, takeoffs, and bid preparation",
-  },
-  {
-    title: "Bookkeeping",
-    icon: DollarSign,
-    price: "$12-18",
-    period: "per hour",
-    description: "Construction-focused financial management and reporting",
-  },
-  {
-    title: "Admin Assistance",
-    price: "$8-12",
-    icon: Users,
-    period: "per hour",
-    description: "General administrative support and documentation",
-  },
-  {
-    title: "Business Development",
-    price: "$20-30",
-    icon: TrendingUp,
-    period: "per hour",
-    description: "Lead generation, proposals, and growth strategies",
-  },
-];
-
 export default function HourlyPricing() {
+  const t = useTranslations("Home.hourlyPricing");
+
+  const hourlyServices = [
+    {
+      title: t("services.projectManagement.title"),
+      icon: ClipboardList,
+      price: "$15-25",
+      period: t("priceUnit"),
+      description: t("services.projectManagement.description"),
+    },
+    {
+      title: t("services.estimating.title"),
+      icon: Calculator,
+      price: "$18-28",
+      period: t("priceUnit"),
+      description: t("services.estimating.description"),
+    },
+    {
+      title: t("services.bookkeeping.title"),
+      icon: DollarSign,
+      price: "$12-18",
+      period: t("priceUnit"),
+      description: t("services.bookkeeping.description"),
+    },
+    {
+      title: t("services.adminAssistance.title"),
+      icon: Users,
+      price: "$8-12",
+      period: t("priceUnit"),
+      description: t("services.adminAssistance.description"),
+    },
+    {
+      title: t("services.businessDevelopment.title"),
+      icon: TrendingUp,
+      price: "$20-30",
+      period: t("priceUnit"),
+      description: t("services.businessDevelopment.description"),
+    },
+  ];
+
   return (
     <section className="py-20 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <Badge className="bg-accent/10 text-accent">Flexible Pricing</Badge>
-          {/* <p className="text-accent  mb-2"></p> */}
-          <h2 className="text-3xl md:text-4xl  text-primary mb-4">
-            Hourly & Project-Based Pricing
+          <Badge className="bg-accent/10 text-accent">{t("badge")}</Badge>
+          <h2 className="text-3xl md:text-4xl text-primary mb-4">
+            {t("title")}
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Need more flexibility? Pay only for the services you use, when you
-            need them
+            {t("description")}
           </p>
         </div>
 
@@ -70,18 +73,16 @@ export default function HourlyPricing() {
           {hourlyServices.map((service, index) => (
             <Card
               key={index}
-              className="p-6 border-2 border-gray-200  transition"
+              className="p-6 border-2 border-gray-200 transition"
             >
-              <div className="flex items-start gap-4 ">
+              <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center shrink-0">
-                  <span className="text-white  text-lg">
-                    {<service.icon />}
-                  </span>
+                  <span className="text-white text-lg">{<service.icon />}</span>
                 </div>
                 <div>
-                  <h3 className="text-lg  text-primary ">{service.title}</h3>
+                  <h3 className="text-lg text-primary">{service.title}</h3>
                   <div className="mb-">
-                    <span className="text-2xl  text-primary">
+                    <span className="text-2xl text-primary">
                       {service.price}
                     </span>
                     <span className="text-gray-600 block text-sm ml-2">
@@ -90,48 +91,51 @@ export default function HourlyPricing() {
                   </div>
                 </div>
               </div>
-
               <p className="text-gray-600 text-sm">{service.description}</p>
             </Card>
           ))}
 
-          <Card className="bg-linear-to-br from-primary to-primary/90 rounded-lg p-5 h-71 text-white">
-            <div className="flex items-start gap-4 mb-4">
+          <Card className="bg-linear-to-br from-primary gap-2 to-primary/90 rounded-lg p-5 text-white">
+            <div className="flex items-start gap-2 mb-">
               <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center shrink-0">
-                <span className="text-white  text-lg">
+                <span className="text-white text-lg">
                   <FileText />
                 </span>
               </div>
               <div>
-                <h3 className="text-lg  mb-2">Per-Project Pricing</h3>
-                <p className="text-white/90 text-sm mb-6">Custom Quote</p>
+                <h3 className="text-lg mb-2">
+                  {t("pricing.perProject.title")}
+                </h3>
+                <p className="text-white/90 text-sm mb-6">
+                  {t("pricing.perProject.description")}
+                </p>
               </div>
             </div>
-            <p className="text-white/80 text-sm mb-6">
-              Flexible packages for specific projects or deliverables
+            <p className="text-white/80 text-sm mb-">
+              {t("pricing.perProject.description")}
             </p>
-
-            <Button asChild className="bg-white mt-auto  hover:bg-white/90  w-full text-primary font-semibold">
-              <Link href="/contact">
-              Get Quote
-              </Link>
+            <Button
+              asChild
+              className="bg-white mt-aut hover:bg-white/90 w-full text-primary font-semibold"
+            >
+              <Link href="/contact">{t("pricing.perProject.button")}</Link>
             </Button>
           </Card>
         </div>
 
         <div className="rounded-lg p-8 gap-8 items-center border border-[#E5E7EB] bg-gray-50 max-md:flex-col max-md:items-center flex justify-between">
-          <div className="  flex-1 ">
-            <h3 className="text-lg  text-primary mb-2">
-              Volume Discounts Available
+          <div className="flex-1">
+            <h3 className="text-lg text-primary mb-2">
+              {t("pricing.volumeDiscount.title")}
             </h3>
             <p className="text-secondary text-sm mb-6">
-              Purchase 20+ hours upfront and save 10-15% on hourly rates
+              {t("pricing.volumeDiscount.description")}
             </p>
           </div>
-          <Button className=" mx-auto " asChild>
+          <Button className="mx-auto" asChild>
             <Link href={"/pricing"}>
-            View All Options
-            <ArrowRight className="w-4 h-4 ml-2" />
+              {t("pricing.volumeDiscount.button")}
+              <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </Button>
         </div>

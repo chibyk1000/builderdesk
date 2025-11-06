@@ -8,7 +8,7 @@ export default function Testimonials() {
     {
       name: "Mike Richardson",
       role: "Owner",
-      image: "/pics1.jpg", // Replace with actual image paths
+      image: "/pics1.jpg", 
       text: `"The Builders Desk transformed how we operate. They took over our estimating and project management, and we saw a 40% reduction in admin time. We're winning more bids and completing projects faster."`,
     },
     {

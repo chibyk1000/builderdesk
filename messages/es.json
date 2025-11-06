@@ -1,0 +1,1065 @@
+{
+  "Home": {
+    "Hero": {
+      "badge": "Con la confianza de más de 50 empresas de construcción",
+      "headline1": "Construye un mejor",
+      "headline2": "Negocio",
+      "description": "Soporte administrativo experto para empresas de diseño y construcción. Gestión de proyectos, contabilidad, presupuestos y más, para que puedas enfocarte en lo que mejor sabes hacer.",
+      "offers": {
+        "noContract": "Sin contratos a largo plazo",
+        "scale": "Crece a tu propio ritmo",
+        "specialists": "Especialistas en la industria"
+      },
+      "buttons": {
+        "consultation": "Obtén una consulta gratuita",
+        "pricing": "Ver precios"
+      },
+      "image": {
+        "alt": "Equipo de construcción trabajando",
+        "tag": "Soporte integral",
+        "ratingLabel": "Valoración de clientes",
+        "ratingValue": "4.9/5"
+      },
+      "stats": {
+        "projects": {
+          "value": "500+",
+          "labelShort": "Proyectos",
+          "labelFull": "Proyectos entregados"
+        },
+        "onTime": {
+          "value": "98%",
+          "labelShort": "A tiempo",
+          "labelFull": "Tasa de puntualidad"
+        },
+        "experience": {
+          "value": "15+",
+          "labelShort": "Años",
+          "labelFull": "Años de experiencia"
+        }
+      },
+      "footer": {
+        "certified": "Certificados por la industria",
+        "support": "Equipo de soporte dedicado",
+        "trackRecord": "Historial comprobado"
+      }
+    },
+    "Services": {
+      "badge": "Nuestros Servicios",
+      "heading": "Lo Que Hacemos",
+      "description": "Servicios administrativos integrales diseñados específicamente para soluciones de diseño y construcción, adaptados a empresas pequeñas, medianas y grandes.",
+      "cta": {
+        "title": "¿Necesitas algo diferente?",
+        "description": "Ofrecemos soluciones personalizadas adaptadas a tus necesidades específicas.",
+        "button": "Ver todos los servicios"
+      },
+      "items": {
+        "projectManagement": {
+          "title": "Soporte de Gestión de Proyectos",
+          "description": "Asistencia completa para mantener tus proyectos organizados y en marcha.",
+          "services": [
+            "Configuración y cierre de proyectos",
+            "Cronograma de valores",
+            "Facturación AJA",
+            "Preparación y seguimiento de submittals",
+            "Preparación de órdenes de cambio",
+            "Control de documentos",
+            "RFI",
+            "Plan de seguridad",
+            "Programación de proyectos"
+          ]
+        },
+        "adminSupport": {
+          "title": "Soporte Administrativo",
+          "description": "Asistencia administrativa profesional para optimizar tus operaciones.",
+          "services": [
+            "Archivo, seguimiento y programación de citas",
+            "Correos de seguimiento",
+            "Gestión de seguros COI",
+            "Onboarding y offboarding",
+            "Atención de llamadas",
+            "Redacción de cartas"
+          ]
+        },
+        "businessDev": {
+          "title": "Desarrollo Empresarial",
+          "description": "Servicios estratégicos de crecimiento que incluyen licitaciones, estimaciones y marketing.",
+          "services": [
+            "Licitaciones y estimaciones",
+            "Seguimiento de ofertas",
+            "Precalificaciones",
+            "Redacción de propuestas"
+          ]
+        },
+        "bookkeeping": {
+          "title": "Contabilidad",
+          "description": "Seguimiento y reportes financieros adaptados al sector de la construcción.",
+          "services": [
+            "Nómina",
+            "Configuración del plan de cuentas",
+            "Seguimiento de cuentas por cobrar y pagar"
+          ]
+        },
+        "marketing": {
+          "title": "Marketing",
+          "description": "Impulsa tu marca y presencia en línea con nuestros servicios de marketing.",
+          "services": [
+            "Gestión de redes sociales",
+            "Diseño web",
+            "Diseño gráfico",
+            "Declaraciones de capacidad",
+            "Branding integral"
+          ]
+        },
+        "hr": {
+          "title": "Recursos Humanos",
+          "description": "Soporte de RRHH para gestionar tu equipo de forma eficaz.",
+          "services": [
+            "Incorporación de empleados",
+            "Asistencia en reclutamiento",
+            "Seguimiento de PTO",
+            "Desvinculación de empleados",
+            "Redacción de políticas"
+          ]
+        },
+        "archSupport": {
+          "title": "Soporte Arquitectónico",
+          "description": "Apoyo en diseño y dibujo técnico utilizando el software más avanzado.",
+          "services": [
+            "Planos de taller",
+            "Dibujo de diseño",
+            "Planos 'As-Built'",
+            "Modelado 3D",
+            "Renderizado",
+            "Software: AutoCAD, Revit, SketchUp, V-Ray, Lumion"
+          ]
+        }
+      }
+    },
+    "WhyChoose": {
+      "badge": "Nuestra Ventaja Competitiva",
+      "title": "Por qué las empresas de construcción nos eligen",
+      "description": "Combinamos experiencia en la industria con soporte dedicado para ayudar a tu negocio a prosperar.",
+      "learnMore": "Haz clic para saber más →",
+      "stats": {
+        "projects": { "value": "500+", "label": "Proyectos completados" },
+        "onTime": { "value": "95%", "label": "Entregas puntuales" },
+        "experience": { "value": "15+", "label": "Proyectos gestionados" }
+      },
+      "reasons": {
+        "reliability": {
+          "title": "Fiabilidad",
+          "badge": "98% Puntual",
+          "description": "Cumplimos plazos, mantenemos flujos de trabajo organizados y una comunicación constante. Nuestra tasa del 98% en entregas puntuales lo demuestra.",
+          "fulldesc": "En The Builders Desk, la fiabilidad está en el centro de todo lo que hacemos. Sabemos que en la construcción, el tiempo es crucial. Nuestro equipo se compromete a cumplir los plazos, mantener flujos de trabajo organizados y garantizar una comunicación constante con tu equipo. Nuestra tasa del 98% de entregas puntuales demuestra nuestra dedicación a ser un socio en el que puedes confiar, proyecto tras proyecto."
+        },
+        "scalability": {
+          "title": "Escalabilidad y Flexibilidad",
+          "badge": "Totalmente Flexible",
+          "description": "Nuestras soluciones se adaptan a tu negocio. Agrega servicios, amplía tus operaciones y ajusta según tus necesidades.",
+          "fulldesc": "Sin contratos a largo plazo. Detén el servicio cuando lo necesites y retómalo cuando estés listo. Desde autónomos y pequeñas constructoras hasta grandes empresas, nuestros servicios crecen contigo. Ya necesites 10 horas a la semana o apoyo a tiempo completo en múltiples áreas, nos adaptamos a tus necesidades cambiantes sin el costo adicional de contratar personal fijo."
+        },
+        "industry": {
+          "title": "Experiencia en la Industria",
+          "badge": "15+ Años",
+          "description": "Conocemos los desafíos únicos, los presupuestos ajustados y los requisitos normativos del sector de la construcción. Entendemos tu industria.",
+          "fulldesc": "Nuestros gerentes de proyecto están formados en PMP y cuentan con títulos universitarios en sus respectivos campos. No solo entendemos los negocios: entendemos específicamente la construcción — cada requisito de permiso, detalle de presupuesto, matiz financiero y norma regulatoria. Hablamos tu idioma y aportamos verdadera experiencia del sector a cada tarea."
+        },
+        "technology": {
+          "title": "Tecnología y Software",
+          "badge": "De Vanguardia",
+          "description": "Invertimos en las herramientas más avanzadas para ofrecerte la mejor experiencia y ventaja competitiva.",
+          "fulldesc": "Invertimos constantemente en las mejores herramientas para garantizar resultados óptimos. Contamos con dominio en software como Planswift, Primavera P6, AutoCAD, Revit, Lumion, 3D Max, SketchUp y más. Esto nos permite integrarnos sin problemas con tus flujos de trabajo existentes y entregar resultados profesionales de alta calidad."
+        },
+        "training": {
+          "title": "Formación Continua",
+          "badge": "Siempre Aprendiendo",
+          "description": "Nuestro equipo se mantiene a la vanguardia gracias a una capacitación especializada y aprendizaje continuo.",
+          "fulldesc": "Nos mantenemos actualizados inscribiendo a nuestros miembros en programas de formación especializados como PMP, Microsoft Office Suite, certificaciones de Servicio al Cliente y más. El desarrollo profesional continuo garantiza que nuestro equipo aporte las mejores prácticas y las últimas tendencias a tu negocio."
+        },
+        "hiring": {
+          "title": "Selección de Personal",
+          "badge": "Talento de Élite",
+          "description": "Contratamos al 1% más destacado, con educación, experiencia y certificaciones óptimas.",
+          "fulldesc": "Contratamos al 1% más cualificado, con el requisito básico de tener títulos universitarios en áreas de especialización como gestión de la construcción, arquitectura e ingeniería. Nuestros administradores cuentan con titulaciones en administración de empresas, comunicación, inglés y otras disciplinas relevantes. La calidad comienza con personas de calidad."
+        }
+      }
+    },
+    "HowItWorks": {
+      "badge": "Nuestro Proceso",
+      "title": "Cómo Funciona",
+      "description": "Un proceso simple y comprobado para ofrecerte el apoyo que necesitas",
+
+      "steps-1-number": "1",
+      "steps-1-title": "Descubrir",
+      "steps-1-text": "Aprendemos sobre tu empresa, desafíos y necesidades específicas mediante una consulta detallada.",
+
+      "steps-2-number": "2",
+      "steps-2-title": "Planificar",
+      "steps-2-text": "Creamos un paquete de soporte con los servicios y la frecuencia adecuados para tu negocio.",
+
+      "steps-3-number": "3",
+      "steps-3-title": "Implementar",
+      "steps-3-text": "En una semana, seleccionamos y capacitamos al miembro del equipo adecuado para comenzar a trabajar en tus proyectos.",
+
+      "steps-4-number": "4",
+      "steps-4-title": "Crecer y Escalar",
+      "steps-4-text": "A medida que creces, nosotros crecemos contigo — agregando servicios o horas según lo necesites.",
+
+      "ctabutton": "Comienza tu viaje hoy"
+    },
+    "hourlyPricing": {
+      "badge": "Precios Flexibles",
+      "title": "Precios por Hora y por Proyecto",
+      "description": "¿Necesitas más flexibilidad? Paga solo por los servicios que uses, cuando los necesites",
+      "services": {
+        "projectManagement": {
+          "title": "Gestión de Proyectos",
+          "description": "Coordinación profesional de proyectos, planificación y"
+        },
+        "estimating": {
+          "title": "Estimaciones",
+          "description": "Estimaciones de costos precisas, mediciones y preparación de ofertas"
+        },
+        "bookkeeping": {
+          "title": "Contabilidad",
+          "description": "Gestión y reportes financieros enfocados en construcción"
+        },
+        "adminAssistance": {
+          "title": "Asistencia Administrativa",
+          "description": "Soporte administrativo general y documentación"
+        },
+        "businessDevelopment": {
+          "title": "Desarrollo de Negocios",
+          "description": "Generación de leads, propuestas y estrategias de crecimiento"
+        }
+      },
+      "pricing": {
+        "perProject": {
+          "title": "Precios por Proyecto",
+          "description": "Paquetes flexibles para proyectos o entregables específicos",
+          "button": "Solicitar Cotización"
+        },
+        "volumeDiscount": {
+          "title": "Descuentos por Volumen",
+          "description": "Compra 20+ horas por adelantado y ahorra 10-15% en tarifas por hora",
+          "button": "Ver Todas las Opciones"
+        }
+      },
+      "priceUnit": "por hora"
+    },
+    "industryExpertise": {
+      "badge": "Experiencia en la Industria",
+      "headerTitle": "Diseñado para Empresas de Construcción",
+      "headerDescription": "Conocemos tu industria a fondo, aportando conocimientos especializados en cada tipo de proyecto.",
+      "sectorsTitle": "Sectores a los que Servimos",
+      "sectors": {
+        "residential": {
+          "title": "Residencial",
+          "description": "Casas unifamiliares y multifamiliares"
+        },
+        "commercial": {
+          "title": "Comercial",
+          "description": "Edificios de oficinas y comercios"
+        },
+        "industrial": {
+          "title": "Industrial",
+          "description": "Almacenes y instalaciones"
+        },
+        "infrastructure": {
+          "title": "Infraestructura",
+          "description": "Carreteras, puentes y servicios públicos"
+        }
+      },
+      "stats": [
+        { "num": "500+", "label": "Proyectos" },
+        { "num": "15+", "label": "Años" },
+        { "num": "98%", "label": "A Tiempo" }
+      ],
+      "footerTitle": "Nuestra Experiencia en Construcción",
+      "footerDetails": [
+        "Costos de materiales regionales y relaciones con proveedores",
+        "Cumplimiento normativo local y estatal",
+        "Mejores prácticas de coordinación de subcontratistas",
+        "Normas contables específicas de la construcción"
+      ]
+    },
+    "preFoot": {
+      "heading": "¿Listo para Construir un Mejor Negocio?",
+      "subheading": "Únete a cientos de empresas de construcción que confían en nosotros para sus operaciones administrativas.",
+      "buttons": {
+        "getStarted": "Comenzar Hoy",
+        "chatWhatsapp": "Chatear en WhatsApp"
+      },
+      "contact": {
+        "call": "Llámanos",
+        "phone": "(800) 123-4567",
+        "emailLabel": "Correo Electrónico",
+        "email": "info@buildersdesk.com",
+        "responseTimeLabel": "Tiempo de Respuesta",
+        "responseTime": "Dentro de 24 horas"
+      }
+    }
+  },
+  "aboutPage": {
+    "header": {
+      "badge": "Sobre Nosotros",
+      "title": "Su Socio Confiable de Back-Office para el Éxito en Construcción",
+      "description": "Ofrecemos servicios de apoyo integral que ayudan a las empresas de construcción a optimizar operaciones y escalar eficientemente.",
+      "stats": {
+        "years": "Años de Experiencia",
+        "projects": "Proyectos",
+        "completion": "Proyectos Completados"
+      }
+    },
+    "whyChooseUs": {
+      "badge": "Por Qué Elegirnos",
+      "title": "Su Socio Confiable de Back-Office",
+      "description": "Manejamos los detalles administrativos para que pueda concentrarse en construir excelentes proyectos y hacer crecer su negocio."
+    },
+    "features": [
+      {
+        "title": "Ahorre Tiempo y Dinero",
+        "description": "Reduzca los costos generales y libere tiempo para lo que más importa: construir."
+      },
+      {
+        "title": "Escale Eficientemente",
+        "description": "Haga crecer su negocio sin los problemas de contratar personal interno."
+      },
+      {
+        "title": "Expertos de la Industria",
+        "description": "Trabaje con profesionales que comprenden la construcción a fondo."
+      },
+      {
+        "title": "Soporte 24/7",
+        "description": "Obtenga ayuda cuando la necesite con nuestro equipo de soporte dedicado."
+      }
+    ],
+    "missionVision": {
+      "badge": "Nuestro Propósito",
+      "mission": {
+        "title": "Nuestra Misión",
+        "description": "Empoderar a las empresas de construcción para que se concentren en lo que hacen mejor—construir—proporcionando soporte integral y confiable de back-office que optimice operaciones, mejore la eficiencia y impulse el crecimiento del negocio."
+      },
+      "vision": {
+        "title": "Nuestra Visión",
+        "description": "Ser el socio más confiable para empresas de construcción a nivel nacional, reconocido por nuestra experiencia en la industria, compromiso con la excelencia y capacidad de ayudar a las empresas a escalar eficientemente."
+      }
+    },
+    "values": {
+      "badge": "Lo Que Nos Mueve",
+      "title": "Nuestros Valores Fundamentales",
+      "description": "Estos principios guían todo lo que hacemos y moldean cómo servimos a nuestros clientes.",
+      "items": [
+        {
+          "title": "Confiabilidad",
+          "desc": "Servicio consistente y confiable en el que puede confiar día tras día."
+        },
+        {
+          "title": "Excelencia",
+          "desc": "Estándares líderes en la industria en cada tarea que realizamos para usted."
+        },
+        {
+          "title": "Asociación",
+          "desc": "Trabajamos como una extensión de su equipo, alineados con sus objetivos."
+        },
+        {
+          "title": "Experiencia en la Industria",
+          "desc": "Conocimiento profundo de las operaciones y desafíos del negocio de la construcción."
+        },
+        {
+          "title": "Integridad",
+          "desc": "Comunicación transparente y prácticas comerciales éticas."
+        },
+        {
+          "title": "Orientados a Resultados",
+          "desc": "Enfocados en resultados medibles que hacen crecer su negocio."
+        }
+      ]
+    },
+    "team": {
+      "badge": "Conozca a Nuestro Equipo",
+      "title": "Nuestro Equipo Experto",
+      "description": "Profesionales de la construcción dedicados a su éxito",
+      "members": [
+        {
+          "title": "Gerentes de Proyecto",
+          "desc": "Profesionales certificados con amplia experiencia en construcción."
+        },
+        {
+          "title": "Estimadores",
+          "desc": "Expertos en análisis de costos y mediciones precisas."
+        },
+        {
+          "title": "Contadores",
+          "desc": "Especialistas en contabilidad para construcción."
+        },
+        {
+          "title": "Asistentes Administrativos",
+          "desc": "Asistentes dedicados a las operaciones diarias."
+        }
+      ]
+    },
+    "expertiseBanner": {
+      "title": "Experiencia Específica de la Industria",
+      "description": "Cada miembro de nuestro equipo tiene experiencia en la industria de la construcción o capacitación especializada en operaciones de negocios de construcción. Hablamos su idioma y entendemos sus desafíos únicos.",
+      "button": "Vea Cómo Podemos Ayudar"
+    },
+    "cta": {
+      "heading": "¿Listo para Construir un Mejor Negocio?",
+      "description": "Experimente la diferencia que un soporte confiable de back-office enfocado en la construcción puede hacer para su negocio.",
+      "buttons": {
+        "getStarted": "Comenzar Hoy",
+        "viewPricing": "Ver Precios"
+      }
+    },
+
+    "ourStory": {
+      "badge": "Nuestra Historia",
+      "title": "Construido sobre la Experiencia",
+      "experience": "15+",
+      "experienceLabel": "Años de Experiencia",
+      "paragraphs": [
+        "The Builders Desk fue fundado por veteranos de la industria de la construcción que entendían de primera mano los desafíos de gestionar operaciones de back-office mientras intentaban hacer crecer un negocio de construcción.",
+        "Vimos demasiados contratistas talentosos luchando con tareas administrativas, documentación de proyectos y gestión financiera, alejándolos de lo que mejor hacen: construir proyectos excepcionales.",
+        "Hoy, hemos reunido un equipo de profesionales enfocados en la construcción que brindan servicios de soporte especializados, permitiendo que las empresas de construcción operen de manera más eficiente y escalen con confianza."
+      ],
+      "conclusion": "Nuestro compromiso con la confiabilidad, la escalabilidad y la experiencia en la industria nos ha convertido en un socio de confianza para empresas de construcción en todo el país."
+    }
+  },
+  "Navbar": {
+    "home": "Inicio",
+    "about": "Sobre Nosotros",
+    "services": "Servicios",
+    "pricing": "Precios",
+    "contact": "Contacto",
+    "whatsapp": "WhatsApp"
+  },
+  "Pricing1": {
+    "badge": "Nuestro Proceso",
+    "title": "Precios que Crecen Contigo",
+    "subtitle": "Planes mensuales transparentes sin tarifas ocultas. Paga solo por lo que necesitas.",
+    "filters": [
+      "Sin tarifas de instalación",
+      "Cancela en cualquier momento",
+      "Garantía de devolución de dinero por 30 días",
+      "Soporte dedicado"
+    ],
+    "plans": [
+      {
+        "name": "Soporte Administrativo",
+        "price": "$1,500",
+        "maxProject": "Máximo de 2 proyectos a la vez",
+        "period": "/mes",
+        "description": "Asistencia administrativa profesional para optimizar tus operaciones",
+        "features": [
+          "Archivo y seguimiento",
+          "Programación de citas",
+          "Correos de seguimiento",
+          "Gestión de seguros COI",
+          "Incorporación y desvinculación de empleados",
+          "Atención telefónica",
+          "Redacción de cartas",
+          "Seguimiento de vencimiento de licencias"
+        ]
+      },
+      {
+        "name": "Soporte de Gestión de Proyectos",
+        "price": "$1,500",
+        "maxProject": "Máximo de 2 proyectos a la vez",
+        "period": "/mes",
+        "description": "Gestión completa de proyectos y análisis en el sitio",
+        "features": [
+          "Para 3 a 4 proyectos simultáneos, agregar $1,000.00",
+          "Configuración y cierre de proyectos",
+          "Cronograma de valores",
+          "Facturación AIA",
+          "Preparación y seguimiento de presentaciones",
+          "Preparación de órdenes de cambio",
+          "Control de documentos",
+          "RFI’s"
+        ]
+      },
+      {
+        "name": "Paquete de Marketing y Marca",
+        "price": "$1,200",
+        "period": "/único",
+        "description": "Soluciones completas de marketing y desarrollo de marca",
+        "features": [
+          "Sitio web, alojamiento y administración",
+          "Diseño gráfico",
+          "Logo",
+          "Declaración de capacidades",
+          "Tarjetas de presentación",
+          "Folletos"
+        ]
+      },
+      {
+        "name": "Gestión de Redes Sociales",
+        "price": "$600",
+        "period": "/mes",
+        "description": "Gestión profesional de redes sociales para hacer crecer tu presencia en línea",
+        "features": [
+          "5 publicaciones por semana",
+          "Diseño gráfico",
+          "3 plataformas a elección del cliente",
+          "Calendario de contenido + textos + diseños",
+          "Publicación de videos o fotos del cliente",
+          "Investigación de hashtags y optimización de palabras clave"
+        ]
+      }
+    ],
+    "cta": {
+      "button": "Comenzar",
+      "trial": "Inicia una prueba gratuita de 14 días",
+      "unsure_title": "¿No estás seguro de qué plan elegir?",
+      "unsure_text": "Nuestro equipo te ayudará a encontrar la solución perfecta según el tamaño de tu empresa, el volumen de proyectos y tus necesidades específicas.",
+      "see_all": "Ver Todas las Opciones de Precios",
+      "consultation": "Agendar una Consulta"
+    },
+    "stats": {
+      "satisfaction": "Satisfacción del Cliente",
+      "projects": "Proyectos Completados",
+      "experience": "Años de Experiencia"
+    }
+  },
+  "Pricing2": {
+    "plans": [
+      {
+        "name": "Soporte Administrativo",
+        "price": "$1,000",
+        "period": "/mes",
+        "description": "Perfecto para empresas de construcción pequeñas y medianas",
+        "features": [
+          "Soporte administrativo dedicado",
+          "Gestión de correos electrónicos",
+          "Programación de calendario",
+          "Organización de documentos",
+          "Ingreso de datos y archivo",
+          "Correspondencia telefónica/correo electrónico",
+          "Coordinación de reuniones",
+          "Organización de viajes",
+          "Seguimiento de gastos",
+          "Comunicación con clientes",
+          "Seguimiento limitado de proyectos",
+          "Reportes básicos"
+        ],
+        "ads": "",
+
+        "button": "Comenzar",
+        "buttonVariant": "outline"
+      },
+      {
+        "name": "Soporte de Gestión de Proyectos",
+        "price": "$1,500",
+        "period": "/mes",
+        "description": "Ideal para empresas de construcción en crecimiento",
+        "ads": "Máximo de 2 proyectos a la vez. Para 3 a 4 proyectos, agregar $1,000",
+        "features": [
+          "Planificación y programación de proyectos",
+          "Seguimiento de presupuesto",
+          "Asignación de recursos",
+          "Gestión de riesgos",
+          "Control de calidad",
+          "Comunicación con partes interesadas",
+          "Gestión de órdenes de cambio",
+          "Reportes de progreso",
+          "Coordinación del equipo",
+          "Gestión de proveedores",
+          "Cumplimiento de seguridad",
+          "Control de documentos"
+        ],
+        "popular": "Más Popular",
+        "button": "Comenzar",
+        "buttonVariant": "default"
+      },
+      {
+        "name": "Paquete de Marketing y Marca",
+        "price": "$1,200",
+        "period": "/único",
+        "description": "Soluciones completas de marketing y marca",
+        "features": [
+          "Sitio web, alojamiento y administración",
+          "Diseño gráfico",
+          "Logo",
+          "Declaración de capacidades",
+          "Tarjetas de presentación",
+          "Folletos"
+        ],
+        "button": "Comenzar",
+        "buttonVariant": "outline"
+      },
+      {
+        "name": "Gestión de Redes Sociales",
+        "price": "$600",
+        "period": "/mes",
+        "description": "Gestión profesional de redes sociales para aumentar tu presencia en línea",
+        "features": [
+          "5 publicaciones por semana",
+          "Diseño gráfico",
+          "3 plataformas a elección del cliente",
+          "Calendario de contenido + textos + diseños",
+          "Publicación de videos o fotos del cliente",
+          "Investigación de hashtags y optimización de palabras clave"
+        ],
+        "button": "Comenzar",
+        "buttonVariant": "outline"
+      }
+    ]
+  },
+  "servicesPage": {
+    "hero": {
+      "badge": "SOLUCIONES PROFESIONALES",
+      "title": "Nuestros Servicios",
+      "subtitle": "Servicios integrales de soporte administrativo diseñados específicamente para empresas de construcción.",
+      "features": ["Más Información", "Prueba Gratuita", "Soporte 24/7"]
+    },
+    "services": {
+      "sectionTitle": "Nuestros Servicios",
+      "sectionDescription": "Servicios integrales de soporte administrativo diseñados para ayudar a su empresa a prosperar",
+      "list": [
+        {
+          "title": "Soporte de Gestión de Proyectos",
+          "description": "Soporte integral para mantener sus proyectos organizados y en marcha."
+        },
+        {
+          "title": "Soporte Administrativo",
+          "description": "Asistencia administrativa profesional para optimizar sus operaciones."
+        },
+        {
+          "title": "Desarrollo de Negocios",
+          "description": "Servicios estratégicos de crecimiento, incluyendo licitaciones, estimaciones y marketing."
+        },
+        {
+          "title": "Contabilidad",
+          "description": "Seguimiento financiero e informes adaptados a la construcción."
+        },
+        {
+          "title": "Marketing",
+          "description": "Construya su marca y presencia online con nuestros servicios de marketing."
+        },
+        {
+          "title": "Recursos Humanos",
+          "description": "Soporte de RRHH para gestionar su equipo de manera efectiva."
+        },
+        {
+          "title": "Arquitectura y Diseño",
+          "description": "Soporte de diseño y planos usando el software más reciente."
+        }
+      ]
+    },
+    "qualifications": {
+      "sectionTitle": "Algunas calificaciones clave de su equipo de back office",
+      "sectionDescription": "Capacidades expertas en todas las áreas de servicio",
+      "list": [
+        {
+          "title": "Soporte de Gestión de Proyectos",
+          "sub": "Gerentes de proyecto expertos con credenciales de la industria.",
+          "items": [
+            "Licenciatura en Gestión de Construcción o Ingeniería",
+            "Certificación PMP (Project Management Professional)",
+            "Dominio experto de software de gestión de proyectos (Procore, Buildertrend, CoConstruct)",
+            "Dominio experto de la suite MS Office y Google Suite",
+            "Dominio experto de software de programación (Primavera P6, MS Project)",
+            "Certificación de seguridad OSHA",
+            "Mínimo 5+ años de experiencia en la industria de la construcción"
+          ]
+        },
+        {
+          "title": "Soporte Administrativo",
+          "sub": "Profesionales administrativos altamente capacitados.",
+          "items": [
+            "Licenciatura en un campo relevante",
+            "Curso de capacitación para representantes de servicio al cliente",
+            "Dominio experto de gestión de CRM (ClickUp, HubSpot, Salesforce, Trello, Asana, Monday, etc.)",
+            "Dominio experto de la suite MS Office y Google Suite",
+            "Habilidades avanzadas de comunicación y organización",
+            "Experiencia en la industria de la construcción preferida",
+            "Experiencia en gestión documental"
+          ]
+        },
+        {
+          "title": "Desarrollo de Negocios",
+          "sub": "Profesionales estratégicos impulsando su crecimiento.",
+          "items": [
+            "Licenciatura en Administración de Empresas o campo relacionado",
+            "Dominio experto de software de estimación (Planswift, Bluebeam, On-Screen Takeoff)",
+            "Conocimiento avanzado de procesos de licitación en construcción",
+            "Experiencia en redacción de propuestas y respuestas a RFP",
+            "Dominio experto de la suite MS Office y Google Suite",
+            "Experiencia con requisitos de pre-calificación y garantías",
+            "Habilidades analíticas y de presentación sólidas"
+          ]
+        },
+        {
+          "title": "Contabilidad",
+          "sub": "Profesionales de contabilidad certificados.",
+          "items": [
+            "Licenciatura en Contabilidad o Finanzas",
+            "Dominio experto de QuickBooks y/o Xero",
+            "Especialización en contabilidad de construcción",
+            "Certificación en procesamiento de nómina",
+            "Conocimiento de costos de trabajo y reportes WIP",
+            "Dominio experto de la suite MS Office y Google Suite",
+            "Comprensión de requisitos fiscales específicos de la construcción"
+          ]
+        },
+        {
+          "title": "Marketing",
+          "sub": "Profesionales creativos con experiencia en la industria.",
+          "items": [
+            "Licenciatura en Marketing, Comunicaciones o Diseño",
+            "Dominio experto de Adobe Creative Suite (Photoshop, Illustrator, InDesign)",
+            "Certificación en gestión de redes sociales",
+            "Experiencia en SEO y marketing digital",
+            "Habilidades en desarrollo y gestión de sitios web",
+            "Experiencia en creación de contenido y redacción",
+            "Experiencia en marketing para la industria de la construcción preferida"
+          ]
+        },
+        {
+          "title": "Recursos Humanos",
+          "sub": "Profesionales de RR.HH. que garantizan cumplimiento y eficiencia.",
+          "items": [
+            "Licenciatura en Recursos Humanos o Administración de Empresas",
+            "Certificación en RR.HH. (PHR, SPHR o SHRM-CP)",
+            "Dominio experto de sistemas HRIS",
+            "Conocimiento de leyes laborales y regulaciones de la industria de la construcción",
+            "Experiencia en reclutamiento y adquisición de talento",
+            "Dominio experto de la suite MS Office y Google Suite",
+            "Habilidades en relaciones con empleados y resolución de conflictos"
+          ]
+        },
+        {
+          "title": "Arquitectura y Diseño",
+          "sub": "Arquitectos y profesionales del diseño.",
+          "items": [
+            "Licenciatura o Maestría en Arquitectura o campo relacionado",
+            "Dominio de AutoCAD, REVIT, SketchUp",
+            "Dominio experto de software de renderizado (V-ray, Lumion, 3ds Max)",
+            "Experiencia en planos constructivos y documentación 'as-built'",
+            "Habilidades en modelado y visualización 3D",
+            "Comprensión de códigos y regulaciones de construcción",
+            "Mínimo 5+ años de experiencia en diseño y dibujo técnico"
+          ]
+        }
+      ]
+    },
+    "process": {
+      "sectionTitle": "Cómo trabajamos con usted",
+      "sectionDescription": "Un proceso simple y directo para brindarle el soporte que necesita",
+      "steps": [
+        {
+          "title": "Llamada de Descubrimiento",
+          "description": "Conocemos su empresa, desafíos y necesidades específicas."
+        },
+        {
+          "title": "Plan Personalizado",
+          "description": "Creamos un plan de soporte adaptado a sus requisitos."
+        },
+        {
+          "title": "Integración del Equipo",
+          "description": "Nuestros expertos se integran perfectamente con su equipo existente."
+        },
+        {
+          "title": "Soporte Continuo",
+          "description": "Servicio constante y confiable con revisiones periódicas y optimización."
+        }
+      ]
+    },
+    "benefits": {
+      "sectionTitle": "Por qué las empresas de construcción nos eligen",
+      "list": [
+        {
+          "title": "Experiencia en la Industria",
+          "description": "Nuestro equipo comprende las operaciones, la terminología y los desafíos únicos de la construcción."
+        },
+        {
+          "title": "Soluciones Escalables",
+          "description": "Aumente su soporte a medida que crece su negocio, sin costos generales ni problemas de RRHH."
+        },
+        {
+          "title": "Servicio Confiable",
+          "description": "Soporte constante y confiable que puede contar día tras día, proyecto tras proyecto."
+        },
+        {
+          "title": "Eficiente en Costos",
+          "description": "Obtenga soporte experto sin el costo de contratar empleados a tiempo completo y administrar beneficios."
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para comenzar?",
+      "description": "Hablemos de sus necesidades específicas y creemos un plan de soporte personalizado para su empresa de construcción.",
+      "buttons": {
+        "consultation": "Programar una Consulta",
+        "pricing": "Ver Planes de Precios"
+      }
+    },
+    "finalSection": {
+      "title": "Deje que nos encarguemos del Back Office",
+      "description": "Concéntrese en construir grandes proyectos mientras nosotros nos ocupamos de la gestión de proyectos, estimaciones, contabilidad y más.",
+      "button": "Obtenga su Consulta Gratuita"
+    }
+  },
+  "pricingPage": {
+    "hero": {
+      "badge": "PRECIOS TRANSPARENTES",
+      "title1": "Precios que Escalan",
+      "title2": "Contigo",
+      "subtitle": "Planes flexibles diseñados para crecer con tu empresa de construcción, sin tarifas ocultas ni sorpresas",
+      "features": {
+        "payPerTask": "Pagar por Tarea",
+        "unlimited": "Ilimitado",
+        "customQuote": "Cotización Personalizada"
+      }
+    },
+
+    "pricingSection": {
+      "title": "Precios que Escalan Contigo",
+      "subtitle": "Precios flexibles para cada etapa de tu empresa de construcción",
+      "customMessage": "¿Necesitas una solución personalizada? Podemos crear un plan adaptado a tus necesidades específicas.",
+      "customButton": "Contáctanos para Precios Personalizados"
+    },
+
+    "hourlyPricing": {
+      "title": "Precios por Hora",
+      "subtitle": "Tarifas por hora flexibles para cada etapa de tu negocio",
+      "services": [
+        {
+          "name": "Gestión de Proyectos",
+          "description": "Supervisión y coordinación integral de proyectos"
+        },
+        {
+          "name": "Estimación",
+          "description": "Estimaciones de costos precisas y preparación de ofertas"
+        },
+        {
+          "name": "Contabilidad",
+          "description": "Gestión completa de registros financieros"
+        },
+        {
+          "name": "Soporte Administrativo",
+          "description": "Asistencia administrativa general"
+        },
+        {
+          "name": "Desarrollo de Negocios",
+          "description": "Generación de leads, propuestas y contacto con clientes"
+        }
+      ],
+      "discount": {
+        "title": "Descuento por Volumen",
+        "description": "Compra 20+ horas por adelantado y ahorra 10–15% en todas las tarifas por hora",
+        "button": "Obtener Cotización"
+      }
+    },
+
+    "projectPricing": {
+      "title": "Precios por Proyecto",
+      "subtitle": "Precios flexibles para proyectos específicos, sin compromiso para proyectos únicos",
+      "projects": [
+        {
+          "name": "Estimación de Proyecto Único",
+          "description": "Estimación completa del proyecto con desglose detallado de costos"
+        },
+        {
+          "name": "Paquete Mensual de Contabilidad",
+          "description": "Gestión financiera completa que incluye conciliación, facturación y reportes"
+        },
+        {
+          "name": "Configuración y Documentación del Proyecto",
+          "description": "Documentación completa del proyecto, incluyendo planos, permisos y contratos"
+        },
+        {
+          "name": "Preparación de Paquete de Licitación",
+          "description": "Paquete completo de licitación con estimaciones, documentación y presentación"
+        }
+      ],
+      "footerNote": "Todos los precios de proyectos se discuten por adelantado. Sin tarifas ocultas ni cargos sorpresa.",
+      "button": "Solicitar Cotización Personalizada"
+    },
+
+    "stats": {
+      "title": "Por Qué Nuestros Precios Tienen Sentido",
+      "items": [
+        {
+          "value": "60%",
+          "title": "Ahorro de Costos",
+          "description": "Comparado con contratar empleados de tiempo completo con beneficios y gastos generales"
+        },
+        {
+          "value": "No",
+          "title": "Tarifas Ocultas",
+          "description": "Precios transparentes sin cargos sorpresa ni tarifas de configuración"
+        },
+        {
+          "value": "100%",
+          "title": "Escalable",
+          "description": "Ajusta tu plan fácilmente a medida que cambian las necesidades de tu negocio"
+        }
+      ]
+    },
+
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": [
+        {
+          "question": "¿Puedo personalizar mi plan?",
+          "answer": "¡Por supuesto! Entendemos que cada negocio de construcción es único. Contáctanos para crear un plan personalizado."
+        },
+        {
+          "question": "¿Qué pasa si necesito más horas?",
+          "answer": "Puedes comprar horas adicionales a tarifas competitivas. También ofrecemos mejoras flexibles a planes superiores."
+        },
+        {
+          "question": "¿Hay un compromiso de contrato?",
+          "answer": "Ofrecemos planes mensuales y anuales. Los planes anuales incluyen un 10% de descuento."
+        },
+        {
+          "question": "¿Qué tan rápido podemos comenzar?",
+          "answer": "La mayoría de los clientes comienzan dentro de 5–7 días hábiles después de la consulta inicial y la selección del plan."
+        }
+      ]
+    }
+  },
+
+  "contactPage": {
+    "hero": {
+      "title": "Ponte en Contacto",
+      "subtitle": "¿Listo para construir un mejor negocio? Conversemos sobre cómo nuestros servicios de back-office pueden ayudar a que tu empresa de construcción crezca."
+    },
+
+    "formSection": {
+      "title": "Construyamos Juntos",
+      "subtitle": "Programa una consulta gratuita hoy",
+
+      "features": {
+        "response": "Respuesta en 24 Horas",
+        "support": "Soporte Experto",
+        "consultation": "Consulta Gratuita"
+      },
+
+      "form": {
+        "fullName": "Nombre Completo *",
+        "fullNamePlaceholder": "Juan Pérez",
+
+        "email": "Correo Electrónico *",
+        "emailPlaceholder": "juan@empresa.com",
+
+        "phone": "Número de Teléfono",
+        "phonePlaceholder": "000 000 0000",
+
+        "company": "Nombre de la Empresa",
+        "companyPlaceholder": "ABC Construcciones Ltda.",
+
+        "service": "¿Qué servicio te interesa?",
+        "servicePlaceholder": "Selecciona un servicio",
+
+        "services": {
+          "projectManagement": "Gestión de Proyectos",
+          "adminSupport": "Soporte Administrativo",
+          "bookkeeping": "Contabilidad",
+          "marketing": "Marketing",
+          "humanResources": "Recursos Humanos",
+          "architectureDesign": "Arquitectura y Diseño"
+        },
+
+        "message": "Cuéntanos sobre tus necesidades *",
+        "messagePlaceholder": "Comparte detalles sobre tu negocio, desafíos actuales y cómo podemos ayudarte...",
+
+        "submit": "Enviar Mensaje",
+        "secureNote": "Tu información es segura y confidencial"
+      }
+    },
+
+    "supportTeam": {
+      "title": "Nuestro Equipo de Soporte",
+      "subtitle": "Estamos disponibles para responder tus preguntas y brindarte asistencia",
+
+      "phone": {
+        "label": "Teléfono",
+        "value": "(555) 123-4567"
+      },
+
+      "email": {
+        "label": "Correo Electrónico",
+        "value": "info@thebuildersdesk.com"
+      },
+
+      "location": {
+        "label": "Área de Servicio",
+        "value": "Cobertura Nacional"
+      },
+
+      "hours": {
+        "label": "Horario de Atención",
+        "value": "Lun-Vie: 8am - 6pm EST"
+      }
+    },
+
+    "instantSupport": {
+      "title": "Soporte Instantáneo",
+      "subtitle": "Disponible 24/7",
+      "description": "Obtén respuestas inmediatas a tus preguntas por WhatsApp",
+      "button": "Chatear Ahora"
+    },
+
+    "guarantee": {
+      "title": "Garantía de 24 Horas",
+      "description": "Prometemos responder a cada consulta dentro de un día hábil"
+    },
+
+    "statsSection": {
+      "title": "Por Qué las Empresas de Construcción Confían en Nosotros",
+      "stats": [
+        {
+          "value": "15+",
+          "label": "Años de Experiencia",
+          "description": "Sirviendo a la industria de la construcción con experiencia comprobada"
+        },
+        {
+          "value": "98%",
+          "label": "Satisfacción del Cliente",
+          "description": "Nuestros clientes nos califican altamente por calidad, confiabilidad y resultados"
+        },
+        {
+          "value": "50+",
+          "label": "Socios en Construcción",
+          "description": "Empresas de construcción que actualmente confían en nuestro apoyo"
+        }
+      ]
+    }
+  },
+  "footer": {
+    "description": "Servicios de apoyo administrativo para empresas de construcción. Construye un Mejor Negocio.",
+
+    "quickLinks": {
+      "title": "Enlaces Rápidos",
+      "links": {
+        "home": "Inicio",
+        "about": "Sobre Nosotros",
+        "services": "Servicios",
+        "pricing": "Precios"
+      }
+    },
+
+    "services": {
+      "title": "Nuestros Servicios",
+      "items": {
+        "projectManagement": "Gestión de Proyectos",
+        "adminAssistance": "Asistencia Administrativa",
+        "estimating": "Estimación",
+        "bookkeeping": "Contabilidad",
+        "businessDevelopment": "Desarrollo de Negocios"
+      }
+    },
+
+    "contact": {
+      "title": "Contáctanos",
+      "email": "info@thebuildersdesk.com",
+      "phone": "(800) 123-4567",
+      "location": "Servicio Nacional"
+    },
+
+    "copyright": "© 2025 The Builders Desk. Todos los derechos reservados."
+  }
+}

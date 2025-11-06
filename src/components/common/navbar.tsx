@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -11,26 +12,39 @@ import {
 import { useState } from "react";
 import { Globe, Menu, MessageCircle, X } from "lucide-react";
 import { Button } from "../ui/button";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
 
 const Navbar = () => {
-  const [lang, setLang] = useState("english");
   const [open, setOpen] = useState(false);
-const pathname = usePathname()
+  const pathname = usePathname();
+  const locale = useLocale();
+  const router = useRouter();
+
   const links = [
-    { text: "Home", href: "/" },
-    { text: "About Us", href: "/about" },
-    { text: "Services", href: "/services" },
-    { text: "Pricing", href: "/pricing" },
-    { text: "Contact", href: "/contact" },
+    { text: "Home", href: "/", key:"home" },
+    { text: "About Us", href: "/about", key:"about" },
+    { text: "Services", href: "/services" , key:"services"},
+    { text: "Pricing", href: "/pricing", key:"pricing" },
+    { text: "Contact", href: "/contact", key:"contact" },
   ];
 
+  const t = useTranslations
+    ("Navbar");
+  console.log(t("home"));
+  
+  // Handle locale change
+  const handleLanguageChange = (value: string) => {
+    const newPath = `/${value}${pathname.replace(/^\/(en|es)/, "")}`;
+    router.push(newPath);
+  };
+
   return (
-    <nav className="h-20 flex items-center relative px-6  container max-w-[1216px] mx-auto  justify-between">
+    <nav className="h-20 flex items-center relative px-6 container max-w-[1216px] mx-auto justify-between">
       {/* Logo */}
-      <Link href={"/"} className="relative inline-block">
+      <Link href={`/${locale}`} className="relative inline-block">
         <Image
-          src={"/logo.png"}
+          src="/logo.png"
           alt="Builders Desk Logo"
           width={145}
           height={82}
@@ -38,53 +52,53 @@ const pathname = usePathname()
       </Link>
 
       {/* Desktop Menu */}
-      <ul className="flex items-center md:max-w-[60%]  w-full justify-between max-lg:hidden">
+      <ul className="flex items-center md:max-w-[60%] w-full justify-between max-lg:hidden">
         {links.map((link) => (
           <li key={link.text}>
-            <Link href={link.href} className={`text-sm ${pathname === link.href && "text-primary"}`}>
-              {link.text}
+            <Link
+              href={`/${locale}${link.href}`}
+              className={`text-sm transition-colors hover:text-primary ${
+                pathname === `/${locale}${link.href}` && "text-primary"
+              }`}
+            >
+              {t(link.key)}
             </Link>
           </li>
         ))}
 
-        <Select value={lang} onValueChange={setLang}>
+        <Select value={locale} onValueChange={handleLanguageChange}>
           <SelectTrigger className="w-[130px] h-9 focus-visible:ring-0">
             <Globe color="#0E4571" />
-            <SelectValue placeholder="Theme" />
+            <SelectValue />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="english">English</SelectItem>
-            <SelectItem value="french">French</SelectItem>
+            <SelectItem value="en">English</SelectItem>
+            <SelectItem value="es">Español</SelectItem>
           </SelectContent>
         </Select>
 
-        <Button variant={"success"} >
-          <MessageCircle /> WhatsAppUs
+        <Button variant="success">
+          <MessageCircle /> {t("whatsapp")}
         </Button>
       </ul>
 
       {/* Mobile Menu Toggle Button */}
       <Button
-        size={"icon"}
-        variant={"ghost"}
+        size="icon"
+        variant="ghost"
         className="lg:hidden relative w-10 h-10 flex items-center justify-center"
         onClick={() => setOpen((prev) => !prev)}
       >
-        {/* Animated icon container */}
         <div className="relative w-6 h-6">
-          {/* Hamburger icon */}
-                  <Menu
-                  
+          <Menu
             className={`absolute inset-0 size-7 transition-all duration-300 transform ${
               open
                 ? "opacity-0 rotate-90 scale-75"
                 : "opacity-100 rotate-0 scale-100"
             }`}
           />
-          {/* Close icon */}
           <X
-
-            className={`absolute inset-0 size-7 transition-all  duration-300 transform ${
+            className={`absolute inset-0 size-7 transition-all duration-300 transform ${
               open
                 ? "opacity-100 rotate-0 scale-100"
                 : "opacity-0 -rotate-90 scale-75"
@@ -93,7 +107,7 @@ const pathname = usePathname()
         </div>
       </Button>
 
-      {/* Mobile Menu with slide + fade animation */}
+      {/* Mobile Menu */}
       <div
         className={`
           absolute top-20 left-0 w-full bg-white border-t z-80 lg:hidden 
@@ -105,27 +119,27 @@ const pathname = usePathname()
         {links.map((link) => (
           <Link
             key={link.text}
-            href={link.href}
+            href={`/${locale}${link.href}`}
             className="text-secondary block py-2"
             onClick={() => setOpen(false)}
           >
-            {link.text}
+            {t(link.key)}
           </Link>
         ))}
 
-        <Select value={lang} onValueChange={setLang}>
+        <Select value={locale} onValueChange={handleLanguageChange}>
           <SelectTrigger className="w-full h-9 focus-visible:ring-0">
             <Globe color="#0E4571" />
-            <SelectValue placeholder="Theme" />
+            <SelectValue />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="english">English</SelectItem>
-            <SelectItem value="french">French</SelectItem>
+            <SelectItem value="en">English</SelectItem>
+            <SelectItem value="es">Español</SelectItem>
           </SelectContent>
         </Select>
 
-        <Button variant={"success"} className="w-full">
-          <MessageCircle /> WhatsAppUs
+        <Button variant="success" className="w-full">
+          <MessageCircle /> {t("whatsapp")}
         </Button>
       </div>
     </nav>

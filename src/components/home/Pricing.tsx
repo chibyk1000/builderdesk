@@ -27,173 +27,27 @@ import "swiper/css/pagination";
 import { Badge } from "../ui/badge";
 import CheckIcon from "./Icon";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
-const plans = [
-  {
-    name: "Administrative Support",
-    price: "$1,500",
-    maxProject: "Maximum of 2 projects at once",
-    period: "/month",
-    description:
-      "Professional administrative assistance to streamline your operations",
-    features: [
-      "Filing and tracking",
-      "Appointment setup",
-      "Follow-up emails",
-      "Insurance COI management",
-      "Onboarding and offboarding",
-      "Call answering",
-      "Letter drafting",
-      "License expiration tracking",
-    ],
-    recommended: true,
-  },
-  {
-    name: "Project Management Support",
-    price: "$1,500",
-    maxProject: "Maximum of 2 projects at once",
-    period: "/month",
-    description: "Complete project management and analysis on-site",
-    features: [
-      "For 3 to 4 projects at once, add $1,000.00",
-      "Project set up and close out",
-      "Schedule of values",
-      "AIA Billing",
-      "Submittal preparation and tracking",
-      "Change orders preparation",
-      "Document control",
-      "RFI's",
-    ],
-    recommended: true,
-  },
-  {
-    name: "Marketing Branding Package",
-    price: "$1,200",
-    period: "/one time",
-    description: "Comprehensive marketing and branding solutions",
-    features: [
-      "Website, hosting and management",
-      "Graphic Design",
-      "Logo",
-      "Capability statement",
-      "Business cards",
-      "Brochures",
-    ],
-    recommended: false,
-  },
-  {
-    name: "Social Media Management",
-    price: "$600",
-    period: "/month",
-    description:
-      "Professional social media management to grow your online presence",
-    features: [
-      "5 Posts a week",
-      "Graphic design",
-      "3 platforms of the client's choice",
-      "Content calendar + Captions + Designs",
-      "Posting of clients videos or pictures",
-      "Hashtag research and keyword optimization",
-    ],
-    recommended: false,
-  },
-];
 
-const filters = [
-  "No setup fees",
-  "Cancel anytime",
-  "30 day money back",
-  "Dedicated support",
-];
 
 
 
 export function Pricing2() {
-    const plans = [
-      {
-        name: "Administrative Support",
-        price: "$1,000",
-        period: "/month",
-        description: "Perfect for small to medium construction companies",
-        features: [
-          "Dedicated admin support",
-          "Email management",
-          "Calendar scheduling",
-          "Document organization",
-          "Data entry and filing",
-          "Phone/email correspondence",
-          "Meeting coordination",
-          "Travel arrangements",
-          "Expense tracking",
-          "Client communication",
-          "Limited project tracking",
-          "Basic reporting",
-        ],
-        buttonText: "Get Started",
-        buttonVariant: "outline" as const,
-        ads: "",
-      },
-      {
-        name: "Project Management Support",
-        price: "$1,500",
-        period: "/month",
-        description: "Ideal for growing construction businesses",
-        ads: "Maximum of 2 projects at once. For 3 to 4 projects add $1,000",
-        popular: true,
-        features: [
-          "Project plan and schedule",
-          "Budget tracking",
-          "Resource allocation",
-          "Risk management",
-          "Quality control",
-          "Stakeholder communication",
-          "Change order management",
-          "Progress reporting",
-          "Team coordination",
-          "Vendor management",
-          "Safety compliance",
-          "Document control",
-        ],
-        buttonText: "Get Started",
-        buttonVariant: "default" as const,
-      },
-      {
-        name: "Marketing Branding Package",
-        price: "$1,200",
-        period: "/one time",
-        description: "Comprehensive marketing and branding solutions",
-        features: [
-          "Website, hosting and management",
-          "Graphic Design",
-          "Logo",
-          "Capability statement",
-          "Business cards",
-          "Brochures",
-        ],
-        buttonText: "Get Started",
-        buttonVariant: "outline" as const,
-        ads: "",
-      },
+  const t = useTranslations("Pricing2")
+  const plans2= t.raw("plans") as {
+    name: string;
+    price: string;
+    period: string;
+    description: string;
+    features: string[];
+    button: string;
+    buttonVariant: "outline" | "default";
+    ads: string;
+    popular?: undefined;
+}[]
 
-      {
-        name: "Social Media Management",
-        price: "$600",
-        period: "/month",
-        description:
-          "Professional social media management to grow your online presence",
-        features: [
-          "5 Posts a week",
-          "Graphic design",
-          "3 platforms of the client's choice",
-          "Content calendar + Captions + Designs",
-          "Posting of clients videos or pictures",
-          "Hashtag research and keyword optimization",
-        ],
-        buttonText: "Get Started",
-        buttonVariant: "outline" as const,
-        ads: "",
-      },
-    ];
+ 
   return (
     <section id="pricing" className=" ">
       <div className="relative">
@@ -222,11 +76,11 @@ export function Pricing2() {
           }}
           className="pricing-swiper sm:w-10/12 overflow-visible mx-auto"
         >
-          {plans.map((plan, index) => (
+          {plans2.map((plan, index) => (
             <SwiperSlide key={index} className="overflow-visible py-5">
               <Card
                 key={index}
-                className={`relative shadow-lg border overflow-visible  h-[696px] flex-1  rounded-[12px] max-w-112 ${
+                className={`relative shadow-lg border overflow-visible  h-[696px] flex-1  rounded-[12px] max-w-md ${
                   plan.popular ? "border-[#1e3a5f] border-2" : ""
                 }`}
               >
@@ -238,7 +92,7 @@ export function Pricing2() {
                         "0px 4px 6px -4px #0000001A, 0px 10px 15px -3px #0000001A",
                     }}
                   >
-                    Most Popular
+                    {plan.popular}
                   </div>
                 )}
                 <CardHeader className="text-center pb-8 text-primary font-normal relative">
@@ -268,7 +122,7 @@ export function Pricing2() {
                         key={featureIndex}
                         className="flex items-start gap-3"
                       >
-                        <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                        <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                         <span className="text-sm">{feature}</span>
                       </div>
                     ))}
@@ -276,8 +130,8 @@ export function Pricing2() {
                   <Button
                     className={`w-full mt-auto ${
                       plan.buttonVariant === "default"
-                        ? "bg-[#1e3a5f] hover:bg-[#2d5a8c]"
-                        : ""
+                        ? "bg-[#1e3a5f]  hover:bg-[#2d5a8c]"
+                        : "text-primary"
                     }`}
                     variant={plan.buttonVariant}
 
@@ -285,7 +139,7 @@ export function Pricing2() {
                   >
                     <Link href={"/contact"}>
                     
-                    {plan.buttonText}
+                    {plan.button}
                     </Link>
                   </Button>
                 </CardContent>
@@ -326,22 +180,31 @@ export function Pricing2() {
   );
 }
 export default function Pricing() {
-
+  const t = useTranslations("Pricing1");
+  const plans = t.raw("plans") as {
+    name: string;
+    price: string;
+    maxProject: string;
+    period: string;
+    description: string;
+    features: string[];
+    recommended: boolean;
+  }[]
+  const filters = t.raw("filters") as string[]
 
   return (
     <section id="pricing" className="py-20 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <Badge className="bg-primary/5 text-xs font-medium text-primary border-none mb-4">
-            Our Process
+            {t("badge")}
           </Badge>
 
           <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4">
-            Pricing That Scales With You
+            {t("title")}
           </h2>
           <p className="text-secondary text-xl max-w-2xl mx-auto">
-            Transparent monthly plans with no hidden fees. Pay for what you
-            need.
+            {t("subtitle")}
           </p>
         </div>
 
@@ -427,14 +290,16 @@ export default function Pricing() {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full  bg-white border border-primary group-hover:text-white group-hover:bg-primary  hover:bg-primary/90 transition-all duration-500 text-primary" asChild>
+                  <Button
+                    className="w-full  bg-white border border-primary group-hover:text-white group-hover:bg-primary  hover:bg-primary/90 transition-all duration-500 text-primary"
+                    asChild
+                  >
                     <Link href={"/pricing"}>
-                    
-                    Get Started <ArrowRight />
+                      {t("cta.button")} <ArrowRight />
                     </Link>
                   </Button>
                   <p className="text-xs text-secondary text-center">
-                    Start free 14-day trial
+                    {t("cta.trial")}
                   </p>
                 </Card>
               </SwiperSlide>
@@ -455,29 +320,28 @@ export default function Pricing() {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="text-4xl  mb-2">98%</div>
-              <p className="text-white/80">Client Satisfaction</p>
+              <p className="text-white/80">{t("stats.satisfaction")}</p>
             </div>
             <div>
               <div className="text-4xl  text-white mb-2">500+</div>
-              <p className="text-white/80">Projects Completed</p>
+              <p className="text-white/80">{t("stats.projects")}</p>
             </div>
 
             <div>
               <div className="text-4xl   mb-2">15+</div>
-              <p className="text-white/80">Years Experience</p>
+              <p className="text-white/80">{t("stats.experience")}</p>
             </div>
           </div>
         </div>
 
         <div className="w-full  mt-8">
           <div className="w-full mt-8">
-            <div className="bg-gradient-to-r from-[#F9FAFB] to-white rounded-xl shadow-sm px-8 py-8 w-full text-center border">
+            <div className="bg-linear-to-r from-[#F9FAFB] to-white rounded-xl shadow-sm px-8 py-8 w-full text-center border">
               <h3 className="text-lg font-semibold mb-2 text-primary">
-                Not sure which plan is right for you?
+                {t("cta.unsure_title")}
               </h3>
               <p className="text-gray-600 mb-6 text-sm max-w-lg mx-auto">
-                Our team will help you find the perfect solution based on your
-                company size, project volume, and specific needs.
+                {t("cta.unsure_text")}
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Button
@@ -486,15 +350,14 @@ export default function Pricing() {
                   className="border-primary text-primary px-6 py-2 font-medium"
                 >
                   <Link href={"/pricing"}>
-                  See All Pricing Options{" "}
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                    {t("cta.see_all")} <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button asChild className="bg-primary hover:bg-primary px-6 py-2 font-medium text-white">
-                  <Link href={"/contact"}>
-                  
-                  Schedule a Consultation
-                  </Link>
+                <Button
+                  asChild
+                  className="bg-primary hover:bg-primary px-6 py-2 font-medium text-white"
+                >
+                  <Link href={"/contact"}> {t("cta.consultation")}</Link>
                 </Button>
               </div>
             </div>

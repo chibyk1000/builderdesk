@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -22,26 +23,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { useTranslations } from "next-intl";
 const Page = () => {
-  const stats = [
-    {
-      value: "15+",
-      label: "Years of Experience",
-      description:
-        "Serving the construction industry with proven expertise and results",
-    },
-    {
-      value: "98%",
-      label: "Client Satisfaction",
-      description:
-        "Our clients consistently rate us highly for quality, reliability, and results",
-    },
-    {
-      value: "50+",
-      label: "Construction Partners",
-      description: "Construction companies currently rely on our support",
-    },
-  ];
+
+  const t = useTranslations("contactPage")
+  const stats = t.raw("statsSection.stats") as {value:string, label:string, description:string}[]
 
   return (
     <div>
@@ -53,10 +39,11 @@ const Page = () => {
         }}
       >
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
-          <p className="text-xl text-white max-w-186 leading-[28px]">
-            Ready to build better business? Let's discuss how our back-office
-            support services can help your construction company thrive.today.
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            {t("hero.title")}
+          </h1>
+          <p className="text-xl text-white max-w-186 leading-7">
+            {t("hero.subtitle")}
           </p>
         </div>
       </section>
@@ -75,10 +62,10 @@ const Page = () => {
                 >
                   <div className="h-19 ">
                     <CardTitle className="text-4xl text-center text-white font-normal ">
-                      Let&apos;s Build Together
+                      {t("formSection.title")}
                     </CardTitle>
                     <p className="text-center text-white text-lg">
-                      Schedule a free consultation today
+                      {t("formSection.subtitle")}
                     </p>
                   </div>
                   <Image
@@ -93,34 +80,34 @@ const Page = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <Card className="flex max-sm:pl-2 sm:items-center  justify-center py-2 border-none shadow-none bg-[#F9FAFB]">
                     <CardContent className="flex items-center gap-2 p-0">
-                      <span className="size-10 rounded-[8px] inline-flex items-center justify-center bg-[linear-gradient(135deg,#2B7FFF_0%,#155DFC_100%)]">
+                      <span className="size-10 rounded-xl inline-flex items-center justify-center bg-[linear-gradient(135deg,#2B7FFF_0%,#155DFC_100%)]">
                         <Clock className="w-5 h-5 text-white" />
                       </span>
 
                       <span className="font-medium text-sm text-[#404040]">
-                        24-Hour Response
+                        {t("formSection.features.response")}
                       </span>
                     </CardContent>
                   </Card>
                   <Card className="flex max-sm:pl-2 sm:items-center  justify-center py-2 border-none shadow-none bg-[#F9FAFB]">
                     <CardContent className="flex items-center gap-2 p-0">
-                      <span className="size-10 rounded-[8px] inline-flex items-center justify-center bg-[linear-gradient(135deg,#DBA400_0%,#F54900_100%)]">
+                      <span className="size-10 rounded-xl inline-flex items-center justify-center bg-[linear-gradient(135deg,#DBA400_0%,#F54900_100%)]">
                         <Headphones className="text-white w-5 h-5" />
                       </span>
 
                       <span className="font-medium text-sm text-[#404040]">
-                        Expert Support
+                        {t("formSection.features.support")}
                       </span>
                     </CardContent>
                   </Card>
                   <Card className="flex max-sm:pl-2 sm:items-center  justify-center py-2 border-none shadow-none bg-[#F9FAFB]">
                     <CardContent className="flex items-center gap-2 p-0">
-                      <span className="size-10 rounded-[8px] inline-flex items-center justify-center bg-[linear-gradient(135deg,#00C950_0%,#00A63E_100%)]">
+                      <span className="size-10 rounded-xl inline-flex items-center justify-center bg-[linear-gradient(135deg,#00C950_0%,#00A63E_100%)]">
                         <MessageSquare className="text-white w-5 h-5" />
                       </span>
 
                       <span className="font-medium text-sm  text-[#404040]">
-                        Free Consultation
+                        {t("formSection.features.consultation")}
                       </span>
                     </CardContent>
                   </Card>
@@ -129,53 +116,76 @@ const Page = () => {
                 <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {/* Full Name */}
                   <div className="space-y-2">
-                    <Label htmlFor="fullName" className="max-sm:text-sm">Full Name *</Label>
-                    <Input id="fullName" placeholder="John Smith" />
+                    <Label htmlFor="fullName" className="max-sm:text-sm">
+                      {t("formSection.form.fullName")}
+                    </Label>
+                    <Input
+                      id="fullName"
+                      placeholder={t("formSection.form.fullNamePlaceholder")}
+                    />
                   </div>
 
                   {/* Email */}
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="max-sm:text-sm">Email Address *</Label>
+                    <Label htmlFor="email" className="max-sm:text-sm">
+                      {t("formSection.form.email")}
+                    </Label>
                     <Input
                       id="email"
-                      placeholder="john@company.com"
+                      placeholder={t("formSection.form.emailPlaceholder")}
                       type="email"
                     />
                   </div>
 
                   {/* Phone Number */}
                   <div className="space-y-2">
-                    <Label htmlFor="phone" className="max-sm:text-sm">Phone Number</Label>
+                    <Label htmlFor="phone" className="max-sm:text-sm">
+                      {t("formSection.form.phone")}
+                    </Label>
                     <Input id="phone" placeholder="000 000 0000" />
                   </div>
 
                   {/* Company Name */}
                   <div className="space-y-2">
-                    <Label htmlFor="company">Company Name</Label>
-                    <Input id="company" placeholder="ABC Construction Ltd" />
+                    <Label htmlFor="company">
+                      {t("formSection.form.company")}
+                    </Label>
+                    <Input
+                      id="company"
+                      placeholder={t("formSection.form.companyPlaceholder")}
+                    />
                   </div>
 
                   {/* Service */}
                   <div className="space-y-2 md:col-span-2">
                     <Label htmlFor="service" className="max-sm:text-sm">
-                      What service are you interested in?
+                      {t("formSection.form.service")}
                     </Label>
                     <Select>
                       <SelectTrigger id="service" className="w-full">
-                        <SelectValue placeholder="Select a service" />
+                        <SelectValue
+                          placeholder={t("formSection.form.servicePlaceholder")}
+                        />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="project">
-                          Project Management
+                          {t("formSection.form.services.projectManagement")}
                         </SelectItem>
                         <SelectItem value="admin">
-                          Administrative Support
+                          {t("formSection.form.services.adminSupport")}
                         </SelectItem>
-                        <SelectItem value="bookkeeping">Bookkeeping</SelectItem>
-                        <SelectItem value="marketing">Marketing</SelectItem>
-                        <SelectItem value="hr">Human Resources</SelectItem>
+                        <SelectItem value="bookkeeping">
+                          {" "}
+                          {t("formSection.form.services.bookkeeping")}
+                        </SelectItem>
+                        <SelectItem value="marketing">
+                          {t("formSection.form.services.marketing")}
+                        </SelectItem>
+                        <SelectItem value="hr">
+                          {t("formSection.form.services.humanResources")}
+                        </SelectItem>
                         <SelectItem value="design">
-                          Architecture & Design
+                          {t("formSection.form.services.architectureDesign")}
                         </SelectItem>
                       </SelectContent>
                     </Select>
@@ -183,10 +193,12 @@ const Page = () => {
 
                   {/* Message */}
                   <div className="space-y-2 md:col-span-2">
-                    <Label htmlFor="message" className="max-sm:text-sm">Tell us about your needs *</Label>
+                    <Label htmlFor="message" className="max-sm:text-sm">
+                      {t("formSection.form.message")}
+                    </Label>
                     <Textarea
                       id="message"
-                      placeholder="Share details about your business, current challenges, and how we can help..."
+                      placeholder={t("formSection.form.messagePlaceholder")}
                       rows={4}
                     />
                   </div>
@@ -201,13 +213,13 @@ const Page = () => {
     shadow-[0px_8px_10px_-6px_#0000001A,0px_20px_25px_-5px_#0000001A]
   "
                     >
-                  <Send/>    Send Message
+                      <Send /> {t("formSection.form.submit")}
                     </Button>
                   </div>
                 </form>
 
                 <p className="text-center text-sm text-secondary">
-                  🔒 Your information is secure and confidential
+                  🔒 {t("formSection.form.secureNote")}
                 </p>
               </CardContent>
             </Card>
@@ -233,31 +245,34 @@ const Page = () => {
                   </div>
                   <div className="px-4 pt-6">
                     <CardTitle className="text-xl text-primary font-normal">
-                      Our Support Team
+                      {t("supportTeam.title")}
                     </CardTitle>
                     <p className="text-sm text-secondary">
-                      We&apos;re available to answer your questions and provide
-                      assistance
+                      {t("supportTeam.subtitle")}
                     </p>
                   </div>
                 </CardHeader>
                 <CardContent className="p-6 space-y-4">
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-[8px] bg-[linear-gradient(135deg,#0E4571_0%,#0A3554_100%)] flex items-center justify-center text-white flex-shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-[linear-gradient(135deg,#0E4571_0%,#0A3554_100%)] flex items-center justify-center text-white shrink-0">
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
-                      <p className=" text-xs text-secondary">Phone</p>
+                      <p className=" text-xs text-secondary">
+                        {t("supportTeam.phone.label")}
+                      </p>
                       <p className="text-sm text-primary">(555) 123-4567</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-[8px] bg-[linear-gradient(135deg,#0E4571_0%,#0A3554_100%)] flex items-center justify-center text-white flex-shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-[linear-gradient(135deg,#0E4571_0%,#0A3554_100%)] flex items-center justify-center text-white shrink-0">
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
-                      <p className="text-xs text-secondary">Email</p>
+                      <p className="text-xs text-secondary">
+                        {t("supportTeam.email.label")}
+                      </p>
                       <p className="text-sm text-primary">
                         info@thebuildersdesk.com
                       </p>
@@ -265,24 +280,28 @@ const Page = () => {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-[8px] bg-[linear-gradient(135deg,#0E4571_0%,#0A3554_100%)] flex items-center justify-center text-white flex-shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-[linear-gradient(135deg,#0E4571_0%,#0A3554_100%)] flex items-center justify-center text-white shrink-0">
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
-                      <p className="text-xs text-secondaryd">Service Area</p>
+                      <p className="text-xs text-secondaryd">
+                        {t("supportTeam.location.label")}
+                      </p>
                       <p className="text-sm text-primary">
-                        Nationwide Coverage
+                        {t("supportTeam.phone.value")}
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-[8px] bg-[linear-gradient(135deg,#0E4571_0%,#0A3554_100%)] flex items-center justify-center text-white flex-shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-[linear-gradient(135deg,#0E4571_0%,#0A3554_100%)] flex items-center justify-center text-white shrink-0">
                       <Clock className="w-5 h-5" />
                     </div>
                     <div>
-                      <p className="text-xs text-secondary">Business Hours</p>
+                      <p className="text-xs text-secondary">
+                        {t("supportTeam.hours.label")}
+                      </p>
                       <p className="text-sm text-primary">
-                        Mon-Fri: 8am - 6pm EST
+                        {t("supportTeam.hours.value")}
                       </p>
                     </div>
                   </div>
@@ -291,26 +310,31 @@ const Page = () => {
 
               <div className="max-w-md mx-auto space-y-4">
                 {/* --- Instant Support Card --- */}
-                <Card className="bg-[linear-gradient(135deg,#25D366_0%,#20BD5A_100%)] h-[208px] text-white border-none shadow-md">
+                <Card className="bg-[linear-gradient(135deg,#25D366_0%,#20BD5A_100%)] h-52 text-white border-none shadow-md">
                   <CardContent className=" space-y-3">
                     <div className="flex items-center gap-2">
                       <span className="size-12 bg-white/20 rounded-[12px] grid place-items-center">
                         <Phone className="w-5 h-5" />
                       </span>
                       <div>
-                        <h3 className=" text-lg">Instant Support</h3>
-                        <p className="text-xs opacity-80">Available 24/7</p>
+                        <h3 className=" text-lg">
+                          {" "}
+                          {t("instantSupport.title")}
+                        </h3>
+                        <p className="text-xs opacity-80">
+                          {t("instantSupport.subtitle")}
+                        </p>
                       </div>
                     </div>
                     <p className="text-sm opacity-80">
-                      Get immediate answers to your questions via WhatsApp
+                      {t("instantSupport.description")}
                     </p>
                     <Button
                       variant="secondary"
-                      className="bg-white text-[#25D366] w-full hover:bg-green-100 font-medium mt-3"
+                      className="bg-white text-success w-full hover:bg-green-100 font-medium mt-3"
                     >
                       <MessageSquare className="w-4 h-4 mr-2" />
-                      Chat Now
+                      {t("instantSupport.button")}
                     </Button>
                   </CardContent>
                 </Card>
@@ -330,11 +354,10 @@ const Page = () => {
                       </span>
                       <div>
                         <h3 className=" text-primary text-base">
-                          24-Hour Guarantee
+                          {t("guarantee.title")}
                         </h3>
                         <p className="text-sm text-secondary">
-                          We promise to respond to every inquiry within one
-                          business day
+                          {t("guarantee.description")}
                         </p>
                       </div>
                     </div>
@@ -348,7 +371,7 @@ const Page = () => {
       <section className="py-16 px-6 bg-muted/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl sm:text-3xl  md:text-4xl  text-center mb-12">
-            Why Construction Companies Trust Us
+            {t("statsSection.title")}
           </h2>
           <div className="grid md:grid-cols-3 md:h-58.5 gap-8">
             {stats.map((stat, index) => (

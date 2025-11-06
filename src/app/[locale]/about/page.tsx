@@ -15,6 +15,7 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -45,6 +46,12 @@ const Page = () => {
       description: "Get help when you need it with our dedicated support team.",
     },
   ];
+  const t = useTranslations("aboutPage")
+  const ft = t.raw("features") as {
+ 
+    title: string;
+    description: string;
+  }[];
 
   const images = [
     "/about-section1.png",
@@ -84,6 +91,11 @@ const Page = () => {
         desc: "Focused on measurable outcomes that grow your business.",
       },
     ];
+  
+   const vt = t.raw("values.items") as {
+     title: string;
+     desc: string;
+   }[];
 
     const team = [
       {
@@ -107,6 +119,12 @@ const Page = () => {
         desc: "Dedicated assistants for daily operations.",
       },
     ];
+  
+    const tm = t.raw("team.members") as {
+      title: string;
+      desc: string;
+    }[];
+  const paragraphs: string[] = t.raw("ourStory.paragraphs");
   return (
     <section>
       <div
@@ -115,31 +133,27 @@ const Page = () => {
         }}
         className="lg:h-[514px] md:px-6    pt-20 overflow-hidden"
       >
-        <div className="  sm:grid max-lg:grid-cols-1 grid-cols-12 max-w-[1280px] mx-auto w-full  text-white">
+        <div className="  sm:grid max-lg:grid-cols-1 grid-cols-12 max-w-7xl mx-auto w-full  text-white">
           <div className="col-span-6 px-2 grid h-96">
-            <Badge className="bg-accent text-white h-7">About Us</Badge>
+            <Badge className="bg-accent text-white h-7">
+              {t("header.badge")}
+            </Badge>
 
-            <h1 className="text-3xl md:text-5xl">
-              Your Trusted Back-Office Partner for Construction Success
-            </h1>
-
-            <p className="text-lg max-w-156.5">
-              We provide comprehensive support services that help construction
-              companies streamline operations and scale efficiently.
-            </p>
+            <h1 className="text-3xl md:text-5xl">{t("header.title")}</h1>
+            <p className="text-lg max-w-156.5">{t("header.description")}</p>
 
             <div className="flex gap-5">
               <div>
                 <p className="text-accent text-3xl">10+</p>
-                <p className="text-sm">Years Experience</p>
+                <p className="text-sm">{t("header.stats.years")}</p>
               </div>
               <div>
                 <p className="text-accent text-3xl">500+</p>
-                <p className="text-sm">Projects</p>
+                <p className="text-sm">{t("header.stats.projects")}</p>
               </div>
               <div>
                 <p className="text-accent text-3xl">98%</p>
-                <p className="text-sm">Projects</p>
+                <p className="text-sm">{t("header.stats.completion")}</p>
               </div>
             </div>
           </div>
@@ -157,24 +171,23 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="py-20  max-w-[1280px] mx-auto">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-          <div className="text-center mb-16">
-            <Badge className="bg-accent/10 font-medium h-9 w-32.5 p-0 rounded-full text-sm text-accent border-none mb-3">
-              Why Choose Us
-            </Badge>
-            <h2 className=" text-2xl sm:text-3xl md:text-5xl  text-primary mb-4">
-              Your Trusted Back-Office Partner
-            </h2>
-            <p className="text-[#4A5565]  sm:text-lg max-w-2xl mx-auto">
-              We handle the administrative details so you can focus on building
-              great projects and growing your business.
-            </p>
-          </div>
-        </div>
+      <div className="py-20  max-w-7xl mx-auto">
         <section className="bg-white py-16 ">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+            <div className="text-center mb-16">
+              <Badge className="bg-accent/10 font-medium h-9 w-32.5 p-0 rounded-full text-sm text-accent border-none mb-3">
+                {t("whyChooseUs.badge")}
+              </Badge>
+              <h2 className="text-2xl sm:text-3xl md:text-5xl text-primary mb-4">
+                {t("whyChooseUs.title")}
+              </h2>
+              <p className="text-[#4A5565] sm:text-lg max-w-2xl mx-auto">
+                {t("whyChooseUs.description")}
+              </p>
+            </div>
+          </div>
           <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
-            {features.map(({ icon: Icon, title, description }) => (
+            {features.map(({ icon: Icon, title, description }, i) => (
               <Card
                 key={title}
                 className="shadow-none border-0 flex h-71 flex-col p-6 w-72  bg-transparent"
@@ -183,11 +196,11 @@ const Page = () => {
                   <div className="bg-accent/10 size-16 rounded-full p-4 justify-center">
                     <Icon className="w-8 h-8 text-accent" />
                   </div>
-                  <h3 className="text-[#0E4571] font-semibold text-lg">
-                    {title}
+                  <h3 className="text-primary font-semibold text-lg">
+                    {ft[i].title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed max-w-xs">
-                    {description}
+                    {ft[i].description}
                   </p>
                 </CardContent>
               </Card>
@@ -220,7 +233,7 @@ const Page = () => {
           {/* Left side - Mission & Vision */}
           <div>
             <Badge className="bg-accent/10 font-normal h-9 px-4 rounded-full text-sm text-accent border-none mb-14">
-              Our Purpose
+              {t("missionVision.badge")}
             </Badge>
             <div className="space-y-8 grid gap-10 grid-rows-2">
               {/* Mission */}
@@ -229,17 +242,14 @@ const Page = () => {
                   <Target className="text-accent size-8.5" />
                 </div>
                 <CardTitle
-                  className="text-[#0E4571] font-normal
+                  className="text-primary font-normal
                  sm:text-3xl text-2xl mb-3"
                 >
-                  Our Mission
+                  {t("missionVision.mission.title")}
                 </CardTitle>
                 <CardContent className="p-0">
                   <p className="text-[#364153] text-sm sm:text-lg leading-relaxed">
-                    To empower construction companies to focus on what they do
-                    best—building—by providing comprehensive, reliable
-                    back-office support that streamlines operations, improves
-                    efficiency, and drives business growth.
+                    {t("missionVision.mission.description")}
                   </p>
                 </CardContent>
               </Card>
@@ -250,17 +260,14 @@ const Page = () => {
                   <Eye className="text-accent size-8.5" />
                 </div>
                 <CardTitle
-                  className="text-[#0E4571] font-normal
+                  className="text-primary font-normal
                  sm:text-3xl text-2xl mb-3"
                 >
-                  Our Vision
+                  {t("missionVision.vision.title")}
                 </CardTitle>
                 <CardContent className="p-0">
                   <p className="text-[#364153] text-sm sm:text-lg leading-relaxed">
-                    To be the most trusted partner for construction companies
-                    nationwide, recognized for our industry expertise,
-                    commitment to excellence, and ability to help businesses
-                    scale efficiently.
+                    {t("missionVision.vision.description")}
                   </p>
                 </CardContent>
               </Card>
@@ -283,7 +290,7 @@ const Page = () => {
               </p>
             </div>
             <div className="relative max-lg:h-84 w-full h-full mx-auto">
-              <div className="relative  h-full  w-full  lg:aspect-[400/500] rounded-2xl overflow-hidden ">
+              <div className="relative  h-full  w-full  lg:aspect-400/500 rounded-2xl overflow-hidden ">
                 <Image
                   src="/mission-vission.png"
                   alt="Mission and Vision illustration"
@@ -297,14 +304,14 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="lg:h-177.5 grid px-2 md:max-w-[1280px] mx-auto lg:grid-cols-2 items-center  gap-10">
+      <section className="lg:h-177.5 grid px-2 md:max-w-7xl mx-auto lg:grid-cols-2 items-center  gap-10">
         <div
           className="relative h-70 lg:h-144 w-f max-lg:order-2"
           style={{ boxShadow: `0px 25px 50px -12px #00000040` }}
         >
-          <div className="bg-accent text-white p-3 lg:p-5 rounded-[16px] z-30 absolute top-8 right-8">
+          <div className="bg-accent text-white p-3 lg:p-5 rounded-2xl z-30 absolute top-8 right-8">
             <p className="text-2xl lg:text-3xl">15+</p>
-            <p>Years Experience</p>
+            <p>{t("ourStory.experienceLabel")}</p>
           </div>
           <Image
             src={"/experience.png"}
@@ -315,53 +322,33 @@ const Page = () => {
         </div>
         <div>
           <Badge className="bg-accent/10 font-medium h-9 w-21.5 p-0 rounded-full text-sm text-accent border-none mb-3">
-            Our Story
+            {t("ourStory.badge")}
           </Badge>
 
           <h2 className="text-primary text-2xl lg:text-5xl">
-            Built on Experience
+            {t("ourStory.title")}
           </h2>
 
           <article className="text-[#364153] space-y-10 mt-10">
-            <p>
-              The Builders Desk was founded by construction industry veterans
-              who understood firsthand the challenges of managing back-office
-              operations while trying to grow a construction business.
-            </p>
-            <p>
-              We saw too many talented contractors struggling with
-              administrative tasks, project documentation, and financial
-              management—taking time away from what they do best: building
-              exceptional projects.
-            </p>
-
-            <p>
-              Today, we've assembled a team of construction-focused
-              professionals who provide specialized support services, allowing
-              construction companies to operate more efficiently and scale
-              confidently.
-            </p>
+            {paragraphs.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
           </article>
           <hr className="my-3 bg-accent/10 text-primary" />
 
-          <p className="text-primary">
-            Our commitment to reliability, scalability, and industry expertise
-            has made us a trusted partner for construction companies across the
-            nation.
-          </p>
+          <p className="text-primary">{t("ourStory.conclusion")}</p>
         </div>
       </section>
 
-      <section className="bg-gradient-to-b from-[#F9FAFB] to-white py-24 px-6 md:px-16 lg:px-32 text-center">
+      <section className="bg-linear-to-b from-[#F9FAFB] to-white py-24 px-6 md:px-16 lg:px-32 text-center">
         {/* Core Values */}
         <div className="max-w-6xl mx-auto">
           <Badge className="bg-accent/10 text-accent border-none rounded-full px-4 py-1 mb-4">
-            What Drives Us
+            {t("values.badge")}
           </Badge>
-          <h2 className="text-[#0E4571] text-4xl  mb-2">Our Core Values</h2>
+          <h2 className="text-primary text-4xl  mb-2"> {t("values.title")}</h2>
           <p className="text-[#364153] text-lg mb-12">
-            These principles guide everything we do and shape how we serve our
-            clients.
+            {t("values.description")}
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -373,12 +360,12 @@ const Page = () => {
                 <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-accent/10 flex items-center justify-center">
                   <v.icon className="text-accent w-7 h-7" />
                 </div>
-                <CardTitle className="text-[#0E4571] text-xl mb-2">
-                  {v.title}
+                <CardTitle className="text-primary text-xl mb-2">
+                  {vt[i].title}
                 </CardTitle>
                 <CardContent className="p-0">
                   <p className="text-[#364153] text-base leading-relaxed">
-                    {v.desc}
+                    {vt[i].desc}
                   </p>
                 </CardContent>
               </Card>
@@ -389,11 +376,11 @@ const Page = () => {
         {/* Expert Team */}
         <div className="max-w-6xl mx-auto mt-32">
           <Badge className="bg-accent/10 text-accent border-none rounded-full px-4 py-1 mb-4">
-            Meet Our Team
+            {t("team.badge")}
           </Badge>
-          <h2 className="text-[#0E4571] text-4xl  mb-2">Our Expert Team</h2>
+          <h2 className="text-primary text-4xl  mb-2"> {t("values.title")}</h2>
           <p className="text-[#364153] text-lg mb-12">
-            Construction professionals dedicated to your success
+            {t("values.description")}
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -402,15 +389,15 @@ const Page = () => {
                 key={i}
                 className="p-8   transition-all duration-300 border-none"
               >
-                <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-[#0E4571] flex items-center justify-center">
+                <div className="w-14 h-14 mx-auto mb-5 rounded-full bg-primary flex items-center justify-center">
                   <t.icon className="text-white w-7 h-7" />
                 </div>
-                <CardTitle className="text-[#0E4571] text-xl mb-2">
-                  {t.title}
+                <CardTitle className="text-primary text-xl mb-2">
+                  {tm[i].title}
                 </CardTitle>
                 <CardContent className="p-0">
                   <p className="text-[#364153] text-base leading-relaxed">
-                    {t.desc}
+                    {tm[i].desc}
                   </p>
                 </CardContent>
               </Card>
@@ -419,25 +406,20 @@ const Page = () => {
         </div>
       </section>
 
-      <div className="relative h-96 md:h-80  w-11/12 mb-16 lg:max-w-6xl mx-auto rounded-2xl overflow-hidden">
+      <div className="relative h-96 md:h-80  w-11/12 mb-16  lg:max-w-6xl mx-auto rounded-2xl overflow-hidden">
         {/* Overlay */}
         <div
-          className="absolute inset-0 z-10 pointer-events-none"
+          className="absolute inset-0 z-10 pointer-events-none p-10"
           style={{
             background: `linear-gradient(90deg, rgba(14, 69, 113, 0.9) 0%, rgba(14, 69, 113, 0.6) 100%)`,
           }}
         >
           <div className="text-white h-full grid p-4 items-start">
-            <h2 className="text-3xl">Industry-Specific Expertise</h2>
-            <p className="text-lg">
-              {" "}
-              Every member of our team has construction industry experience or
-              specialized training in construction business operations. We speak
-              your language and understand your unique challenges.
-            </p>
+            <h2 className="text-3xl">{t("expertiseBanner.title")}</h2>
+            <p className="text-lg"> {t("expertiseBanner.description")}</p>
 
             <Button className="bg-accent hover:bg-accent/90 max-w-46 h-10 px-4 py-1  ">
-              See How We Can Help
+              {t("expertiseBanner.button")}
             </Button>
           </div>
         </div>
@@ -455,26 +437,16 @@ const Page = () => {
         <div className="absolute top-20 left-40 size-40 rounded-full rem]  bg-accent blur-[148px] max-sm:opacity-10"></div>
         <div className="absolute -top-24 right-40 size-40 rounded-full   bg-accent blur-[148px] "></div>
 
-        <div className="lg:max-w-224 w-full px-8 text-center space-y-4">
-          <h3 className="text-3xl lg:text-5xl">
-            Ready to Build Better Business?
-          </h3>
-          <p className="text-xl">
-            Experience the difference that reliable, construction-focused
-            back-office support can make for your business.
-          </p>
+        <div className="lg:max-w-4xl w-full px-8 text-center space-y-4">
+          <h3 className="text-3xl lg:text-5xl">{t("cta.heading")}</h3>
+          <p className="text-xl">{t("cta.description")}</p>
 
           <div className="space-x-4 max-sm:space-y-4 ">
             <Button className="w-52 bg-accent hover:bg-accent/90" asChild>
-              <Link href="/contact">
-              Get Started Today
-              </Link>
+              <Link href="/contact"> {t("cta.buttons.getStarted")}</Link>
             </Button>
             <Button className="w-42 bg-white text-primary hover:bg-white/90">
-                <Link href="/pricing">
-              View Pricing
-              
-              </Link>
+              <Link href="/pricing">{t("cta.buttons.viewPricing")}</Link>
             </Button>
           </div>
         </div>
