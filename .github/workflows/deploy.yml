@@ -50,6 +50,8 @@ jobs:
             npm run build
 
             # Restart PM2 or start if not running
+
+            cd /home/${{ secrets.VPS_USER }}/${{ secrets.APP_NAME }}
             PORT=${{ secrets.PORT }} pm2 restart ${{ secrets.APP_NAME }} || PORT=${{ secrets.PORT }} pm2 start npm --name ${{ secrets.APP_NAME }} -- start
 
             # Save PM2 process list for restart on reboot
