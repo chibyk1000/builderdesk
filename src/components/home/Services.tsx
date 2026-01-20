@@ -15,6 +15,26 @@ import ServiceCard, { ServiceCtaCard } from "../common/service-card";
 import { Badge } from "../ui/badge";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
+import { Variants } from "framer-motion";
+import { motion } from "framer-motion";
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+
+const stagger: Variants = {
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
 
 const Services = () => {
   const t = useTranslations("Home.Services");
@@ -66,8 +86,14 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-24">
-      <header className="text-center">
+    <motion.section
+      className="py-24"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={stagger}
+    >
+      <motion.header className="text-center" variants={fadeUp}>
         <Badge
           className="text-primary bg-primary/5 mb-4 font-medium"
           variant="outline"
@@ -82,28 +108,39 @@ const Services = () => {
             {t("description")}
           </p>
         </div>
-      </header>
+      </motion.header>
 
-      <div className="grid md:grid-cols-3 gap-8 xl:max-w-7xl px-2 sm:px-8 mx-auto">
+      <motion.div
+        variants={stagger}
+        className="grid md:grid-cols-3 gap-8 xl:max-w-7xl px-2 sm:px-8 mx-auto"
+      >
         {services.map((service) => (
-          <ServiceCard
+          <motion.div
             key={service.title}
-            description={service.description}
-            icon={<service.icon />}
-            title={service.title}
-            services={service.services}
-          />
+            variants={fadeUp}
+            whileHover={{ y: -6 }}
+            transition={{ type: "spring", stiffness: 200 }}
+          >
+            <ServiceCard
+              description={service.description}
+              icon={<service.icon />}
+              title={service.title}
+              services={service.services}
+            />
+          </motion.div>
         ))}
 
-        <ServiceCtaCard
-          icon={<Sparkles className="w-5 h-5" />}
-          title={t("cta.title")}
-          description={t("cta.description")}
-          buttonText={t("cta.button")}
-          onClick={() =>  router.push("/services") }
-        />
-      </div>
-    </section>
+        <motion.div variants={fadeUp} transition={{ delay: 0.2 }}>
+          <ServiceCtaCard
+            icon={<Sparkles className="w-5 h-5" />}
+            title={t("cta.title")}
+            description={t("cta.description")}
+            buttonText={t("cta.button")}
+            onClick={() => router.push("/services")}
+          />
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
 

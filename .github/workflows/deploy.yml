@@ -1,0 +1,43 @@
+# 4efdd2e5b1cc58741cc620b9c900642b
+name: Deploy buildersdesk
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Node.js on runner
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      # Copy SSH key and configure
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+
+      # Deploy via SSH
+      - name: Deploy to VPS
+        run: |
+          ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "
+            cd ${{ secrets.APP_PATH }} || git clone https://github.com/${{ github.repository }} ${{ secrets.APP_PATH }};
+            cd ${{ secrets.APP_PATH }};
+            git fetch --all;
+            git reset --hard origin/main;
+            npm install;
+            npm run build;
+            PORT=${{ secrets.PORT }} pm2 restart ${{ secrets.APP_NAME }} || PORT=${{ secrets.PORT }} pm2 start npm --name ${{ secrets.APP_NAME }} -- start;
+            pm2 save
+          "

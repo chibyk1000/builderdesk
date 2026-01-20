@@ -18,6 +18,25 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "../ui/badge";
 import { useTranslations } from "next-intl";
+import { motion, Variants } from "framer-motion";
+
+
+const fadeUp:Variants = {
+  hidden: { opacity: 0, y: 32 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
+
+const stagger:Variants = {
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
 
 export default function WhyChoose() {
   const t = useTranslations("Home.WhyChoose");
@@ -68,9 +87,16 @@ export default function WhyChoose() {
   ];
 
   return (
-    <section id="why" className="py-20 md:py-32 bg-white">
+    <motion.section
+      id="why"
+      className="py-20 md:py-32 bg-white"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-120px" }}
+      variants={stagger}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <motion.div className="text-center mb-16" variants={fadeUp}>
           <Badge className="bg-accent/10 font-medium text-accent border-none mb-3">
             {t("badge")}
           </Badge>
@@ -80,73 +106,87 @@ export default function WhyChoose() {
           <p className="text-secondary text-lg max-w-2xl mx-auto">
             {t("description")}
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <motion.div
+          variants={stagger}
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+        >
           {reasons.map((reason, index) => {
             const IconComponent = reason.icon;
             return (
-              <Card
+              <motion.div
                 key={index}
-                className="p-8 border-0 h-[292px] gap-2 hover:shadow-lg transition relative shadow-[0px_4px_6px_-4px_#0000001A,0px_10px_15px_-3px_#0000001A]"
+                variants={fadeUp}
+                whileHover={{ y: -6 }}
+                transition={{ type: "spring", stiffness: 200, damping: 20 }}
               >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center shrink-0">
-                    <IconComponent className="w-6 h-6 text-white" />
+                <Card
+                  key={index}
+                  className="p-8 border-0 h-[292px] gap-2 hover:shadow-lg transition relative shadow-[0px_4px_6px_-4px_#0000001A,0px_10px_15px_-3px_#0000001A]"
+                >
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center shrink-0">
+                      <IconComponent className="w-6 h-6 text-white" />
+                    </div>
+                    <span className="absolute top-6 right-6 bg-[linear-gradient(90deg,#DBA400_0%,rgba(219,164,0,0.9)_100%)] text-white text-sm px-3 py-1 rounded-[33554400px] shadow-[0px_2px_4px_-2px_rgba(0,0,0,0.1),0px_4px_6px_-1px_rgba(0,0,0,0.1)]">
+                      {reason.badge}
+                    </span>
                   </div>
-                  <span className="absolute top-6 right-6 bg-[linear-gradient(90deg,#DBA400_0%,rgba(219,164,0,0.9)_100%)] text-white text-sm px-3 py-1 rounded-[33554400px] shadow-[0px_2px_4px_-2px_rgba(0,0,0,0.1),0px_4px_6px_-1px_rgba(0,0,0,0.1)]">
-                    {reason.badge}
-                  </span>
-                </div>
 
-                <h3 className="text-lg font-bold text-primary mb-3">
-                  {reason.title}
-                </h3>
-                <p className="text-secondary text-sm mb-4">
-                  {reason.description}
-                </p>
+                  <h3 className="text-lg font-bold text-primary mb-3">
+                    {reason.title}
+                  </h3>
+                  <p className="text-secondary text-sm mb-4">
+                    {reason.description}
+                  </p>
 
-                <Dialog>
-                  <DialogHeader>
-                    <DialogTitle></DialogTitle>
-                  </DialogHeader>
-                  <DialogTrigger>
-                    <p className="text-primary/60 font-semibold text-sm hover:underline">
-                      {t("learnMore")}
-                    </p>
-                  </DialogTrigger>
-                  <DialogContent className="leading-8">
-                    {reason.fulldesc}
-                  </DialogContent>
-                </Dialog>
-              </Card>
+                  <Dialog>
+                    <DialogHeader>
+                      <DialogTitle></DialogTitle>
+                    </DialogHeader>
+                    <DialogTrigger>
+                      <p className="text-primary/60 font-semibold text-sm hover:underline">
+                        {t("learnMore")}
+                      </p>
+                    </DialogTrigger>
+                    <DialogContent className="leading-8">
+                      {reason.fulldesc}
+                    </DialogContent>
+                  </Dialog>
+                </Card>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
 
         <div className="mt-16 bg-[linear-gradient(180deg,#0E4571_0%,#0A3554_100%)] text-white rounded-2xl p-12 text-center">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
+          <motion.div
+            variants={fadeUp}
+            transition={{ delay: 0.2 }}
+            className="grid md:grid-cols-3 gap-8"
+          >
+            <motion.div variants={stagger}>
               <div className="text-4xl font-bold text-white mb-2">
                 {t("stats.projects.value")}
               </div>
               <p className="text-white/80">{t("stats.projects.label")}</p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div variants={stagger}>
               <div className="text-4xl font-bold mb-2">
                 {t("stats.onTime.value")}
               </div>
               <p className="text-white/80">{t("stats.onTime.label")}</p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div variants={stagger}>
               <div className="text-4xl font-bold mb-2">
                 {t("stats.experience.value")}
               </div>
               <p className="text-white/80">{t("stats.experience.label")}</p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
