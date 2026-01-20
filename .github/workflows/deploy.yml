@@ -32,12 +32,27 @@ jobs:
       - name: Deploy to VPS
         run: |
           ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "
-            cd ${{ secrets.APP_PATH }} || git clone https://github.com/${{ github.repository }}.git ${{ secrets.APP_PATH }};
+            # Ensure folder exists
+            mkdir -p ${{ secrets.APP_PATH }};
+            chown -R ${{ secrets.VPS_USER }}:${{ secrets.VPS_USER }} ${{ secrets.APP_PATH }};
             cd ${{ secrets.APP_PATH }};
-            git fetch --all;
-            git reset --hard origin/main;
-            npm install;
-            npm run build;
-            PORT=${{ secrets.PORT }} pm2 restart ${{ secrets.APP_NAME }} || PORT=${{ secrets.PORT }} pm2 start npm --name ${{ secrets.APP_NAME }} -- start;
+
+            # Clone repo if folder is empty or not a git repo
+            if [ ! -d .git ]; then
+                git clone https://github.com/chibyk1000/builderdesk.git .;
+            else
+                git fetch --all;
+                git reset --hard origin/main;
+            fi
+
+            # Install dependencies and build
+            npm install
+            npm run build
+
+            # Restart PM2 or start if not running
+            PORT=${{ secrets.PORT }} pm2 restart ${{ secrets.APP_NAME }} || PORT=${{ secrets.PORT }} pm2 start npm --name ${{ secrets.APP_NAME }} -- start
+
+            # Save PM2 process list for restart on reboot
             pm2 save
-          "
+            "
+
