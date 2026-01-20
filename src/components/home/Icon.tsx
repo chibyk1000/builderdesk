@@ -8,7 +8,7 @@ const CheckIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
       viewBox="0 0 13 13"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props} // ✅ allows overriding className, width, stroke, etc.
+      {...props}
     >
       <g clipPath="url(#clip0_113_4329)">
         <path
