@@ -1,126 +1,99 @@
 "use client";
 
-import { Mail, MapPin, Phone } from "lucide-react";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
-  const t = useTranslations("footer");
-
   return (
-    <footer className="bg-[#29618D] text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
-          {/* Logo + Description */}
-          <div>
-            <div className="relative w-[142.56px] h-20">
-              <Image src="/logo-light.svg" alt="" fill />
+    <footer className="bg-orange-600 text-white py-16 px-6">
+      <div className="max-w-7xl mx-auto">
+        {/* Top Section */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          {/* Logo and CTA */}
+          <div className="flex flex-col items-start gap-6">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 bg-blue-600 rounded"></div>
+              <div>
+                <div className="text-xs font-bold">THE</div>
+                <div className="text-xs font-bold">BUILDERS</div>
+                <div className="text-sm font-bold">DESK</div>
+              </div>
             </div>
-            <p className="text-gray-300 text-sm">{t("description")}</p>
+            <button className="bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+              Contact Us
+            </button>
           </div>
 
-          {/* Quick Links */}
+          {/* Head Office */}
           <div>
-            <div className="relative">
-              <h4 className="font-bold mb-4 relative">
-                {t("quickLinks.title")}
-              </h4>
-              <span className="bg-accent absolute top-5 inline-block w-8 h-0.5"></span>
-            </div>
-            <ul className="space-y-2 text-sm text-gray-300">
-              <li>
-                <Link href="/" className="hover:text-white transition">
-                  {t("quickLinks.links.home")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:text-white transition">
-                  {t("quickLinks.links.about")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="hover:text-white transition">
-                  {t("quickLinks.links.services")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/pricing" className="hover:text-white transition">
-                  {t("quickLinks.links.pricing")}
-                </Link>
-              </li>
-            </ul>
+            <h3 className="font-bold text-lg mb-4">Head Office</h3>
+            <p className="text-sm leading-relaxed">
+              4500 Forbes Blvd.
+              <br />
+              Lahamn MD 20706
+            </p>
           </div>
 
-          {/* Our Services */}
+          {/* Inquiries */}
           <div>
-            <div className="relative">
-              <h4 className="font-bold mb-4 relative">{t("services.title")}</h4>
-              <span className="bg-accent absolute top-5 inline-block w-8 h-0.5"></span>
-            </div>
-
-            <ul className="space-y-2 text-sm text-gray-300">
-              <li>
-                <Link href="#" className="hover:text-white transition">
-                  {t("services.items.projectManagement")}
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white transition">
-                  {t("services.items.adminAssistance")}
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white transition">
-                  {t("services.items.estimating")}
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white transition">
-                  {t("services.items.bookkeeping")}
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white transition">
-                  {t("services.items.businessDevelopment")}
-                </Link>
-              </li>
-            </ul>
+            <h3 className="font-bold text-lg mb-4">Inquiries</h3>
+            <p className="text-sm leading-relaxed mb-4">
+              For any inquiries, questions or commendations:
+            </p>
+            <p className="text-sm">
+              123-456-7890
+              <br />
+              <a
+                href="mailto:hello@buildersdesk.com"
+                className="underline hover:no-underline transition"
+              >
+                hello@buildersdesk.com
+              </a>
+            </p>
           </div>
 
-          {/* Contact */}
+          {/* Menu */}
           <div>
-            <div className="relative">
-              <h4 className="font-bold mb-4 relative">{t("contact.title")}</h4>
-              <span className="bg-accent absolute top-5 inline-block w-8 h-0.5"></span>
-            </div>
-
-            <ul className="space-y-2 text-sm text-gray-300">
-              <li className="flex items-center gap-3">
-                <Mail className="text-accent" />
-                <span className="hover:text-white transition">
-                  {t("contact.email")}
-                </span>
-              </li>
-              <li className="flex items-center gap-4">
-                <Phone className="text-accent" />
-                <span className="hover:text-white transition">
-                  {t("contact.phone")}
-                </span>
-              </li>
-              <li className="flex items-center gap-4">
-                <MapPin className="text-accent" />
-                <span className="hover:text-white transition">
-                  {t("contact.location")}
-                </span>
-              </li>
-            </ul>
+            <h3 className="font-bold text-lg mb-4">Menu</h3>
+            <nav className="flex flex-col gap-2 text-sm">
+              <Link href="#" className="hover:underline transition">
+                Home
+              </Link>
+              <Link href="#" className="hover:underline transition">
+                Services
+              </Link>
+              <Link href="#" className="hover:underline transition">
+                Projects
+              </Link>
+              <Link href="#" className="hover:underline transition">
+                About Us
+              </Link>
+              <Link href="#" className="hover:underline transition">
+                Careers
+              </Link>
+              <Link href="#" className="hover:underline transition">
+                Contact
+              </Link>
+            </nav>
           </div>
         </div>
 
-        {/* Footer Bottom */}
-        <div className="border-t border-primary pt-8 text-center text-[#D1D5DC]">
-          <p>{t("copyright")}</p>
+        {/* Divider */}
+        <div className="border-t border-orange-500 my-8"></div>
+
+        {/* Socials */}
+        <div>
+          <h3 className="font-bold text-lg mb-4">Socials</h3>
+          <div className="flex gap-6 text-sm">
+            <Link href="#" className="hover:underline transition">
+              Facebook
+            </Link>
+            <Link href="#" className="hover:underline transition">
+              Instagram
+            </Link>
+            <Link href="#" className="hover:underline transition">
+              LinkedIn
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
