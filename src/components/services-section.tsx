@@ -10,6 +10,7 @@ import {
   Users2,
   PiggyBank,
 } from "lucide-react";
+import { Svgexport13, Svgexport14, Svgexport15, Svgexport16, Svgexport17, Svgexport19 } from "./icons";
 
 export function ServicesSection() {
   const services = [
@@ -17,8 +18,8 @@ export function ServicesSection() {
       title: "PROJECT MANAGEMENT SUPPORT",
       description:
         "Keep Your Projects Organized, On Schedule, and Moving Forward",
-      icon: Users,
-      bgColor: "bg-blue-100",
+      icon: Svgexport13,
+      bgColor: "bg-[#d0deea]",
       features: [
         "Project Set up and Close-out",
         "Schedule of Values",
@@ -34,8 +35,8 @@ export function ServicesSection() {
     {
       title: "ESTIMATING SUPPORT",
       description: "Accurate Estimates That Help You Win More Jobs",
-      icon: Calculator,
-      bgColor: "bg-gray-50",
+      icon: Svgexport14,
+      bgColor: "bg-[#f7f7f7]",
       features: [
         "Material takeoffs",
         "Quantity surveying",
@@ -50,8 +51,8 @@ export function ServicesSection() {
     {
       title: "ARCHITECTURAL SUPPORT",
       description: "Professional Drafting & Design Support for Your Projects",
-      icon: Square,
-      bgColor: "bg-blue-100",
+      icon: Svgexport15,
+      bgColor: "bg-[#d0deea]",
       features: [
         "Shop Drawings",
         "Design Drafting",
@@ -64,8 +65,8 @@ export function ServicesSection() {
     {
       title: "ADMINISTRATIVE SUPPORT",
       description: "Reliable Back-Office Support for Busy Contractors",
-      icon: FileText,
-      bgColor: "bg-white border border-gray-200",
+      icon: Svgexport16,
+      bgColor: "bg-[#f7f7f7]",
       features: [
         "Filing tracking appointment set up",
         "Email management",
@@ -79,8 +80,8 @@ export function ServicesSection() {
     {
       title: "MARKETING SUPPORT",
       description: "Build Your Brand and Generate More Leads",
-      icon: Megaphone,
-      bgColor: "bg-white",
+      icon: Svgexport17,
+      bgColor: "bg-[#d0deea]",
       features: [
         "Social media management",
         "Content creation",
@@ -96,7 +97,7 @@ export function ServicesSection() {
       title: "BUSINESS DEVELOPMENT SUPPORT",
       description: "Helping You Find, Pursue, and Close More Opportunities",
       icon: TrendingUp,
-      bgColor: "bg-blue-100",
+      bgColor: "bg-[#f7f7f7]",
       features: [
         "Lead research and prospecting",
         "Proposal preparation",
@@ -112,7 +113,7 @@ export function ServicesSection() {
       title: "HR SUPPORT",
       description: "HR support to manage your team effectively",
       icon: Users2,
-      bgColor: "bg-white",
+      bgColor: "bg-[#d0deea]",
       features: [
         "Recruitment and candidate sourcing",
         "Resume screening",
@@ -127,8 +128,8 @@ export function ServicesSection() {
     {
       title: "ACCOUNTING SUPPORT",
       description: "Financial tracking and reporting tailored for construction",
-      icon: PiggyBank,
-      bgColor: "bg-blue-100",
+      icon: Svgexport19,
+      bgColor: "bg-[#f7f7f7]",
       features: [
         "Bookkeeping",
         "Invoice preparation",
@@ -144,12 +145,12 @@ export function ServicesSection() {
 
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12">
-          <p className="text-gray-600 text-sm font-medium mb-2">Our Services</p>
-          <h2 className="text-4xl font-bold text-blue-600 mb-4">WHAT WE DO</h2>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">
+          <p className="text-gray-600 text-[30px]  mb-2">Our Services</p>
+          <h2 className="text-6xl  text-[#1262a0] mb-4">WHAT WE DO</h2>
+          <h3 className="text-[27px] font-bold  mb-3">
             Reliable Remote Support for Contractors Who Are Tired of Doing
             Everything Themselves
           </h3>
@@ -160,26 +161,25 @@ export function ServicesSection() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <div key={index} className={`p-6 rounded-lg ${service.bgColor}`}>
+              <div key={index} className={`p-6  ${service.bgColor}`}>
                 {/* Icon */}
                 <div className="mb-4 flex items-center gap-2">
                   <IconComponent
-                    className="w-6 h-6 text-blue-600"
+                    className="size-20 text-blue-600"
                     strokeWidth={1.5}
                   />
+                  {/* Title */}
+                  <h3 className="font-bold text-gray-900 text-[23px] mb-3 leading-tight">
+                    {service.title}
+                  </h3>
                 </div>
 
-                {/* Title */}
-                <h3 className="font-bold text-gray-900 text-sm mb-3 leading-tight">
-                  {service.title}
-                </h3>
-
                 {/* Description */}
-                <p className="text-orange-500 font-semibold text-sm mb-4 leading-snug">
+                <p className="text-[#d6730a] font-[350] font-neue-haas  text-[23px] mb-4 leading-snug">
                   {service.description}
                 </p>
 
@@ -188,9 +188,9 @@ export function ServicesSection() {
                   {service.features.map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
-                      className="text-gray-800 text-sm flex items-start"
+                      className="text-gray-800 text-[23px] flex items-start"
                     >
-                      <span className="mr-2">•</span>
+                      <span className="mr-2 ">•</span>
                       <span>{feature}</span>
                     </li>
                   ))}

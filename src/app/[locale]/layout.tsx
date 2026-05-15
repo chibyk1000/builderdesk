@@ -1,20 +1,12 @@
 import type { Metadata } from "next";
-import {  Roboto, Roboto_Mono } from "next/font/google";
+
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import "./globals.css";
 import AppLayout from "@/layouts/AppLayout";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 
-const roboto = Roboto({
-  variable: "--font-roboto",
-  subsets:["latin"]
-})
 
-const robotoMono =Roboto_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Builders Desk",
@@ -39,7 +31,7 @@ export default async function RootLayout({
     }
   return (
     <html lang="en">
-      <body className={`${roboto.variable} ${roboto.variable} antialiased`}>
+      <body >
         <NextIntlClientProvider>
           <AppLayout>{children}</AppLayout>
         </NextIntlClientProvider>

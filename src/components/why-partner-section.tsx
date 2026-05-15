@@ -62,8 +62,8 @@ export function WhyPartnerSection() {
     <div>
      <Image src="/office-img.avif" alt="Our Partners" width={1200} height={600} className="w-full h-auto" />
     <section className="bg-gray-100 py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold font-mono text-blue-600 mb-12">
+      <div className="max-w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-6xl font-[350] text-primary max-w-4xl mb-12">
           WHY PARTNER WITH THE BUILDERS DESK?
         </h2>
 
@@ -74,15 +74,16 @@ export function WhyPartnerSection() {
               <div key={index} className="flex gap-6">
                 <div className="flex-shrink-0">
                   <div className="flex items-center justify-center h-20 w-20 rounded-lg ">
-                    <Icon className="h-10 w-10 text-orange-500" />
+                    <Icon className="size-16 text-orange-500" />
                   </div>
                 </div>
                 <div className="flex-1 flex gap-10">
                   <div className="mb-2 w-60">
-                    <h3 className="text-lg font-bold text-gray-900">
+                    <h3 className="text-[23px] font-bold text-black">
                       {reason.title}
                     </h3>
-                    <p className="text-orange-500 font-semibold">
+
+                    <p className="h font-semibold">
                       {reason.tagline}
                     </p>
                   </div>
