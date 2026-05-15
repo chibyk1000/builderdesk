@@ -1,25 +1,29 @@
-import IndustryExpertise from "@/components/home/Expertise";
+import AboutSection from "@/components/about-section";
+import { BenefitsSection } from "@/components/benefits";
+import ClientsSection from "@/components/clients-section";
+import ContactSection from "@/components/contact-section";
+import ContactUs from "@/components/contact-us";
 import Hero from "@/components/home/Hero";
-import HourlyPricing from "@/components/home/hourlyPricing";
-import HowItWorks from "@/components/home/how-it-works";
-import PreFoot from "@/components/home/PreFoot";
-import Pricing from "@/components/home/Pricing";
-import Services from "@/components/home/Services";
-import Testimonials from "@/components/home/testimonials";
-import WhyChoose from "@/components/home/WhyUs";
-import Image from "next/image";
+import OurPartners from "@/components/our-partners";
+import Pricing from "@/components/pricing";
+import  { ProcessSection } from "@/components/process-section";
+import { ServicesSection } from "@/components/services-section";
+import { WhyPartnerSection } from "@/components/why-partner-section";
 
 export default function Home() {
-  return (<main>
-    <Hero />
-    <Services />
-    <WhyChoose />
-    <HowItWorks />
-    <Testimonials />
-    <Pricing />
-    <HourlyPricing />
-    <IndustryExpertise />
-    <PreFoot/>
-  </main>
+  return (
+    <main>
+      <Hero />
+      <ServicesSection />
+      <WhyPartnerSection />
+      <BenefitsSection />
+     
+      <ProcessSection />
+      <Pricing />
+      <AboutSection />
+      <ContactUs />
+      <ContactSection/>
+      <ClientsSection />
+    </main>
   );
 }

@@ -1,0 +1,76 @@
+import React from "react";
+import { SVGIcon, type SVGIconProps } from "../svg-icon";
+
+/**
+ * Svgexport28 Icon
+ * Generated from: svgexport-28.svg
+ */
+export const Svgexport28 = React.forwardRef<SVGSVGElement, SVGIconProps>(
+  ({ size = 24, className = "", ...props }, ref) => (
+    <SVGIcon
+      ref={ref}
+      size={size}
+      viewBox="35.5 28 129 144"
+      className={className}
+      {...props}
+    >
+      <g className="_svgImageSource_16ugp_7" data-type="color">
+        <g>
+          <path
+            fill="#FD8A19"
+            d="M164.5 100v6h-87v-6h87z"
+            data-color="1"
+          ></path>
+          <path
+            d="M131.5 103h-6v-6h-9v-6h12a3 3 0 0 1 3 3v9z"
+            fill="#FD8A19"
+            data-color="1"
+          ></path>
+          <path
+            d="M143.5 103h-6v-9a3 3 0 0 1 3-3h15V61h-12v-6h15a3 3 0 0 1 3 3v36a3 3 0 0 1-3 3h-15v6z"
+            fill="#FD8A19"
+            data-color="1"
+          ></path>
+          <path
+            d="M140.5 85h-9a3 3 0 0 1-3-3V31a3 3 0 0 1 3-3h9c4.963 0 9 4.037 9 9v39c0 4.963-4.037 9-9 9zm-6-6h6c1.655 0 3-1.346 3-3V37c0-1.654-1.345-3-3-3h-6v45z"
+            fill="#FD8A19"
+            data-color="1"
+          ></path>
+          <path fill="#FD8A19" d="M68.5 148v15h-6v-15h6z" data-color="1"></path>
+          <path
+            d="M104.866 170.437L87.719 139H68.5c-11.578 0-21-9.42-21-21V85c0-8.271 6.729-15 15-15h12c.624 0 1.236.195 1.743.558L96.461 85H110.5a2.998 2.998 0 0 1 2.979 2.657c.041.344.914 8.489-3.876 13.862-2.654 2.974-6.39 4.481-11.104 4.481h-12a3.003 3.003 0 0 1-1.664-.504l-18-12 3.328-4.992L87.408 100H98.5c2.974 0 5.139-.81 6.624-2.474 1.679-1.884 2.227-4.551 2.388-6.526H95.5a2.999 2.999 0 0 1-1.743-.558L73.539 76H62.5c-4.963 0-9 4.037-9 9v33c0 8.271 6.729 15 15 15h21c1.099 0 2.109.599 2.634 1.563l18 33-5.268 2.874z"
+            fill="#FD8A19"
+            data-color="1"
+          ></path>
+          <path
+            d="M118.293 169.939l-14.484-43.956C102.145 121.23 97.592 118 92.5 118h-15a3 3 0 0 1-3-3V97h6v15h12a18.019 18.019 0 0 1 16.989 12.053l14.505 44.008-5.701 1.878z"
+            fill="#FD8A19"
+            data-color="1"
+          ></path>
+          <path
+            d="M83.5 151h-21c-14.889 0-27-12.113-27-27V79h6v45c0 11.58 9.422 21 21 21h21v6z"
+            fill="#FD8A19"
+            data-color="1"
+          ></path>
+          <path
+            d="M66.004 125.664L60.895 118H38.5v-6h24c1.002 0 1.939.501 2.496 1.336l6 9-4.992 3.328z"
+            fill="#FD8A19"
+            data-color="1"
+          ></path>
+          <path
+            d="M83.5 172h-12a2.995 2.995 0 0 1-2.121-.879l-3.879-3.879-3.879 3.879A2.995 2.995 0 0 1 59.5 172h-12v-6h10.758l5.121-5.121a2.998 2.998 0 0 1 4.242 0L72.742 166H83.5v6z"
+            fill="#FD8A19"
+            data-color="1"
+          ></path>
+          <path
+            d="M67 67c-9.097 0-16.5-7.113-16.5-15.855v-4.289C50.5 38.113 57.903 31 67 31s16.5 7.113 16.5 15.855v4.289C83.5 59.887 76.097 67 67 67zm0-30c-5.789 0-10.5 4.421-10.5 9.855v4.289C56.5 56.579 61.211 61 67 61s10.5-4.421 10.5-9.855v-4.289C77.5 41.421 72.789 37 67 37z"
+            fill="#FD8A19"
+            data-color="1"
+          ></path>
+        </g>
+      </g>
+    </SVGIcon>
+  ),
+);
+
+Svgexport28.displayName = "Svgexport28";

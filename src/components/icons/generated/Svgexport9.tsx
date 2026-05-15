@@ -1,0 +1,30 @@
+import React from "react";
+import { SVGIcon, type SVGIconProps } from "../svg-icon";
+
+/**
+ * Svgexport9 Icon
+ * Generated from: svgexport-9.svg
+ */
+export const Svgexport9 = React.forwardRef<SVGSVGElement, SVGIconProps>(
+  ({ size = 24, className = "", ...props }, ref) => (
+    <SVGIcon
+      ref={ref}
+      size={size}
+      viewBox="23.001 56 153.999 88"
+      className={className}
+      {...props}
+    >
+      <g className="_svgImageSource_16ugp_7" data-type="color">
+        <g>
+          <path
+            d="M177 59.996V100a4 4 0 0 1-8 0V69.688l-56.211 56.467a4.001 4.001 0 0 1-5.67 0L76.772 95.67l-46.937 47.152A3.989 3.989 0 0 1 27 144a4.001 4.001 0 0 1-2.835-6.822l49.772-50a4.001 4.001 0 0 1 5.67 0l30.347 30.485L163.374 64h-30.193a4 4 0 0 1 0-8H173c.049 0 .095.013.144.015.212.008.424.022.633.064.125.025.242.07.362.106.129.038.259.068.384.119.136.056.259.132.387.202.101.055.206.1.303.164.176.117.335.255.489.397.038.035.082.06.119.097l.004.005c.185.185.351.388.497.606.07.104.118.218.177.327.065.12.139.235.192.362.059.141.093.288.135.434.03.105.072.205.094.313.052.259.079.522.08.785z"
+            fill="#F1F0EC"
+            data-color="1"
+          ></path>
+        </g>
+      </g>
+    </SVGIcon>
+  ),
+);
+
+Svgexport9.displayName = "Svgexport9";

@@ -1,149 +1,80 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { useState } from "react";
-import { Globe, Menu, MessageCircle, X } from "lucide-react";
-import { Button } from "../ui/button";
-import { usePathname, useRouter } from "next/navigation";
-import { useLocale, useTranslations } from "next-intl";
+import { Button } from "@/components/ui/button";
 
-const Navbar = () => {
-  const [open, setOpen] = useState(false);
-  const pathname = usePathname();
-  const locale = useLocale();
-  const router = useRouter();
-
-  const links = [
-    { text: "Home", href: "/", key:"home" },
-    { text: "About Us", href: "/about", key:"about" },
-    { text: "Services", href: "/services" , key:"services"},
-    { text: "Pricing", href: "/pricing", key:"pricing" },
-    { text: "Contact", href: "/contact", key:"contact" },
-  ];
-
-  const t = useTranslations
-    ("Navbar");
-  console.log(t("home"));
-  
-  // Handle locale change
-  const handleLanguageChange = (value: string) => {
-    const newPath = `/${value}${pathname.replace(/^\/(en|es)/, "")}`;
-    router.push(newPath);
-  };
-
+export default function Navbar() {
   return (
-    <nav className="h-20 flex items-center relative px-6 container max-w-[1216px] mx-auto justify-between">
-      {/* Logo */}
-      <Link href={`/${locale}`} className="relative inline-block">
-        <Image
-          src="/logo.png"
-          alt="Builders Desk Logo"
-          width={145}
-          height={82}
-        />
-      </Link>
-
-      {/* Desktop Menu */}
-      <ul className="flex items-center md:max-w-[60%] w-full justify-between max-lg:hidden">
-        {links.map((link) => (
-          <li key={link.text}>
-            <Link
-              href={`/${locale}${link.href}`}
-              className={`text-sm transition-colors hover:text-primary ${
-                pathname === `/${locale}${link.href}` && "text-primary"
-              }`}
+    <header className="bg-white border-b border-gray-200">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+          <div className="w-10 h-10 bg-blue-700 rounded flex items-center justify-center">
+            <svg
+              className="w-8 h-8 text-white"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
             >
-              {t(link.key)}
-            </Link>
-          </li>
-        ))}
+              <rect x="3" y="3" width="7" height="7" />
+              <rect x="14" y="3" width="7" height="7" />
+              <rect x="14" y="14" width="7" height="7" />
+              <rect x="3" y="14" width="7" height="7" />
+            </svg>
+          </div>
+          <div className="flex flex-col">
+            <span className="text-xs font-bold text-blue-700 leading-tight">
+              THE
+            </span>
+            <span className="text-xs font-bold text-blue-700 leading-tight">
+              BUILDERS
+            </span>
+            <span className="text-sm font-black text-gray-900 leading-tight">
+              DESK
+            </span>
+          </div>
+        </Link>
 
-        <Select value={locale} onValueChange={handleLanguageChange}>
-          <SelectTrigger className="w-[130px] h-9 focus-visible:ring-0">
-            <Globe color="#0E4571" />
-            <SelectValue />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="en">English</SelectItem>
-            <SelectItem value="es">Español</SelectItem>
-          </SelectContent>
-        </Select>
-
-        <Button variant="success">
-          <MessageCircle /> {t("whatsapp")}
-        </Button>
-      </ul>
-
-      {/* Mobile Menu Toggle Button */}
-      <Button
-        size="icon"
-        variant="ghost"
-        className="lg:hidden relative w-10 h-10 flex items-center justify-center"
-        onClick={() => setOpen((prev) => !prev)}
-      >
-        <div className="relative w-6 h-6">
-          <Menu
-            className={`absolute inset-0 size-7 transition-all duration-300 transform ${
-              open
-                ? "opacity-0 rotate-90 scale-75"
-                : "opacity-100 rotate-0 scale-100"
-            }`}
-          />
-          <X
-            className={`absolute inset-0 size-7 transition-all duration-300 transform ${
-              open
-                ? "opacity-100 rotate-0 scale-100"
-                : "opacity-0 -rotate-90 scale-75"
-            }`}
-          />
-        </div>
-      </Button>
-
-      {/* Mobile Menu */}
-      <div
-        className={`
-          absolute top-20 left-0 w-full bg-white border-t z-80 lg:hidden 
-          flex flex-col px-4 py-4 gap-4 
-          transition-all duration-300 ease-in-out overflow-hidden
-          ${open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}
-        `}
-      >
-        {links.map((link) => (
+        {/* Navigation Links */}
+        <div className="hidden md:flex items-center gap-8">
           <Link
-            key={link.text}
-            href={`/${locale}${link.href}`}
-            className="text-secondary block py-2"
-            onClick={() => setOpen(false)}
+            href="/"
+            className="text-sm font-medium text-gray-900 hover:text-blue-700 transition-colors"
           >
-            {t(link.key)}
+            HOME
           </Link>
-        ))}
+          <Link
+            href="/about"
+            className="text-sm font-medium text-gray-900 hover:text-blue-700 transition-colors"
+          >
+            ABOUT US
+          </Link>
+          <Link
+            href="/services"
+            className="text-sm font-medium text-gray-900 hover:text-blue-700 transition-colors"
+          >
+            SERVICES
+          </Link>
+          <Link
+            href="/pricing"
+            className="text-sm font-medium text-gray-900 hover:text-blue-700 transition-colors"
+          >
+            PRICING
+          </Link>
+          <Link
+            href="/contact"
+            className="text-sm font-medium text-gray-900 hover:text-blue-700 transition-colors"
+          >
+            CONTACT
+          </Link>
+        </div>
 
-        <Select value={locale} onValueChange={handleLanguageChange}>
-          <SelectTrigger className="w-full h-9 focus-visible:ring-0">
-            <Globe color="#0E4571" />
-            <SelectValue />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="en">English</SelectItem>
-            <SelectItem value="es">Español</SelectItem>
-          </SelectContent>
-        </Select>
-
-        <Button variant="success" className="w-full">
-          <MessageCircle /> {t("whatsapp")}
+        {/* CTA Button */}
+        <Button className="bg-orange-500 hover:bg-orange-600 text-white text-sm font-bold px-6 py-2 rounded">
+          SCHEDULE A CALL
         </Button>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
-};
-
-export default Navbar;
+}
