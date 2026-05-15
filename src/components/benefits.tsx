@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight,  } from "lucide-react";
+import { Svgexport25 } from "./icons";
 
 export function BenefitsSection() {
   const benefits = [
@@ -11,31 +12,29 @@ export function BenefitsSection() {
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-orange-500">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-[#E98316]">
       {/* Background image placeholder */}
       <div className="absolute right-0 top-0 bottom-0 w-1/3 opacity-20">
         <div className="w-full h-full bg-gradient-to-l from-black to-transparent" />
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="w-11/12 mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="space-y-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start gap-4">
-                <div className="flex-shrink-0 pt-1">
-                  <ArrowRight className="w-6 h-6 text-white" />
+                <div className="shrink-0 pt-1">
+                  <Svgexport25 className="size-10 text-white" />
                 </div>
-                <p className="text-xl md:text-2xl font-semibold text-white">
-                  {benefit}
-                </p>
+                <p className="text-xl md:text-4xl  text-white">{benefit}</p>
               </div>
             ))}
           </div>
 
           {/* Right CTA */}
           <div className="flex items-center justify-center lg:justify-end">
-            <button className="px-8 py-3 border-2 border-white text-white font-bold text-sm hover:bg-white hover:text-orange-500 transition-colors">
+            <button className="px-8 py-3 border-2 border-white text-white font-bold bg-[#bd4f00] text-sm hover:bg-white hover:text-orange-500 transition-colors hover:underline ">
               SCHEDULE A FREE STRATEGY CALL
             </button>
           </div>

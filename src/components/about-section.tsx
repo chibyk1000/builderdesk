@@ -12,11 +12,11 @@ const AboutSection = () => {
         className="-z-1"
       />
       <div>
-        <p>Who We Are</p>
-        <h2 className="text-3xl">About Our Company</h2>
+        <p className="text-3xl">Who We Are</p>
+        <h2 className="text-6xl">About Our Company</h2>
       </div>
-      <div>
-        <h3>
+      <div className="text-xl font-light">
+        <h3 className="font-bold">
           Built by Industry Insiders. Designed to Take Work Off Your Plate.
         </h3>
         ​
@@ -60,35 +60,27 @@ const AboutSection = () => {
 
       {/* Statistics Section */}
       <div className="col-span-1 md:col-span-2 mt-12 grid grid-cols-2 md:grid-cols-4 gap-1 pt-12 h-60 ">
-        <div className="bg-white p-6  ">
-          <p className="text-4xl md:text-5xl -bold text-gray-900 mb-2">
-            15
-          </p>
-          <p className="text-gray-600 text-sm md:text-base">
-            Years of Experience
+        <div className="bg-white p-6 flex flex-col  ">
+          <p className="text-4xl md:text-6xl -bold text-gray-900 mb-2">15</p>
+          <p className="text-gray-600 mt-auto text-xl md:text-2xl">
+            Years of <br /> Experience
           </p>
         </div>
-        <div className="bg-white p-6  ">
-          <p className="text-4xl md:text-5xl -bold text-gray-900 mb-2">
-            400+
-          </p>
-          <p className="text-gray-600 text-sm md:text-base">
-            Projects Completed
+        <div className="bg-white p-6 flex flex-col  ">
+          <p className="text-4xl md:text-6xl -bold text-gray-900 mb-2">400+</p>
+          <p className="text-gray-600 mt-auto  text-xl md:text-2x">
+            Projects <br /> Completed
           </p>
         </div>
-        <div className="bg-white p-6 ">
-          <p className="text-4xl md:text-5xl -bold text-gray-900 mb-2">
-            95%
-          </p>
-          <p className="text-gray-600 text-sm md:text-base">
-            Client Satisfaction
+        <div className="bg-white flex flex-col  p-6 ">
+          <p className="text-4xl md:text-6xl -bold text-gray-900 mb-2">95%</p>
+          <p className="text-gray-600 mt-auto text-xl md:text-2xl">
+            Client <br /> Satisfaction
           </p>
         </div>
-        <div className="bg-white p-6 ">
-          <p className="text-4xl md:text-5xl -bold text-gray-900 mb-2">
-            4.9/5
-          </p>
-          <p className="text-gray-600 text-sm md:text-base">Client Rating</p>
+        <div className="bg-white flex flex-col  p-6 ">
+          <p className="text-4xl md:text-6xl -bold text-gray-900 mb-2">4.9/5</p>
+          <p className="text-gray-600 mt-auto text-xl md:text-2xl">Client <br /> Rating</p>
         </div>
       </div>
     </section>

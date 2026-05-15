@@ -61,7 +61,7 @@ export function WhyPartnerSection() {
 
     <div>
      <Image src="/office-img.avif" alt="Our Partners" width={1200} height={600} className="w-full h-auto" />
-    <section className="bg-gray-100 py-16">
+    <section className="bg-gray-200 py-16">
       <div className="max-w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-6xl font-[350] text-primary max-w-4xl mb-12">
           WHY PARTNER WITH THE BUILDERS DESK?
@@ -83,11 +83,11 @@ export function WhyPartnerSection() {
                       {reason.title}
                     </h3>
 
-                    <p className="h font-semibold">
+                    <p className="bg-[#d7b08f] w-fit font-[350]">
                       {reason.tagline}
                     </p>
                   </div>
-                  <p className="text-gray-700 flex-1 leading-relaxed">
+                  <p className="text-[#595959] text-[21px] font-[350] flex-1 max-w-4xl leading-relaxed">
                     {reason.description}
                   </p>
                 </div>

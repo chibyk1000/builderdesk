@@ -216,7 +216,7 @@
 
 @layer base {
   * {
-    @apply  font-neue-haas font-[400];
+    @apply  font-neue-haas font-[350];
   }
 
 

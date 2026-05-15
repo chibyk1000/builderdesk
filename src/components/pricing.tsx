@@ -11,7 +11,7 @@ const Pricing = () => {
 
   const pricingCards = [
     {
-      icon: <Svgexport30 />,
+      icon: <Svgexport30 className="size-10" />,
       title: "Estimating Support",
       description:
         "For solo contractors & small trades who need the basics handled",
@@ -27,7 +27,7 @@ const Pricing = () => {
       idealFor: "Small contractors, overwhelmed owners, first-time clients",
     },
     {
-      icon: <Svgexport31 />,
+      icon: <Svgexport31 className="size-10"/>,
       title: "Operations Support",
       description: "We keep your projects and business running smoothly",
       price: "$2,500",
@@ -43,7 +43,7 @@ const Pricing = () => {
       idealFor: "For growing GCs ready to scale without growing headcount",
     },
     {
-      icon: <Svgexport32 />,
+      icon: <Svgexport32 className="size-10"/>,
       title: "Full Back Office",
       description: "Your complete remote team",
       price: "$5,000",
@@ -109,14 +109,14 @@ const Pricing = () => {
       {/* Content */}
       <div className="relative z-10 w-full">
         {/* Top Section */}
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="max-w-6xl mx-auto text-center mb-16">
           {/* Heading */}
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Pricing That Scales With You
           </h2>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-gray-200 mb-12">
+          <p className="text-3xl md:text-4xl text-gray-200 mb-12">
             Transparent monthly plans with no hidden fees. Pay for what you
             need.
           </p>
@@ -124,7 +124,7 @@ const Pricing = () => {
           {/* Top Features */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">
             {topFeatures.map((feature, i) => (
-              <div key={i} className="flex items-center gap-3">
+              <div key={i} className="flex items-center gap-3  w-full">
                 {/* Circular Arrow Icon */}
                 <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-orange-500 flex-shrink-0">
                   <svg
@@ -144,7 +144,7 @@ const Pricing = () => {
                     />
                   </svg>
                 </div>
-                <span className="text-lg text-white font-medium">
+                <span className="text-3xl md:text-4xl text-white font-medium">
                   {feature.text}
                 </span>
               </div>
@@ -153,46 +153,46 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
+        <div className="w-10/12 mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
           {pricingCards.map((card, i) => (
-            <div key={i} className="bg-gray-100 rounded-lg p-7 w-80 shadow-sm">
+            <div key={i} className="bg-gray-100 rounded-lg p-7 w-120 h-150  shadow-sm">
               {/* Header: icon + title */}
               <div className="flex items-center gap-3 mb-3.5">
                 {/* Icon */}
                 <div className="flex-shrink-0 w-9 h-9">{card.icon}</div>
-                <h2 className="text-xl font-bold text-gray-900 leading-tight">
+                <h2 className="text-3xl font-bold text-gray-900 leading-tight">
                   {card.title}
                 </h2>
               </div>
 
               {/* Subtitle */}
-              <p className="text-sm text-gray-600 m-0 mb-3 leading-relaxed">
+              <p className="text-2xl font-[350] text-[#595959] m-0 mb-3 leading-relaxed">
                 {card.description}
               </p>
 
               {/* Pricing */}
-              <p className="text-sm text-gray-900 m-0 mb-3.5">
+              <p className="text-2xl text-gray-900 m-0 mb-3.5">
                 Starting from{" "}
-                <strong className="text-base">
+                <strong className="">
                   {card.price}
                   {card.period}
                 </strong>
               </p>
 
               {/* Bullet list */}
-              <ul className="m-0 mb-4.5 pl-4.5 text-sm text-gray-800 leading-loose list-disc">
+              <ul className="m-0 mb-4.5 pl-4.5 text-xl ml-4  text-[#595959] font-[350] list-disc">
                 {card.features.map((item, j) => (
                   <li key={j}>{item}</li>
                 ))}
               </ul>
 
               {/* Ideal for label */}
-              <p className="text-sm font-bold text-orange-600 m-0 mb-1.5">
+              <p className="text-xl font-bold text-orange-600 m-0 mb-1.5">
                 Ideal for:
               </p>
 
               {/* Ideal for text */}
-              <p className="text-sm text-gray-600 m-0 leading-relaxed">
+              <p className="text-xl text-[#595959] m-0 leading-relaxed">
                 {card.idealFor}
               </p>
             </div>
@@ -200,16 +200,14 @@ const Pricing = () => {
         </div>
 
         {/* Add-On Services Section */}
-        <div className="max-w-6xl mx-auto mt-20">
+        <div className="max-w-10/12 mx-auto mt-20">
           {/* Heading */}
           <div className=" ">
-            <h2 className=" font-bold text-white ">
-              ADD-ON SERVICES
-            </h2>
-            <p className="text-orange-500 text-lg font-semibold ">
+            <h2 className=" font-bold text-white ">ADD-ON SERVICES</h2>
+            <p className="text-orange-500 text-2xl font-semibold ">
               Available on any plan
             </p>
-            <p className="text-gray-200 text-base md:text-lg  ">
+            <p className="text-gray-200 text-base md:text-2xl  ">
               These services can be added individually to any base plan — or
               combined into the Full Back Office package. Price varies by hours
               required.
@@ -220,35 +218,25 @@ const Pricing = () => {
           <div className="grid mt-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-2">
             {addOnServices.map((service, i) => {
               const isOrange = i % 2 === 0;
-             
-              
 
               return (
                 <div
                   key={i}
-                  className={`rounded-lg p-2 shadow-sm flex flex-col ${
-                    isOrange
-                      ? "bg-orange-500"
-                      
-                        : "bg-white"
+                  className={`rounded-lg p-2 shadow-sm border border-white flex flex-col ${
+                    isOrange ? "bg-[#d6730a]" : "bg-white"
                   }`}
                 >
                   <div className="">
-
-                  <h3
-                    className={`text-nowrap font-bold m-0 mb-2 text-gray-900`}
-                  >
-                    {service.title}
-                  </h3>
-                  <p
-                    className={`text-sm m-0 mb-3 leading-relaxed `}
-                  >
-                    {service.description}
-                  </p>
+                    <h3
+                      className={`text-nowrap text-xl font-bold m-0 mb-2 text-gray-900`}
+                    >
+                      {service.title}
+                    </h3>
+                    <p className={`text-xl font-[350] m-0 mb-3 leading-relaxed `}>
+                      {service.description}
+                    </p>
                   </div>
-                  <p
-                    className={`text-sm font-bold m-0 mt-auto text-end`}
-                  >
+                  <p className={`text-lg font-bold m-0 mt-auto text-end`}>
                     {service.price}
                   </p>
                 </div>

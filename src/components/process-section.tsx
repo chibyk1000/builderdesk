@@ -1,33 +1,27 @@
 "use client";
 import { useState } from "react";
-import { Svgexport26, Svgexport27, Svgexport28, Svgexport29 } from "./icons";
+import { Svgexport11, Svgexport26, Svgexport27, Svgexport28, Svgexport29 } from "./icons";
 
  function HowWeDoIt() {
-  const bullets = [
-    { text: "PMP Certified Project Managers", indent: 0 },
-    { text: "Bachelor's Degree - minimum requirement", indent: 1 },
-    { text: "No long Term Contracts", indent: 2 },
-    { text: "Continous Training", indent: 3 },
-  ];
 
   return (
     <div className="w-full  bg-white">
-      <div className="flex flex-col md:flex-row items-start gap-16 max-w-5xl mx-auto justify-between ">
+      <div className="flex flex-col md:flex-row items-start gap-16 max-w-11/12 mx-auto justify-between ">
         {/* Left: Heading */}
-        <div className="shrink-0">
-          <h2 className="text-4xl font-bold text-sky-500 leading-tight whitespace-nowrap">
+        <div className="">
+          <h2 className="text-6xl font-bold text-[#1262a0] leading-tight whitespace-nowrap">
             HOW WE DO IT
           </h2>
         </div>
 
         {/* Right: Content */}
-        <div className="flex flex-col md:flex-1 ml-auto text-right gap-5 flex-1">
+        <div className=" flex-1 text- gap-5 flex-1">
           {/* Top text block */}
-          <div>
-            <p className="text-sm font-bold text-gray-900 mb-1">
+          <div className="text-[30px] ">
+            <p className=" font-bold text-gray-900 mb-1">
               Built for Contractors Who Are Tired of Doing Everything Themselves
             </p>
-            <p className="text-sm font-bold text-gray-900">
+            <p className=" font-bold text-gray-900">
               We take the work off your plate so you can focus on winning jobs
               and delivering projects.
             </p>
@@ -35,39 +29,43 @@ import { Svgexport26, Svgexport27, Svgexport28, Svgexport29 } from "./icons";
 
           {/* Bullet list — cascading indents */}
           <div className="flex flex-col gap-2 text-right items-end">
-            {bullets.map((item, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-2"
-                style={{ paddingLeft: `${item.indent * 28}px` }}
-              >
-                {/* Arrow circle icon */}
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 22 22"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="flex-shrink-0"
-                >
-                  <circle
-                    cx="11"
-                    cy="11"
-                    r="10"
-                    stroke="#E87722"
-                    strokeWidth="1.8"
-                  />
-                  <path
-                    d="M8 11h6M11 8l3 3-3 3"
-                    stroke="#E87722"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                <span className="text-xs text-gray-900">{item.text}</span>
-              </div>
-            ))}
+            <div
+              className="flex items-center gap-2 mr-40"
+              style={{ paddingLeft: "0px" }}
+            >
+              <Svgexport11 />
+              <span className="text-[23px] text-gray-900">
+                PMP Certified Project Managers
+              </span>
+            </div>
+
+            <div
+              className="flex items-center gap-2"
+              style={{ paddingLeft: "28px" }}
+            >
+              <Svgexport11 />
+              <span className="text-[23px] text-gray-900">
+                Bachelor&apos;s Degree - minimum requirement
+              </span>
+            </div>
+
+            <div
+              className="flex items-center gap-2 mr-20"
+              style={{ paddingLeft: "56px" }}
+            >
+              <Svgexport11 />
+              <span className="text-[23px] text-gray-900">
+                No long Term Contracts
+              </span>
+            </div>
+
+            <div
+              className="flex items-center gap-2 mr-10"
+              style={{ paddingLeft: "84px" }}
+            >
+              <Svgexport11 />
+              <span className="text-[23px] text-gray-900">Continous Training</span>
+            </div>
           </div>
         </div>
       </div>
@@ -117,7 +115,7 @@ export function ProcessSection() {
     <section className="py-10  min-h-screen">
       <HowWeDoIt />
       <div className="w-full flex items-center justify-center px-6  bg-white">
-        <div className="w-full max-w-5xl">
+        <div className=" w-11/12 mt-10">
           <div className="grid grid-cols-4 gap-0">
             {steps.map((step, i) => {
               const isLast = i === steps.length - 1;
@@ -138,16 +136,13 @@ export function ProcessSection() {
                 >
                   {/* Giant background number */}
                   <div
-                    className="absolute top-0 left-0 select-none pointer-events-none leading-none font-black"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[32rem] select-none pointer-events-none leading-none font-black"
                     style={{
-                      fontSize: "clamp(300px, 16vw, 400px)",
                       color: hoverColor,
-                      fontFamily: "'Arial Black', 'Impact', sans-serif",
+                      fontFamily: "inherit",
                       lineHeight: 1,
-                      transition: "color 0.3s ease",
+                      transition: "all 0.5s ease",
                       zIndex: 0,
-                      top: "-10px",
-                      left: "-4px",
                     }}
                   >
                     {step.number}
@@ -167,7 +162,7 @@ export function ProcessSection() {
 
                   {/* Title */}
                   <div
-                    className="relative z-10 font-black text-sm tracking-wider mb-3 text-gray-900"
+                    className="relative z-10 font-bold text-[23px] tracking-wider mb-3 text-gray-900"
                     style={{
                       fontFamily: "'Arial Black', Arial, sans-serif",
                       letterSpacing: "0.05em",
@@ -178,7 +173,7 @@ export function ProcessSection() {
 
                   {/* Description */}
                   <p
-                    className="relative z-10 text-xs leading-relaxed text-gray-600"
+                    className="relative z-10 font-[350] text-[23px] leading-relaxed text-gray-600"
                     style={{
                       fontFamily: "Arial, sans-serif",
                       lineHeight: "1.6",

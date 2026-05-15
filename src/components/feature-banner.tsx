@@ -4,13 +4,15 @@ import { Users, TrendingUp, Shield } from 'lucide-react'
 
 export function FeatureBanner() {
   return (
-    <div className="bg-secondary text-white py-6">
+    <div className="bg-[#88C3EF] text-white py-6">
       <div className="w-7/12 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
           {/* Feature 1 */}
           <div className="flex items-center gap-4">
             <Users className="w-8 h-8 shrink-0" />
-            <span className="text-[18px] font-neue-haas ">Dedicated Team Support</span>
+            <span className="text-[18px] font-neue-haas ">
+              Dedicated Team Support
+            </span>
           </div>
 
           {/* Feature 2 */}
@@ -27,5 +29,5 @@ export function FeatureBanner() {
         </div>
       </div>
     </div>
-  )
+  );
 }
