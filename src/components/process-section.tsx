@@ -1,8 +1,10 @@
 "use client";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Svgexport11, Svgexport26, Svgexport27, Svgexport28, Svgexport29 } from "./icons";
 
  function HowWeDoIt() {
+  const t = useTranslations("Process");
 
   return (
     <div className="w-full  bg-white">
@@ -10,7 +12,7 @@ import { Svgexport11, Svgexport26, Svgexport27, Svgexport28, Svgexport29 } from 
         {/* Left: Heading */}
         <div className="">
           <h2 className="text-6xl font-bold text-[#1262a0] leading-tight whitespace-nowrap">
-            HOW WE DO IT
+            {t("title")}
           </h2>
         </div>
 
@@ -19,11 +21,10 @@ import { Svgexport11, Svgexport26, Svgexport27, Svgexport28, Svgexport29 } from 
           {/* Top text block */}
           <div className="text-[30px] ">
             <p className=" font-bold text-gray-900 mb-1">
-              Built for Contractors Who Are Tired of Doing Everything Themselves
+              {t("tagline")}
             </p>
             <p className=" font-bold text-gray-900">
-              We take the work off your plate so you can focus on winning jobs
-              and delivering projects.
+              {t("description")}
             </p>
           </div>
 
@@ -35,7 +36,7 @@ import { Svgexport11, Svgexport26, Svgexport27, Svgexport28, Svgexport29 } from 
             >
               <Svgexport11 />
               <span className="text-[23px] text-gray-900">
-                PMP Certified Project Managers
+                {t("bullets.pmp")}
               </span>
             </div>
 
@@ -45,7 +46,7 @@ import { Svgexport11, Svgexport26, Svgexport27, Svgexport28, Svgexport29 } from 
             >
               <Svgexport11 />
               <span className="text-[23px] text-gray-900">
-                Bachelor&apos;s Degree - minimum requirement
+                {t("bullets.degree")}
               </span>
             </div>
 
@@ -55,7 +56,7 @@ import { Svgexport11, Svgexport26, Svgexport27, Svgexport28, Svgexport29 } from 
             >
               <Svgexport11 />
               <span className="text-[23px] text-gray-900">
-                No long Term Contracts
+                {t("bullets.noContracts")}
               </span>
             </div>
 
@@ -64,7 +65,7 @@ import { Svgexport11, Svgexport26, Svgexport27, Svgexport28, Svgexport29 } from 
               style={{ paddingLeft: "84px" }}
             >
               <Svgexport11 />
-              <span className="text-[23px] text-gray-900">Continous Training</span>
+              <span className="text-[23px] text-gray-900">{t("bullets.training")}</span>
             </div>
           </div>
         </div>
@@ -73,43 +74,40 @@ import { Svgexport11, Svgexport26, Svgexport27, Svgexport28, Svgexport29 } from 
   );
 }
 
-const steps = [
-  {
-    number: "1",
-    title: "DISCOVERY",
-    description:
-      "We learn about your company, challenges, and specific needs through an in-depth consultation.",
-    icon: <Svgexport26 className="size-30" />,
-    active: false,
-  },
-  {
-    number: "2",
-    title: "PLAN",
-    description:
-      "We tailor a support package with the right services and frequency for your business.",
-    icon: <Svgexport27 className="size-30" />,
-    active: false,
-  },
-  {
-    number: "3",
-    title: "EXECUTE",
-    description:
-      "In one week, we will select and onboard the right team member to commence working on your projects.",
-    icon: <Svgexport28 className="size-30" />,
-    active: false,
-  },
-  {
-    number: "4",
-    title: "GROW AND SCALE",
-    description:
-      "As you expand, we scale with you — adding services or hours as needed.",
-    icon: <Svgexport29 className="size-30" />,
-    active: true,
-  },
-];
-
 export function ProcessSection() {
+  const t = useTranslations("Process");
   const [hovered, setHovered] = useState<number | null>(null);
+
+  const steps = [
+    {
+      number: "1",
+      title: t("steps.discovery.title"),
+      description: t("steps.discovery.description"),
+      icon: <Svgexport26 className="size-30" />,
+      active: false,
+    },
+    {
+      number: "2",
+      title: t("steps.plan.title"),
+      description: t("steps.plan.description"),
+      icon: <Svgexport27 className="size-30" />,
+      active: false,
+    },
+    {
+      number: "3",
+      title: t("steps.execute.title"),
+      description: t("steps.execute.description"),
+      icon: <Svgexport28 className="size-30" />,
+      active: false,
+    },
+    {
+      number: "4",
+      title: t("steps.grow.title"),
+      description: t("steps.grow.description"),
+      icon: <Svgexport29 className="size-30" />,
+      active: true,
+    },
+  ];
 
   return (
     <section className="py-10  min-h-screen">
@@ -186,9 +184,8 @@ export function ProcessSection() {
             })}
           </div>
         </div>
-
- 
       </div>
     </section>
   );
 }
+

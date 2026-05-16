@@ -20,40 +20,54 @@ jobs:
         with:
           node-version: '22'
 
+      # Install dependencies and build on GitHub Actions runner
+      - name: Install dependencies and build
+        run: |
+          set -e
+          npm ci
+          npm run build
+
       # Copy SSH key and configure
       - name: Setup SSH
         run: |
+          set -e
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
 
-      # Deploy via SSH
-      - name: Deploy to VPS
+      # Push only the build output and required runtime files to VPS
+      - name: Sync build to VPS
         run: |
+          set -e
           ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "
-            # Ensure folder exists
-            mkdir -p ${{ secrets.APP_PATH }};
-            chown -R ${{ secrets.VPS_USER }}:${{ secrets.VPS_USER }} ${{ secrets.APP_PATH }};
-            cd ${{ secrets.APP_PATH }};
+            set -e
+            mkdir -p ${{ secrets.APP_PATH }}/.next
+            mkdir -p ${{ secrets.APP_PATH }}/public
+          "
 
-            # Clone repo if folder is empty or not a git repo
-            if [ ! -d .git ]; then
-                git clone https://github.com/chibyk1000/builderdesk.git .;
-            else
-                git fetch --all;
-                git reset --hard origin/main;
-            fi
+          rsync -az --delete \
+            .next/ \
+            ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.APP_PATH }}/.next/
 
-            # Install dependencies and build
-            npm install
-            npm run build
+          rsync -az --delete \
+            public/ \
+            ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.APP_PATH }}/public/
 
-            # Restart PM2 or start if not running
+          rsync -az \
+            package.json \
+            next.config.* \
+            ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.APP_PATH }}/
 
+      # Install production dependencies on VPS and restart app
+      - name: Install prod deps and restart on VPS
+        run: |
+          set -e
+          ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "
+            set -e
+            cd ${{ secrets.APP_PATH }}
+            npm ci --omit=dev
             cd /home/${{ secrets.VPS_USER }}/${{ secrets.APP_NAME }}
             pm2 restart ${{ secrets.APP_NAME }}
-
-            # Save PM2 process list for restart on reboot
             pm2 save
-            "
+          "

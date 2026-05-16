@@ -1,15 +1,17 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 export default function ClientsSection() {
+  const t = useTranslations("Clients");
   const clients = [
-    { id: 1, name: "VOLVE", img:"/volve.avif" },
-    { id: 2, name: "SHAWNS", img:"/shawn.avif" },
-    { id: 3, name: "Latch.", img:"/latch.avif" },
-    { id: 4, name: "STOCKET", img:"/stocket.avif" },
-    { id: 5, name: "DEMOTIVE GROUP", img:"/demotive.avif" },
-    { id: 6, name: "Embreeque", img:"/emb.avif" },
+    { id: 1, name: "VOLVE", img: "/volve.avif" },
+    { id: 2, name: "SHAWNS", img: "/shawn.avif" },
+    { id: 3, name: "Latch.", img: "/latch.avif" },
+    { id: 4, name: "STOCKET", img: "/stocket.avif" },
+    { id: 5, name: "DEMOTIVE GROUP", img: "/demotive.avif" },
+    { id: 6, name: "Embreeque", img: "/emb.avif" },
   ];
 
   return (
@@ -17,9 +19,9 @@ export default function ClientsSection() {
       <div className="w-11/12 mx-auto">
         {/* Header */}
         <div className="mb-12">
-          <p className=" text-sm 2xl:text-[36px] mb-2">Our Clients</p>
+          <p className=" text-sm 2xl:text-[36px] mb-2">{t("label")}</p>
           <h2 className="text-4xl 2xl:text-6xl text-accent max-w-2xl leading-tight">
-            We believe each client is a long term partnership
+            {t("title")}
           </h2>
         </div>
 
@@ -30,7 +32,7 @@ export default function ClientsSection() {
               key={client.id}
               className="bg-white p-8 flex items-center justify-center min-h-40 shadow-sm hover:shadow-md transition"
             >
-          <Image src={client.img} alt={client.name} width={100} height={100} />
+              <Image src={client.img} alt={client.name} width={100} height={100} />
             </div>
           ))}
         </div>

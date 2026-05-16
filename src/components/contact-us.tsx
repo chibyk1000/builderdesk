@@ -1,14 +1,16 @@
-import { ArrowRight,  Phone } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react'
-import { Svgexport33, Svgexport34 } from './icons';
+import { ArrowRight, Phone } from "lucide-react";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { Svgexport33, Svgexport34 } from "./icons";
 
 const ContactUs = () => {
+  const t = useTranslations("Contact");
+
   return (
     <section className="min-h-screen flex flex-col py-10 px-4">
-
-      <p className="text-primary text-[56px]">SCHEDULE A FREE STRATEGY CALL</p>
+      <p className="text-primary text-[56px]">{t("scheduleTitle")}</p>
       <div className='grid items-end flex-1'>
         <section className=" flex items-end relative justify-center bg-red-40 px-4 sm:px-6 lg:px-8 ">
           <div className="w-10/12 mx-auto w-full">
@@ -18,7 +20,7 @@ const ContactUs = () => {
                 <div className="relative w-full max-w-4xl aspect-square">
                   <Image
                     src="/contact.avif"
-                    alt="Business professionals in consultation"
+                    alt={t("professionalAlt")}
                     fill
                     className="object-contain "
                   />
@@ -41,18 +43,14 @@ const ContactUs = () => {
                       </div>
                       <div className="flex flex-col relative -left-2 font-dm-sans">
                         <span className="text-xl  font-dm-sans  leading-tight">
-                          THE <br /> BUILDERS
-                        </span>
-
-                        <span className="text-3xl font-black font-dm-sans leading-tight">
-                          DESK
+                          {t("brandPart1")} <br /> {t("brandPart2")}
                         </span>
                       </div>
                     </Link>
                   </div>
 
                   <h2 className="text-4xl font-normal sm:text-4xl  text-[#595959]">
-                    CALENDER
+                    {t("calendar")}
                   </h2>
                 </div>
 
@@ -65,8 +63,7 @@ const ContactUs = () => {
 
                     <div className="flex-1 min-w-0 max-w-md ">
                       <p className="text-gray-700 text-lg 2xl:text-3xl leading-relaxed font-normal break-words">
-                        Schedule a 30min. call to learn how The BuildersDesk can
-                        support your growth and give you relief.
+                        {t("scheduleDescription")}
                       </p>
                     </div>
                   </div>
@@ -75,10 +72,11 @@ const ContactUs = () => {
                 {/* CTA Button */}
                 <div>
                   <button className="inline-flex items-center gap-3  text-[#bd4f00] font-semibold py-3 px-6 rounded transition-colors duration-200">
-                    <span className='text-[#bd4f00] font-bold text-3xl'>Click to Open Calender</span>
-                    <span className='border rounded w-14 border-black h-10 flex items-center justify-center'>
-
-                    <Svgexport34 className="w-5 h-5" />
+                    <span className="text-[#bd4f00] font-bold text-3xl">
+                      {t("openCalendar")}
+                    </span>
+                    <span className="border rounded w-14 border-black h-10 flex items-center justify-center">
+                      <Svgexport34 className="w-5 h-5" />
                     </span>
                   </button>
                 </div>

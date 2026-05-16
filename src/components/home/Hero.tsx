@@ -1,8 +1,11 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Svgexport11 } from "../icons";
 
 export default function Hero() {
+  const t = useTranslations("Hero");
+
   return (
     <section className="relative min-h-screen  grid overflow-hidden">
       {/* Background Video */}
@@ -26,27 +29,24 @@ export default function Hero() {
           {/* Left Column */}
           <div className="text-white max-w-3/5  h-full grid  ">
             <h1 className="text-5xl lg:text-[64px] font-bold mb-6 leading-tight">
-              Your Construction Back Office - Done Right
+              {t("title")}
             </h1>
 
             <p className="text-[42px] mb-6 leading-relaxed">
-              We handle your back office, so you can focus on building your
-              business.
+              {t("subtitle")}
             </p>
 
             <p className="text-[27px] text-gray-100 mb-8 leading-relaxed">
-              Builders Desk provides remote estimating, administrative, project
-              management, bookkeeping, and operational support for US design and
-              construction companies—so you can focus on what you do best.
+              {t("description")}
             </p>
 
             {/* Action Buttons */}
             <div className="flex gap-4 shrink-0 mt-auto">
               <button className="bg-white text-gray-900  py-3 px-6 font-[arial]  hover:bg-gray-100 transition-colors">
-                Schedule a free strategy call
+                {t("cta")}
               </button>
               <button className="border-2 border-white text-white  py-3 px-6 font-[arial] hover:bg-white/10 transition-colors">
-                How we do it
+                {t("howWeDoIt")}
               </button>
             </div>
           </div>
@@ -54,10 +54,10 @@ export default function Hero() {
           {/* Right Column - Benefits List */}
           <div className="hidden lg:flex flex-col gap-6 justify-center ">
             {[
-              "Save time.",
-              "No long term contracts",
-              "Reduce overhead.",
-              "Scale without hiring in-house.",
+              t("benefits.saveTime"),
+              t("benefits.noContracts"),
+              t("benefits.reduceOverhead"),
+              t("benefits.scale"),
             ].map((benefit, index) => (
               <div key={index} className="flex items-center  gap-4">
                 <div className="shrink-0 size-14 rounded-full  flex items-center justify-center mt-1">
@@ -72,10 +72,10 @@ export default function Hero() {
         {/* Mobile Benefits List */}
         <div className="lg:hidden mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
           {[
-            "Save time.",
-            "No long term contracts",
-            "Reduce overhead.",
-            "Scale without hiring in-house.",
+            t("benefits.saveTime"),
+            t("benefits.noContracts"),
+            t("benefits.reduceOverhead"),
+            t("benefits.scale"),
           ].map((benefit, index) => (
             <div key={index} className="flex items-start gap-3">
               <svg
