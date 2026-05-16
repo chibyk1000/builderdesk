@@ -14,11 +14,11 @@ export default function ClientsSection() {
 
   return (
     <section className="bg-gray-100 py-16 px-6">
-      <div className="max-w-7xl mx-auto">
+      <div className="w-11/12 mx-auto">
         {/* Header */}
         <div className="mb-12">
-          <p className="text-gray-500 text-sm mb-2">Our Clients</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-orange-600 max-w-2xl leading-tight">
+          <p className=" text-sm 2xl:text-[36px] mb-2">Our Clients</p>
+          <h2 className="text-4xl 2xl:text-6xl text-accent max-w-2xl leading-tight">
             We believe each client is a long term partnership
           </h2>
         </div>

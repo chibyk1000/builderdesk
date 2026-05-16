@@ -6,27 +6,27 @@ import { Svgexport33, Svgexport34 } from './icons';
 
 const ContactUs = () => {
   return (
-    <section className="min-h-screen py-10 px-4">
-      <p className="text-primary text-[56px]">SCHEDULE A FREE STRATEGY CALL</p>
+    <section className="min-h-screen flex flex-col py-10 px-4">
 
-      <div>
-        <section className="min-h-screen flex items-center justify-center bg-white px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto w-full">
+      <p className="text-primary text-[56px]">SCHEDULE A FREE STRATEGY CALL</p>
+      <div className='grid items-end flex-1'>
+        <section className=" flex items-end relative justify-center bg-red-40 px-4 sm:px-6 lg:px-8 ">
+          <div className="w-10/12 mx-auto w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Left Side - Image */}
-              <div className="flex justify-center lg:justify-start order-2 lg:order-1">
-                <div className="relative w-full max-w-md aspect-square">
+              <div className="flex justify-center  lg:justify-start order-2 lg:order-1">
+                <div className="relative w-full max-w-4xl aspect-square">
                   <Image
                     src="/contact.avif"
                     alt="Business professionals in consultation"
                     fill
-                    className="object-cover rounded-lg"
+                    className="object-contain "
                   />
                 </div>
               </div>
 
               {/* Right Side - Content */}
-              <div className="flex flex-col justify-center order-1 lg:order-2 space-y-8">
+              <div className="flex flex-col  items-center justify-center order-1 lg:order-2 space-y-8">
                 {/* Logo and Title */}
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -34,8 +34,8 @@ const ContactUs = () => {
                       <div className=" rounded relative  flex items-center justify-center">
                         <Image
                           src={"/logo-new.avif"}
-                          width={111}
-                          height={100}
+                            width={111}
+              height={100}
                           alt="BuildersDesklogo"
                         />
                       </div>
@@ -63,8 +63,8 @@ const ContactUs = () => {
                       <Svgexport33 className="size-30" />
                     </div>
 
-                    <div className="flex-1 min-w-0">
-                      <p className="text-gray-700 text-lg leading-relaxed font-normal break-words">
+                    <div className="flex-1 min-w-0 max-w-md ">
+                      <p className="text-gray-700 text-lg 2xl:text-3xl leading-relaxed font-normal break-words">
                         Schedule a 30min. call to learn how The BuildersDesk can
                         support your growth and give you relief.
                       </p>
@@ -75,8 +75,8 @@ const ContactUs = () => {
                 {/* CTA Button */}
                 <div>
                   <button className="inline-flex items-center gap-3  text-[#bd4f00] font-semibold py-3 px-6 rounded transition-colors duration-200">
-                    <span>Click to Open Calender</span>
-                    <span>
+                    <span className='text-[#bd4f00] font-bold text-3xl'>Click to Open Calender</span>
+                    <span className='border rounded w-14 border-black h-10 flex items-center justify-center'>
 
                     <Svgexport34 className="w-5 h-5" />
                     </span>
@@ -85,10 +85,14 @@ const ContactUs = () => {
               </div>
             </div>
           </div>
+      <div className='absolute bottom-0 left-0 w-full bg-[#1e1717] h-40'/>
         </section>
+
+ 
       </div>
+
     </section>
   );
 }
 
-export default ContactUs
+export default ContactUs 

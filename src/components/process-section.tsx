@@ -109,7 +109,7 @@ const steps = [
 ];
 
 export function ProcessSection() {
-  const [hovered, setHovered] = useState(null);
+  const [hovered, setHovered] = useState<number | null>(null);
 
   return (
     <section className="py-10  min-h-screen">
