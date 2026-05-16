@@ -68,5 +68,105 @@
     "pricing": "PRECIOS",
     "contact": "CONTACTO",
     "cta": "PROGRAMAR UNA LLAMADA"
+  },
+  "About": {
+    "whoWeAre": "Quiénes Somos",
+    "title": "Sobre Nuestra Empresa",
+    "tagline": "Creado por expertos de la industria. Diseñado para quitarle trabajo de encima.",
+    "p1": "The Builders Desk se fundó sobre una observación sencilla: las empresas de construcción están dirigidas por personas que son excepcionales construyendo, pero el negocio de la construcción a menudo se interpone en el trabajo mismo.",
+    "p2": "Estimación, administración de proyectos, contabilidad, programación, control de documentos: todo tiene que hacerse. Pero no todo tiene que ser hecho por usted.",
+    "p3": "Somos una empresa especializada en servicios administrativos remotos creada exclusivamente para empresas de diseño y construcción en EE. UU. Nuestro equipo combina un profundo conocimiento de la industria de la construcción con formación profesional en gestión de proyectos, administración, contabilidad y desarrollo empresarial, ofreciéndole un sistema de apoyo capaz y dedicado sin el coste ni el compromiso de contratar personal interno.",
+    "p4": "Cada miembro del equipo que desplegamos posee, como mínimo, un título universitario en su campo. Nuestros gestores de proyectos tienen formación PMP. Nuestros administradores comprenden los flujos de trabajo de la construcción, no solo el trabajo de oficina general. No necesitamos que se nos enseñe la industria, ya hablamos el idioma.",
+    "p5": "Desde un contratista individual que gestiona tres proyectos hasta una empresa en crecimiento que maneja múltiples contratos, escalamos con usted, según sus términos, sin compromisos a largo plazo.",
+    "footer": "Nosotros nos encargamos de su oficina. Usted se concentra en construir.",
+    "stats": {
+      "experience": "Años de Experiencia",
+      "completed": "Proyectos Completados",
+      "satisfaction": "Satisfacción del Cliente",
+      "rating": "Valoración del Cliente"
+    }
+  },
+  "Pricing": {
+    "title": "Precios que escalan con usted",
+    "subtitle": "Planes mensuales transparentes sin cargos ocultos. Pague por lo que necesita.",
+    "features": {
+      "noSetup": "Sin cuotas de inscripción",
+      "cancel": "Cancele en cualquier momento",
+      "support": "Soporte dedicado"
+    },
+    "startingFrom": "A partir de",
+    "mo": "/mes",
+    "idealForLabel": "Ideal para:",
+    "cards": {
+      "estimating": {
+        "title": "Soporte de Estimación",
+        "description": "Para contratistas individuales y pequeños gremios que necesitan que se maneje lo básico",
+        "idealFor": "Pequeños contratistas, propietarios abrumados, clientes primerizos",
+        "features": [
+          "Desglose de materiales",
+          "Presupuestos",
+          "Estimaciones de costes",
+          "Entrega en 48 horas",
+          "Revisiones menores"
+        ]
+      },
+      "operations": {
+        "title": "Soporte de Operaciones",
+        "description": "Mantenemos sus proyectos y su negocio funcionando sin problemas",
+        "idealFor": "Para contratistas generales en crecimiento listos para escalar sin aumentar la plantilla",
+        "features": [
+          "Todo lo del Paquete 1",
+          "Gestión de correo electrónico",
+          "Programación",
+          "Actualizaciones de CRM",
+          "Coordinación de proyectos (apoyo PM)",
+          "Asistencia en la comunicación con clientes"
+        ]
+      },
+      "full": {
+        "title": "Oficina Administrativa Completa",
+        "description": "Su equipo remoto completo",
+        "idealFor": "Para empresas consolidadas que desean un equipo administrativo totalmente externalizado",
+        "features": [
+          "Todo lo del Paquete 2",
+          "Personal de soporte dedicado",
+          "Entrega prioritaria",
+          "Soporte de facturación y contabilidad",
+          "Informes semanales",
+          "Optimización del flujo de trabajo"
+        ]
+      }
+    },
+    "addons": {
+      "title": "SERVICIOS ADICIONALES",
+      "subtitle": "Disponible en cualquier plan",
+      "description": "Estos servicios pueden añadirse individualmente a cualquier plan base o combinarse en el paquete de Oficina Administrativa Completa. El precio varía según las horas requeridas.",
+      "items": {
+        "architectural": {
+          "title": "Arquitectura",
+          "description": "Planos, Revit, renderizado"
+        },
+        "marketing": {
+          "title": "Marketing",
+          "description": "Redes sociales, contenido, correos electrónicos, marca"
+        },
+        "business": {
+          "title": "Desarrollo de Negocio",
+          "description": "Prospectos, propuestas, CRM"
+        },
+        "hr": {
+          "title": "Soporte de RRHH",
+          "description": "Contratación, incorporación, registros"
+        },
+        "admin": {
+          "title": "Administración",
+          "description": "Redacción de documentos, entrada de datos, gestión de archivos"
+        },
+        "bookkeeping": {
+          "title": "Contabilidad",
+          "description": "Nóminas, gastos, cuentas por cobrar/pagar"
+        }
+      }
+    }
   }
 }

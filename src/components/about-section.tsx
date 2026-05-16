@@ -1,61 +1,28 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
 const AboutSection = () => {
+  const t = useTranslations("About");
+
   return (
     <section className="relative text-white grid min-h-screen grid-cols-1 md:grid-cols-2 gap-8  px-6 py-20 bg-black/30">
       <Image
         src={"/about.webp"}
-        alt="About Us"
+        alt={t("title")}
         layout="fill"
         objectFit="cover"
         className="-z-1"
       />
       <div>
-        <p className="text-3xl">Who We Are</p>
-        <h2 className="text-6xl">About Our Company</h2>
+        <p className="text-3xl">{t("whoWeAre")}</p>
+        <h2 className="text-6xl">{t("title")}</h2>
       </div>
       <div className="text-xl font-light">
-        <h3 className="font-bold">
-          Built by Industry Insiders. Designed to Take Work Off Your Plate.
-        </h3>
-        ​
-        <p>
-          The Builders Desk was founded on a simple observation: construction
-          companies are run by people who are exceptional at building — but the
-          business of construction often gets in the way of the work itself.
-        </p>
-        ​
-        <p>
-          Estimating, project administration, bookkeeping, scheduling, document
-          control — it all has to get done. But it doesn't all have to be done
-          by you.
-        </p>
-        ​
-        <p>
-          We are a specialized remote back-office firm built exclusively for
-          U.S. design and construction companies. Our team combines deep
-          construction industry knowledge with professional training across
-          project management, administration, accounting, and business
-          development — giving you a capable, dedicated support system without
-          the cost and commitment of hiring in-house.
-        </p>
-        ​
-        <p>
-          Every team member we deploy holds at minimum an undergraduate degree
-          in their field. Our project managers are PMP-trained. Our admins
-          understand construction workflows, not just general office work. We
-          don't need to be taught the industry — we already speak the language.
-        </p>
-        ​
-        <p>
-          From a single contractor managing three projects to a growing firm
-          juggling multiple contracts, we scale with you — on your terms, with
-          no long-term commitments.
-        </p>
-        <p className="font-bold ">
-          We handle your back office. You focus on building.
-        </p>
+        <h3 className="font-bold">{t("tagline")}</h3>​<p>{t("p1")}</p>​<p>{t("p2")}</p>​<p>{t("p3")}</p>​<p>{t("p4")}</p>​<p>{t("p5")}</p>
+        <p className="font-bold ">{t("footer")}</p>
       </div>
 
       {/* Statistics Section */}
@@ -63,24 +30,30 @@ const AboutSection = () => {
         <div className="bg-white p-6 flex flex-col  ">
           <p className="text-4xl md:text-6xl -bold text-gray-900 mb-2">15</p>
           <p className="text-gray-600 mt-auto text-xl md:text-2xl">
-            Years of <br /> Experience
+            {t("stats.experience").split(" ").slice(0, 2).join(" ")} <br />{" "}
+            {t("stats.experience").split(" ").slice(2).join(" ")}
           </p>
         </div>
         <div className="bg-white p-6 flex flex-col  ">
           <p className="text-4xl md:text-6xl -bold text-gray-900 mb-2">400+</p>
           <p className="text-gray-600 mt-auto  text-xl md:text-2x">
-            Projects <br /> Completed
+            {t("stats.completed").split(" ").slice(0, 1).join(" ")} <br />{" "}
+            {t("stats.completed").split(" ").slice(1).join(" ")}
           </p>
         </div>
-        <div className="bg-white flex flex-col  p-6 ">
+        <div className="bg-white p-6 flex flex-col  ">
           <p className="text-4xl md:text-6xl -bold text-gray-900 mb-2">95%</p>
           <p className="text-gray-600 mt-auto text-xl md:text-2xl">
-            Client <br /> Satisfaction
+            {t("stats.satisfaction").split(" ").slice(0, 1).join(" ")} <br />{" "}
+            {t("stats.satisfaction").split(" ").slice(1).join(" ")}
           </p>
         </div>
-        <div className="bg-white flex flex-col  p-6 ">
+        <div className="bg-white p-6 flex flex-col  ">
           <p className="text-4xl md:text-6xl -bold text-gray-900 mb-2">4.9/5</p>
-          <p className="text-gray-600 mt-auto text-xl md:text-2xl">Client <br /> Rating</p>
+          <p className="text-gray-600 mt-auto text-xl md:text-2xl">
+            {t("stats.rating").split(" ").slice(0, 1).join(" ")} <br />{" "}
+            {t("stats.rating").split(" ").slice(1).join(" ")}
+          </p>
         </div>
       </div>
     </section>

@@ -79,7 +79,6 @@ jobs:
             set -e
             cd ${{ secrets.APP_PATH }}
             npm ci --omit=dev
-            cd /home/${{ secrets.VPS_USER }}/${{ secrets.APP_NAME }}
             pm2 restart ${{ secrets.APP_NAME }}
             pm2 save
-          "
+          " 

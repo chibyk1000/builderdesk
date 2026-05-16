@@ -1,95 +1,78 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 import { Svgexport30, Svgexport31, Svgexport32 } from "./icons";
 
 const Pricing = () => {
+  const t = useTranslations("Pricing");
+
   const topFeatures = [
-    { text: "No set up fees", icon: "→" },
-    { text: "Cancel anytime", icon: "→" },
-    { text: "Dedicated support", icon: "→" },
+    { text: t("features.noSetup"), icon: "→" },
+    { text: t("features.cancel"), icon: "→" },
+    { text: t("features.support"), icon: "→" },
   ];
 
   const pricingCards = [
     {
       icon: <Svgexport30 className="size-10" />,
-      title: "Estimating Support",
-      description:
-        "For solo contractors & small trades who need the basics handled",
+      title: t("cards.estimating.title"),
+      description: t("cards.estimating.description"),
       price: "$1,500",
-      period: "/mo",
-      features: [
-        "Material takeoffs",
-        "BOQs",
-        "Cost estimates",
-        "48-hour turnaround",
-        "Minor revisions",
-      ],
-      idealFor: "Small contractors, overwhelmed owners, first-time clients",
+      period: t("mo"),
+      features: t.raw("cards.estimating.features"),
+      idealFor: t("cards.estimating.idealFor"),
     },
     {
-      icon: <Svgexport31 className="size-10"/>,
-      title: "Operations Support",
-      description: "We keep your projects and business running smoothly",
+      icon: <Svgexport31 className="size-10" />,
+      title: t("cards.operations.title"),
+      description: t("cards.operations.description"),
       price: "$2,500",
-      period: "/mo",
-      features: [
-        "Everything in Package 1",
-        "Email management",
-        "Scheduling",
-        "CRM updates",
-        "Project coordination (PM support)",
-        "Client communication assistance",
-      ],
-      idealFor: "For growing GCs ready to scale without growing headcount",
+      period: t("mo"),
+      features: t.raw("cards.operations.features"),
+      idealFor: t("cards.operations.idealFor"),
     },
     {
-      icon: <Svgexport32 className="size-10"/>,
-      title: "Full Back Office",
-      description: "Your complete remote team",
+      icon: <Svgexport32 className="size-10" />,
+      title: t("cards.full.title"),
+      description: t("cards.full.description"),
       price: "$5,000",
-      period: "/mo",
-      features: [
-        "Everything in Package 2",
-        "Dedicated support staff",
-        "Priority turnaround",
-        "Invoicing + bookkeeping support",
-        "Weekly reporting",
-        "Workflow optimization",
-      ],
-      idealFor:
-        "For established firms who want a fully outsourced back-office team",
+      period: t("mo"),
+      features: t.raw("cards.full.features"),
+      idealFor: t("cards.full.idealFor"),
     },
   ];
 
   const addOnServices = [
     {
-      title: "Architectural",
-      description: "Drawings, Revit, rendering",
+      title: t("addons.items.architectural.title"),
+      description: t("addons.items.architectural.description"),
       price: "$1,200/mo",
     },
     {
-      title: "Marketing",
-      description: "Social Media, content, emails, branding",
+      title: t("addons.items.marketing.title"),
+      description: t("addons.items.marketing.description"),
       price: "$800/mo",
     },
     {
-      title: "Business Development",
-      description: "Leads, Proposals, CRM",
+      title: t("addons.items.business.title"),
+      description: t("addons.items.business.description"),
       price: "$950/mo",
     },
     {
-      title: "HR Support",
-      description: "Hiring, Onboarding, Records",
+      title: t("addons.items.hr.title"),
+      description: t("addons.items.hr.description"),
       price: "$500/mo",
     },
     {
-      title: "Administrative",
-      description: "Document drafting, Data Entry, file management",
+      title: t("addons.items.admin.title"),
+      description: t("addons.items.admin.description"),
       price: "$950/mo",
     },
     {
-      title: "Bookkeeping",
-      description: "Payroll, expense, AR/AP",
+      title: t("addons.items.bookkeeping.title"),
+      description: t("addons.items.bookkeeping.description"),
       price: "$950/mo",
     },
   ];
@@ -100,7 +83,7 @@ const Pricing = () => {
       <div className="absolute inset-0 ">
         <Image
           src="/pricing.avif"
-          alt="Pricing background"
+          alt={t("title")}
           fill
           className="w-full h-full object-cover"
         />
@@ -112,13 +95,12 @@ const Pricing = () => {
         <div className="max-w-6xl mx-auto text-center mb-16">
           {/* Heading */}
           <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">
-            Pricing That Scales With You
+            {t("title")}
           </h2>
 
           {/* Subtitle */}
           <p className="text-3xl md:text-4xl text-gray-200 mb-12">
-            Transparent monthly plans with no hidden fees. Pay for what you
-            need.
+            {t("subtitle")}
           </p>
 
           {/* Top Features */}
@@ -155,7 +137,10 @@ const Pricing = () => {
         {/* Pricing Cards */}
         <div className="w-10/12 mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
           {pricingCards.map((card, i) => (
-            <div key={i} className="bg-gray-100 rounded-lg p-7 w-120 h-150  shadow-sm">
+            <div
+              key={i}
+              className="bg-gray-100 rounded-lg p-7 w-120 h-150  shadow-sm"
+            >
               {/* Header: icon + title */}
               <div className="flex items-center gap-3 mb-3.5">
                 {/* Icon */}
@@ -172,7 +157,7 @@ const Pricing = () => {
 
               {/* Pricing */}
               <p className="2xl:text-2xl text-gray-900 m-0 mb-3.5">
-                Starting from{" "}
+                {t("startingFrom")}{" "}
                 <strong className="">
                   {card.price}
                   {card.period}
@@ -181,14 +166,14 @@ const Pricing = () => {
 
               {/* Bullet list */}
               <ul className="m-0 mb-4.5 pl-4.5 2xl:text-xl ml-4  text-[#595959] font-[350] list-disc">
-                {card.features.map((item, j) => (
+                {card.features.map((item: string, j: number) => (
                   <li key={j}>{item}</li>
                 ))}
               </ul>
 
               {/* Ideal for label */}
               <p className="text-xl font-bold text-orange-600 m-0 mb-1.5">
-                Ideal for:
+                {t("idealForLabel")}
               </p>
 
               {/* Ideal for text */}
@@ -203,14 +188,12 @@ const Pricing = () => {
         <div className="max-w-10/12 mx-auto mt-20">
           {/* Heading */}
           <div className=" ">
-            <h2 className=" font-bold text-white ">ADD-ON SERVICES</h2>
+            <h2 className=" font-bold text-white ">{t("addons.title")}</h2>
             <p className="text-orange-500 2xl:text-2xl font-semibold ">
-              Available on any plan
+              {t("addons.subtitle")}
             </p>
             <p className="text-gray-200 text-base 2xl:text-2xl  ">
-              These services can be added individually to any base plan — or
-              combined into the Full Back Office package. Price varies by hours
-              required.
+              {t("addons.description")}
             </p>
           </div>
 
