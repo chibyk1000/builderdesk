@@ -36,25 +36,37 @@ jobs:
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
 
-      # Push only the build output and required runtime files to VPS
-      - name: Sync build to VPS
+      # Fix ownership on VPS before syncing so rsync can write freely
+      - name: Fix permissions on VPS
         run: |
           set -e
           ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "
             set -e
+            sudo chown -R ${{ secrets.VPS_USER }}:${{ secrets.VPS_USER }} ${{ secrets.APP_PATH }}
             mkdir -p ${{ secrets.APP_PATH }}/.next
             mkdir -p ${{ secrets.APP_PATH }}/public
           "
 
+      # Push only the build output and required runtime files to VPS
+      - name: Sync build to VPS
+        run: |
+          set -e
+
+          # Sync .next build output
           rsync -az --delete \
+            --no-perms --no-group --omit-dir-times \
             .next/ \
             ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.APP_PATH }}/.next/
 
+          # Sync public assets
           rsync -az --delete \
+            --no-perms --no-group --omit-dir-times \
             public/ \
             ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.APP_PATH }}/public/
 
+          # Sync only required runtime files (not full source)
           rsync -az \
+            --no-perms --no-group --omit-dir-times \
             package.json \
             next.config.* \
             ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.APP_PATH }}/
