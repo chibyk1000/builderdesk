@@ -1,28 +1,43 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-orange-600 text-white py-16 px-6">
-      <div className="max-w-7xl mx-auto">
+    <footer className="bg-[#d6730a] text-white py-16 px-6">
+      <div className="max-w-11/12 mx-auto">
         {/* Top Section */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="flex  justify-between">
           {/* Logo and CTA */}
           <div className="flex flex-col items-start gap-6">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-blue-600 rounded"></div>
-              <div>
-                <div className="text-xs font-bold">THE</div>
-                <div className="text-xs font-bold">BUILDERS</div>
-                <div className="text-sm font-bold">DESK</div>
+            <Link href="/" className="flex items-center  flex-shrink-0">
+              <div className=" rounded relative  flex items-center justify-center">
+                <Image
+                  src={"/logo-new.avif"}
+                  width={111}
+                  height={100}
+                  alt="BuildersDesklogo"
+                />
               </div>
-            </div>
-            <button className="bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+              <div className="flex text-black flex-col relative -left-2 font-dm-sans">
+                <span className="text-xl  font-dm-sans  leading-tight">
+                  THE <br /> BUILDERS
+                </span>
+
+                <span className="text-3xl font-black font-dm-sans leading-tight">
+                  DESK
+                </span>
+              </div>
+            </Link>
+
+            <button className="bg-white text-orange-600 px-6 py-3  font-semibold hover:bg-gray-100 transition">
               Contact Us
             </button>
           </div>
+<div className="flex  w-7/12 justify-between">
 
+            
           {/* Head Office */}
           <div>
             <h3 className="font-bold text-lg mb-4">Head Office</h3>
@@ -75,6 +90,7 @@ export default function Footer() {
               </Link>
             </nav>
           </div>
+</div>
         </div>
 
         {/* Divider */}

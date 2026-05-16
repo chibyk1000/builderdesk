@@ -111,7 +111,7 @@ const Pricing = () => {
         {/* Top Section */}
         <div className="max-w-6xl mx-auto text-center mb-16">
           {/* Heading */}
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">
             Pricing That Scales With You
           </h2>
 
@@ -160,18 +160,18 @@ const Pricing = () => {
               <div className="flex items-center gap-3 mb-3.5">
                 {/* Icon */}
                 <div className="flex-shrink-0 w-9 h-9">{card.icon}</div>
-                <h2 className="text-3xl font-bold text-gray-900 leading-tight">
+                <h2 className="2xl:text-3xl font-bold text-gray-900 leading-tight">
                   {card.title}
                 </h2>
               </div>
 
               {/* Subtitle */}
-              <p className="text-2xl font-[350] text-[#595959] m-0 mb-3 leading-relaxed">
+              <p className="2xl:text-2xl font-[350] text-[#595959] m-0 mb-3 leading-relaxed">
                 {card.description}
               </p>
 
               {/* Pricing */}
-              <p className="text-2xl text-gray-900 m-0 mb-3.5">
+              <p className="2xl:text-2xl text-gray-900 m-0 mb-3.5">
                 Starting from{" "}
                 <strong className="">
                   {card.price}
@@ -180,7 +180,7 @@ const Pricing = () => {
               </p>
 
               {/* Bullet list */}
-              <ul className="m-0 mb-4.5 pl-4.5 text-xl ml-4  text-[#595959] font-[350] list-disc">
+              <ul className="m-0 mb-4.5 pl-4.5 2xl:text-xl ml-4  text-[#595959] font-[350] list-disc">
                 {card.features.map((item, j) => (
                   <li key={j}>{item}</li>
                 ))}
@@ -192,7 +192,7 @@ const Pricing = () => {
               </p>
 
               {/* Ideal for text */}
-              <p className="text-xl text-[#595959] m-0 leading-relaxed">
+              <p className="2xl:text-xl text-[#595959] m-0 leading-relaxed">
                 {card.idealFor}
               </p>
             </div>
@@ -204,10 +204,10 @@ const Pricing = () => {
           {/* Heading */}
           <div className=" ">
             <h2 className=" font-bold text-white ">ADD-ON SERVICES</h2>
-            <p className="text-orange-500 text-2xl font-semibold ">
+            <p className="text-orange-500 2xl:text-2xl font-semibold ">
               Available on any plan
             </p>
-            <p className="text-gray-200 text-base md:text-2xl  ">
+            <p className="text-gray-200 text-base 2xl:text-2xl  ">
               These services can be added individually to any base plan — or
               combined into the Full Back Office package. Price varies by hours
               required.

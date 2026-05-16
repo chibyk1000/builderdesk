@@ -1,11 +1,13 @@
-import { ArrowRight, Phone } from 'lucide-react';
+import { ArrowRight,  Phone } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react'
+import { Svgexport33, Svgexport34 } from './icons';
 
 const ContactUs = () => {
   return (
-    <section className='min-h-screen py-10 px-4'>
-      <p className="text-primary text-3xl">SCHEDULE A FREE STRATEGY CALL</p>
+    <section className="min-h-screen py-10 px-4">
+      <p className="text-primary text-[56px]">SCHEDULE A FREE STRATEGY CALL</p>
 
       <div>
         <section className="min-h-screen flex items-center justify-center bg-white px-4 sm:px-6 lg:px-8">
@@ -28,49 +30,41 @@ const ContactUs = () => {
                 {/* Logo and Title */}
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-blue-600 rounded flex items-center justify-center">
-                      <svg
-                        className="w-8 h-8 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M3 12h18M3 6h18M3 18h18"
+                    <Link href="/" className="flex items-center  flex-shrink-0">
+                      <div className=" rounded relative  flex items-center justify-center">
+                        <Image
+                          src={"/logo-new.avif"}
+                          width={111}
+                          height={100}
+                          alt="BuildersDesklogo"
                         />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-sm font-bold text-gray-900">THE</p>
-                      <p className="text-sm font-bold text-gray-900">
-                        BUILDERS
-                      </p>
-                    </div>
+                      </div>
+                      <div className="flex flex-col relative -left-2 font-dm-sans">
+                        <span className="text-xl  font-dm-sans  leading-tight">
+                          THE <br /> BUILDERS
+                        </span>
+
+                        <span className="text-3xl font-black font-dm-sans leading-tight">
+                          DESK
+                        </span>
+                      </div>
+                    </Link>
                   </div>
-                  <h1 className="text-4xl sm:text-5xl font-bold text-gray-900">
-                    DESK
-                  </h1>
-                  <h2 className="text-3xl sm:text-4xl font-semibold text-gray-700">
+
+                  <h2 className="text-4xl font-normal sm:text-4xl  text-[#595959]">
                     CALENDER
                   </h2>
                 </div>
 
                 {/* Phone Icon and Description */}
-                <div className="space-y-4">
+                <div className="space-y-4 w-9/12 ">
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center">
-                        <Phone
-                          className="w-8 h-8 text-orange-500"
-                          strokeWidth={1.5}
-                        />
-                      </div>
+                    <div className="shrink-0">
+                      <Svgexport33 className="size-30" />
                     </div>
-                    <div className="flex-1">
-                      <p className="text-gray-700 text-lg leading-relaxed">
+
+                    <div className="flex-1 min-w-0">
+                      <p className="text-gray-700 text-lg leading-relaxed font-normal break-words">
                         Schedule a 30min. call to learn how The BuildersDesk can
                         support your growth and give you relief.
                       </p>
@@ -80,9 +74,12 @@ const ContactUs = () => {
 
                 {/* CTA Button */}
                 <div>
-                  <button className="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded transition-colors duration-200">
+                  <button className="inline-flex items-center gap-3  text-[#bd4f00] font-semibold py-3 px-6 rounded transition-colors duration-200">
                     <span>Click to Open Calender</span>
-                    <ArrowRight className="w-5 h-5" />
+                    <span>
+
+                    <Svgexport34 className="w-5 h-5" />
+                    </span>
                   </button>
                 </div>
               </div>

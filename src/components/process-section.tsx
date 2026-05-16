@@ -173,7 +173,7 @@ export function ProcessSection() {
 
                   {/* Description */}
                   <p
-                    className="relative z-10 font-[350] text-[23px] leading-relaxed text-gray-600"
+                    className="relative z-10 font-[350]  2xl:text-[23px] leading-relaxed text-gray-600"
                     style={{
                       fontFamily: "Arial, sans-serif",
                       lineHeight: "1.6",
